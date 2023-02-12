@@ -6,11 +6,11 @@ import styles from '../styles/NavBar.module.css'
 
 const NavBar = () => {
   return (
-    <Navbar bg="light" expand="lg" fixed="top">
+    <Navbar expand="lg" fixed="top" className={styles.NavBar}>
       <Container>
         <Navbar.Brand href="#home" className={styles.Logo}>Nexus</Navbar.Brand>
-        <Navbar.Text className="text-start">
-          Discover today.
+        <Navbar.Text className={styles.NavBarText}>
+          Discover, today.
         </Navbar.Text>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

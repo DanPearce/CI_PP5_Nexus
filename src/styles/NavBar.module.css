@@ -1,5 +1,34 @@
+.NavBar {
+  background-color: #201624;
+  border-bottom: #706078 solid 3px;
+}
+
+.NavBar a {
+  color: #fefdfd;
+}
+
+.NavBar a:hover{
+  color: #B9ABC1;
+}
+
+.NavBarText {
+  color: #B9ABC1;
+}
+
 .Logo {
   font-family: 'El Messiri', sans-serif;
   font-size: xx-large;
-  font-weight: bold;
+  overflow: hidden;
+  background: linear-gradient(to right, #B9ABC1, #B9ABC1 50%, #F8F8F8 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  text-decoration: none; 
+}
+
+.Logo:hover {
+  background-position: 0 100%;
 }

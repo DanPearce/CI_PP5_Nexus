@@ -1,3 +1,8 @@
+/*Everything on page, before and after*/
+*, *::before, *, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif;
