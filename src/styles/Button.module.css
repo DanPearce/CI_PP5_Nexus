@@ -1,0 +1,13 @@
+.Button {
+  background-color: rgba(63, 44, 71, 1);;
+  font-size: 1em;
+  border-color: transparent;
+  border-radius: 50px;
+  width: 100%;
+}
+
+.Button:hover {
+  border-color: rgba(63, 44, 71, .5);
+  background-color: #fefdfd;
+  color: rgba(63, 44, 71, 1);
+}

@@ -20,3 +20,27 @@
   font-family: 'El Messiri', sans-serif;
   font-size: xx-large;
 }
+
+.Input {
+  text-align: center;
+  border-color: rgba(63, 44, 71, .5);
+  color: rgba(63, 44, 71, .5);
+}
+
+.Input:hover {
+  border-color: rgba(63, 44, 71, 1);
+}
+
+.LinkContainer {
+  color: rgba(63, 44, 71, .8)
+}
+
+.Link {
+  text-decoration: none;
+  color: #3f2c47;
+}
+
+.Link:hover {
+  text-decoration: none;
+  color: #201624;
+}
