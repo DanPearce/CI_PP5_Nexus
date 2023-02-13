@@ -32,3 +32,8 @@
 .Logo:hover {
   background-position: 0 100%;
 }
+
+.NavLink {
+  padding: 5px;
+  text-decoration: none;
+}
