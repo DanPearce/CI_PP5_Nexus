@@ -1,0 +1,22 @@
+.Heading {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #3f2c47;
+}
+
+.Background {
+  background-color: #fff;
+  border: #3f2c47 solid 1px;
+  border-radius: 3px;
+  color: #3f2c47;
+}
+
+.Logo {
+  font-family: 'El Messiri', sans-serif;
+  font-size: xx-large;
+}
