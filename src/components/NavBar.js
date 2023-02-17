@@ -7,11 +7,12 @@ import { NavLink } from 'react-router-dom';
 import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContext';
 import axios from 'axios';
 import ProfilePicture from './ProfilePicture';
+import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
 
 const NavBar = () => {
   const currentUser = useCurrentUser()
   const setCurrentUser = useSetCurrentUser()
-
+  const { expanded, setExpanded, ref} = useClickOutsideToggle()
   const handleSignOut = async () => {
     try {
       await axios.post('dj-rest-auth/logout/')
@@ -71,13 +72,23 @@ const NavBar = () => {
     </>
   )
   return (
-    <Navbar expand="lg" fixed="top" className={styles.NavBar}>
+    <Navbar 
+      expand="lg"
+      fixed="top"
+      className={styles.NavBar}
+      expanded={expanded}
+    >
       <Container>
         <NavLink to='/' className={styles.NavLink}>
           <Navbar.Brand className={styles.Logo}>Nexus</Navbar.Brand>
         </NavLink>
           {currentUser ? loggedInNavText : loggedOutNavText}
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className={`navbar-dark`}/>
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className={`navbar-dark`}
+          ref={ref}
+          onClick={() => setExpanded(!expanded)}
+        />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto text-start">
             {currentUser ? loggedInNavBar : loggedOutNavBar}
