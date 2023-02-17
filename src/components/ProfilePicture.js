@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from '../styles/ProfilePicture.module.css'
 
-const ProfilePicture = ({ src, px = 30, text }) => {
+const ProfilePicture = ({ src, px = 30, user }) => {
+
   return (
     <span>
       <img 
@@ -9,9 +10,9 @@ const ProfilePicture = ({ src, px = 30, text }) => {
         src={src}
         height={px}
         width={px}
-        alt='Profile image'
+        alt={`${user}'s Profile Icon`}
       />
-      {text}
+      {user}
     </span>
   )
 }

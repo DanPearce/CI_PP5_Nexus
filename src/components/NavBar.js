@@ -49,7 +49,7 @@ const NavBar = () => {
         <i className="fa-solid fa-magnifying-glass"></i> Discover
       </NavLink>
       <NavLink to='/profile' className={styles.NavLink}>
-        <ProfilePicture src={currentUser?.profile_image} text={currentUser?.username} height={25} /> 
+        <ProfilePicture src={currentUser?.profile_image} user={currentUser?.username} height={25} /> 
       </NavLink>
       <NavLink to='/' className={styles.NavLink} onClick={handleSignOut}>
         <i className="fa-solid fa-xmark"></i> Sign Out
@@ -77,7 +77,7 @@ const NavBar = () => {
           <Navbar.Brand className={styles.Logo}>Nexus</Navbar.Brand>
         </NavLink>
           {currentUser ? loggedInNavText : loggedOutNavText}
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className={`navbar-dark`}/>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto text-start">
             {currentUser ? loggedInNavBar : loggedOutNavBar}
