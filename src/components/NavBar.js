@@ -6,6 +6,7 @@ import styles from '../styles/NavBar.module.css'
 import { NavLink } from 'react-router-dom';
 import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContext';
 import axios from 'axios';
+import ProfilePicture from './ProfilePicture';
 
 const NavBar = () => {
   const currentUser = useCurrentUser()
@@ -48,7 +49,7 @@ const NavBar = () => {
         <i className="fa-solid fa-magnifying-glass"></i> Discover
       </NavLink>
       <NavLink to='/profile' className={styles.NavLink}>
-        <i className="fa-solid fa-house-user"></i> {currentUser?.username}
+        <ProfilePicture src={currentUser?.profile_image} text={currentUser?.username} height={25} /> 
       </NavLink>
       <NavLink to='/' className={styles.NavLink} onClick={handleSignOut}>
         <i className="fa-solid fa-xmark"></i> Sign Out
