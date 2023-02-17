@@ -7,6 +7,7 @@ import SignInForm from './pages/auth/SignInForm';
 import SignUpForm from './pages/auth/SignUpForm';
 import Profile from './pages/profiles/Profile';
 import PostSearch from './pages/posts/PostSearch';
+import './api/axiosDefaults'
 
 function App() {
   return (
