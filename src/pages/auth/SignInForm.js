@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import Alert from 'react-bootstrap/Alert'
 import { Link, useNavigate } from 'react-router-dom'
 import styles from '../../styles/AuthForm.module.css'
 import appStyles from '../../styles/App.module.css'
@@ -16,7 +17,7 @@ function SignInForm() {
     password: '',
   })
   const {username, password} = signInData
-
+  const [errors, setErrors] = useState({})
   const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -24,7 +25,7 @@ function SignInForm() {
       await axios.post('/dj-rest-auth/login/', signInData)
       navigate('/')
     } catch(err){
-      console.log(err)
+      setErrors(err.response?.data)
     }
   }
   const handleChange = (event) => {
@@ -40,7 +41,7 @@ function SignInForm() {
         <Col className={`text-center mt-auto mb-auto ${styles.Logo}`}>
           <h1>Nexus</h1>
         </Col>
-        <Col className='text-center mx-auto'>
+        <Col className='text-center'>
           <Container>
             <h1 className={`${styles.Heading} mb-3`}>Sign In</h1>
             <Form onSubmit={handleSubmit}>
@@ -55,8 +56,16 @@ function SignInForm() {
                   onChange={handleChange}
                 />
               </Form.Group>
-
-              <Form.Group className="mb-4" controlId="password">
+              {errors.username?.map((message, index) => (
+                <Alert
+                  key={index} 
+                  variant="warning"
+                  className={`${appStyles.Alert} mb-3`}
+                >
+                  {message}
+                </Alert>
+              ))}
+              <Form.Group className="mb-3" controlId="password">
                 <Form.Label className='d-none'>Password</Form.Label>
                 <Form.Control 
                   type="password"
@@ -67,6 +76,15 @@ function SignInForm() {
                   onChange={handleChange}
                 />
               </Form.Group>
+              {errors.password?.map((message, index) => (
+                <Alert 
+                  key={index}
+                  variant="warning"
+                  className={`${appStyles.Alert} mb-3`}
+                >
+                  {message}
+                </Alert>
+              ))}
               <Button 
                 variant="primary"
                 type="submit"
@@ -74,6 +92,15 @@ function SignInForm() {
               >
                 Sign In
               </Button>
+              {errors.non_field_errors?.map((message, index) => (
+              <Alert 
+                key={index}
+                variant="warning"
+                className={`${appStyles.Alert} mb-3`}
+                >
+                {message}
+              </Alert>
+            ))}
             </Form>
           </Container>
           <Container className={styles.LinkContainer}>
