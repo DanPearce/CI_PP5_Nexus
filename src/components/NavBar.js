@@ -20,6 +20,25 @@ const NavBar = () => {
     }
   }
 
+  const loggedInNavText = (
+    <>
+      <NavLink
+        className={styles.NavLink}
+        to='/posts/create'
+      >
+        <i className="fa-regular fa-square-plus"></i> Share
+      </NavLink>
+    </>
+  )
+
+  const loggedOutNavText = (
+    <>
+      <Navbar.Text className={styles.NavBarText}>
+        Discover, today.
+      </Navbar.Text>
+    </>
+  )
+
   const loggedInNavBar = (
     <>
       <NavLink to='/' className={styles.NavLink}>
@@ -56,9 +75,7 @@ const NavBar = () => {
         <NavLink to='/' className={styles.NavLink}>
           <Navbar.Brand className={styles.Logo}>Nexus</Navbar.Brand>
         </NavLink>
-        <Navbar.Text className={styles.NavBarText}>
-          Discover, today.
-        </Navbar.Text>
+          {currentUser ? loggedInNavText : loggedOutNavText}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto text-start">
