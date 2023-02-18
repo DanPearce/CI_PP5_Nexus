@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -9,8 +9,31 @@ import appStyles from '../../styles/App.module.css'
 import btnStyles from '../../styles/Button.module.css'
 import Upload from '../../assets/upload.png'
 import Asset from '../../components/Asset'
+import { Image } from 'react-bootstrap'
 
 function PostCreateForm() {
+  const [postData, setPostData] = useState({
+    title: '',
+    body: '',
+    image: ''
+  })
+  const { title, body, image } = postData
+  const handleChange = (event) => {
+    setPostData({
+      ...postData,
+      [event.target.name]: event.target.value
+    })
+  }
+  const handleChangeImage = (event) => {
+    if (event.target.files.length) {
+      URL.revokeObjectURL(image);
+      setPostData({
+        ...postData,
+        image: URL.createObjectURL(event.target.files[0]),
+      });
+    }
+  };
+
   return (
       <Container className={`${appStyles.Border} ${styles.Background}`}>
         <Form>
@@ -19,15 +42,30 @@ function PostCreateForm() {
               <Container className={`p-2 mt-4`}>
               <h1 className={`${styles.Heading} mb-3 text-center d-lg-none`}>Share a Post</h1>
                 <Form.Group className={`text-center`}>
+                  {image ? (
+                    <>
+                      <figure>
+                        <Image className={`${appStyles.Image}`} src={image} rounded />
+                      </figure>
+                    </>
+                  ) : (
                   <Form.Label
                     className={`d-flex justify-content-center`}
                     htmlFor='image-upload'
                   >
                     <Asset
                       src={Upload}
-                      message='Click here to upload an image'
+                      message="Tap the image or 'choose file' to upload an image"
                     />
                   </Form.Label>
+                  )}
+
+                  <Form.Control
+                    type='file'
+                    id='image-upload'
+                    accept='image/*'
+                    onChange={handleChangeImage}
+                  />
                 </Form.Group>
               </Container>
             </Col>
@@ -42,6 +80,8 @@ function PostCreateForm() {
                       placeholder="Add a title"
                       name='title'
                       className={styles.PostInput}
+                      value={title}
+                      onChange={handleChange}
                     />
                   </Form.Group>
 
@@ -53,6 +93,8 @@ function PostCreateForm() {
                       placeholder="Add a caption"
                       name='caption'
                       className={styles.PostInput}
+                      value={body}
+                      onChange={handleChange}
                     />
                   </Form.Group>
                   <Container className='text-center'>
@@ -61,7 +103,7 @@ function PostCreateForm() {
                       type="submit"
                       className={`mb-3 ${btnStyles.PostButton}`}
                     >
-                    <i class="fa-solid fa-arrow-left"></i> Go back 
+                    <i className="fa-solid fa-arrow-left"></i> Go back 
                     </Button>
                     <Button 
                       variant="primary"

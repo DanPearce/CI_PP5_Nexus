@@ -18,3 +18,9 @@
   color: rgba(65, 53, 17, .8);
   font-weight: bold;
 }
+
+.Image {
+  max-height: 45vh;
+  max-width: 100%;
+  object-fit: contain;
+}
