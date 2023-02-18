@@ -45,3 +45,10 @@
   text-decoration: none;
   color: #201624;
 }
+
+.PostInput {
+  text-align: left;
+  font-size: 0.8em;
+  border-color: rgba(63, 44, 71, .5);
+  color: rgba(63, 44, 71, .5);
+}

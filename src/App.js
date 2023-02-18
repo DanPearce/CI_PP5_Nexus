@@ -8,6 +8,7 @@ import SignUpForm from './pages/auth/SignUpForm';
 import Profile from './pages/profiles/Profile';
 import PostSearch from './pages/posts/PostSearch';
 import './api/axiosDefaults'
+import PostCreateForm from './pages/posts/PostCreateForm';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/signup' element={<SignUpForm />}/>
           <Route exact path='/discover' element={<PostSearch />}/>
           <Route exact path='/profile' element={<Profile />}/>
+          <Route exact path='/posts/create' element={<PostCreateForm />}/>
         </Routes>
       </Container>
     </div>
