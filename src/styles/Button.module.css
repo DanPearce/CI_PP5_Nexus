@@ -37,3 +37,10 @@
   background-color: rgba(63, 44, 71, 1);;
   color: #fefdfd;
 }
+
+@media (max-width: 480px) { 
+  .PostButton {
+    margin: 1rem 0 !important;
+    width: 65%;
+  }
+ }

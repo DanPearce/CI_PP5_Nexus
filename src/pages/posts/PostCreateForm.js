@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -10,6 +10,8 @@ import btnStyles from '../../styles/Button.module.css'
 import Upload from '../../assets/upload.png'
 import Asset from '../../components/Asset'
 import { Image } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
+import { axiosReq } from "../../api/axiosDefaults";
 
 function PostCreateForm() {
   const [postData, setPostData] = useState({
@@ -18,6 +20,8 @@ function PostCreateForm() {
     image: ''
   })
   const { title, body, image } = postData
+  const imageInput = useRef(null)
+  const navigate = useNavigate()
   const handleChange = (event) => {
     setPostData({
       ...postData,
@@ -33,10 +37,23 @@ function PostCreateForm() {
       });
     }
   };
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const formData = new FormData()
+    formData.append('title', title)
+    formData.append('body', body)
+    formData.append('image', imageInput.current.files[0])
+    try {
+      const {data} = await axiosReq.post('/posts/', formData)
+      navigate(`/posts/${data.id}`)
+    } catch(err) {
+      console.log(err)
+    }
+  }
 
   return (
       <Container className={`${appStyles.Border} ${styles.Background}`}>
-        <Form>
+        <Form onSubmit={handleSubmit}>
           <Row>
             <Col lg={6} className={`lg-6`}>
               <Container className={`p-2 mt-4`}>
@@ -65,6 +82,7 @@ function PostCreateForm() {
                     id='image-upload'
                     accept='image/*'
                     onChange={handleChangeImage}
+                    ref={imageInput}
                   />
                 </Form.Group>
               </Container>
@@ -85,13 +103,13 @@ function PostCreateForm() {
                     />
                   </Form.Group>
 
-                  <Form.Group className="mb-3" controlId="caption">
+                  <Form.Group className="mb-3" controlId="body">
                     <Form.Label className=''>Caption</Form.Label>
                     <Form.Control 
                       as="textarea"
                       rows={5}
                       placeholder="Add a caption"
-                      name='caption'
+                      name='body'
                       className={styles.PostInput}
                       value={body}
                       onChange={handleChange}
@@ -99,16 +117,15 @@ function PostCreateForm() {
                   </Form.Group>
                   <Container className='text-center'>
                     <Button 
-                      variant="primary"
-                      type="submit"
-                      className={`mb-3 ${btnStyles.PostButton}`}
+                      className={`mb-3 me-5 ${btnStyles.PostButton}`}
+                      onClick={() => navigate(-1)}
                     >
                     <i className="fa-solid fa-arrow-left"></i> Go back 
                     </Button>
                     <Button 
                       variant="primary"
                       type="submit"
-                      className={`mb-3 ms-5 ${btnStyles.PostButton}`}
+                      className={`mb-3 ${btnStyles.PostButton}`}
                     >
                       Share
                     </Button>
