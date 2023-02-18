@@ -4,12 +4,13 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import Image from 'react-bootstrap/Image'
+import Alert from 'react-bootstrap/Alert'
 import styles from '../../styles/AuthForm.module.css'
 import appStyles from '../../styles/App.module.css'
 import btnStyles from '../../styles/Button.module.css'
 import Upload from '../../assets/upload.png'
 import Asset from '../../components/Asset'
-import { Image } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import { axiosReq } from "../../api/axiosDefaults";
 
@@ -22,6 +23,7 @@ function PostCreateForm() {
   const { title, body, image } = postData
   const imageInput = useRef(null)
   const navigate = useNavigate()
+  const [errors, setErrors] = useState({});
   const handleChange = (event) => {
     setPostData({
       ...postData,
@@ -48,6 +50,9 @@ function PostCreateForm() {
       navigate(`/posts/${data.id}`)
     } catch(err) {
       console.log(err)
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
     }
   }
 
@@ -85,6 +90,15 @@ function PostCreateForm() {
                     ref={imageInput}
                   />
                 </Form.Group>
+                {errors?.image?.map((message, index) => (
+                    <Alert
+                      key={index}
+                      variant="warning"
+                      className={`${appStyles.Alert} mb-3`}
+                    >
+                      {message}
+                    </Alert>
+                  ))}
               </Container>
             </Col>
             <Col lg={5}>
@@ -102,7 +116,15 @@ function PostCreateForm() {
                       onChange={handleChange}
                     />
                   </Form.Group>
-
+                  {errors?.title?.map((message, index) => (
+                    <Alert
+                      key={index}
+                      variant="warning"
+                      className={`${appStyles.Alert} mb-3`}
+                    >
+                      {message}
+                    </Alert>
+                  ))}
                   <Form.Group className="mb-3" controlId="body">
                     <Form.Label className=''>Caption</Form.Label>
                     <Form.Control 
@@ -115,6 +137,15 @@ function PostCreateForm() {
                       onChange={handleChange}
                     />
                   </Form.Group>
+                  {errors?.body?.map((message, index) => (
+                    <Alert
+                      key={index}
+                      variant="warning"
+                      className={`${appStyles.Alert} mb-3`}
+                    >
+                      {message}
+                    </Alert>
+                  ))}
                   <Container className='text-center'>
                     <Button 
                       className={`mb-3 me-5 ${btnStyles.PostButton}`}
