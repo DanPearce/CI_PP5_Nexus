@@ -6,6 +6,7 @@ import appStyles from '../../styles/App.module.css'
 import formStyles from '../../styles/AuthForm.module.css'
 import { useParams } from 'react-router-dom'
 import { axiosReq } from '../../api/axiosDefaults'
+import Post from './Post'
 
 function PostPage() {
   const { id } = useParams()
@@ -29,7 +30,7 @@ function PostPage() {
     <Container className={`${appStyles.Border} ${formStyles.Background}`}> 
       <Row>
         <Col className={`text-center`}>
-          <p>Test</p>
+          <Post {...post.results[0]} setPosts={setPost} postPage/>
         </Col>
       </Row>
     </Container>

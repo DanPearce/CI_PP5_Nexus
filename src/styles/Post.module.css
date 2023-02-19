@@ -1,0 +1,45 @@
+.Post {
+  background-color: #ffffff;
+  margin: 16px 0;
+  color: #3f2c47;
+}
+
+.PostBio{
+  margin: 16px 0;
+}
+
+.PostLink {
+  text-decoration: none;
+  color: #3f2c47;
+}
+
+.PostLink:hover{
+  color: #807685;
+}
+
+.PostImage {
+  width: 100%;
+  max-width: 80vw;
+}
+
+.Heart {
+  color: #CB1B1B;
+}
+
+.Heart:hover {
+  color: #D97E7E;
+}
+
+.HeartOutline:hover {
+  color: #CB1B1B;
+}
+
+.PostBody {
+  text-align: start;
+}
+
+.SharePopover {
+  background-color: #3f2c47;
+  color: #fefdfd;
+  padding: 5px;
+}
