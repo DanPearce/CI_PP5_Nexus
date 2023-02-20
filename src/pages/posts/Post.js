@@ -10,6 +10,8 @@ import Popover from "react-bootstrap/Popover";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Link } from "react-router-dom";
 import ProfilePicture from "../../components/ProfilePicture";
+import axios from "axios";
+import { axiosRes } from "../../api/axiosDefaults";
 
 const Post = (props) => {
   const {
@@ -25,6 +27,7 @@ const Post = (props) => {
     image,
     updated_on,
     postPage,
+    setPosts,
   } = props;
 
   const currentUser = useCurrentUser();
@@ -33,6 +36,43 @@ const Post = (props) => {
   const url = getCurrentURL()
   function getCurrentURL() {
     return window.location.href
+  }
+
+  const handleLike = async () => {
+    try {
+      const { data } = await axiosRes.post('/likes/', { post: id })
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+          ? { 
+              ...post, 
+              likes_count: post.likes_count + 1, 
+              like_id: data.id
+        }
+          : post
+        })
+      }))
+    } catch(err) {
+      console.log(err)
+    }
+  }
+
+  const handleUnlike = async () => {
+    try {
+      await axiosRes.delete(`/likes/${like_id}`)
+      setPosts((prevPosts) => ({
+        ...prevPosts,
+        results: prevPosts.results.map((post) => {
+          return post.id === id
+          ? { ...post, likes_count:
+          post.likes_count - 1, like_id: null }
+          : post
+        })
+      }))
+    } catch(err) {
+      console.log(err)
+    }
   }
 
   return (
@@ -65,11 +105,11 @@ const Post = (props) => {
                   <i className="far fa-heart" />
                 </OverlayTrigger>
               ) : like_id ? (
-                <span onClick={() => {}}>
+                <span onClick={handleUnlike}>
                   <i className={`fas fa-heart ${styles.Heart}`} />
                 </span>
               ) : currentUser ? (
-                <span onClick={() => {}}>
+                <span onClick={handleLike}>
                   <i className={`far fa-heart ${styles.HeartOutline}`} />
                 </span>
               ) : (
@@ -97,7 +137,7 @@ const Post = (props) => {
               rootClose
             >
               <div onClick={() => {navigator.clipboard.writeText(url);}}>
-                <i class="fa-regular fa-share-from-square"></i>
+                <i className="fa-regular fa-share-from-square"></i>
               </div>
             </OverlayTrigger>
           </Container>
