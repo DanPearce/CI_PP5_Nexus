@@ -1,0 +1,18 @@
+.Comment {
+  text-align: left;
+  font-size: 1em;
+}
+
+.Owner {
+  font-weight: bold;
+}
+
+.Updated {
+  color: #763b9b;
+  text-align: right;
+}
+
+.Body {
+  font-size: 0.85em;
+}
+

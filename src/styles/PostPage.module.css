@@ -1,0 +1,23 @@
+.Overflow {
+  max-height: 590px;
+  overflow-y: scroll;
+}
+
+
+@media all and (max-width: 1400px) {
+  .Overflow {
+    max-height: 500px;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .Overflow {
+    max-height: 400px;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .Overflow {
+    max-height: 370px;
+  }
+}

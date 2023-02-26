@@ -5,9 +5,13 @@ import appStyles from '../../styles/App.module.css'
 import formStyles from '../../styles/AuthForm.module.css'
 import { useParams } from 'react-router-dom'
 import { axiosReq } from '../../api/axiosDefaults'
+import styles from '../../styles/PostPage.module.css'
 import stylesPost from '../../styles/Post.module.css'
+import commentFormStyles from '../../styles/CommentCreateForm.module.css'
+import authStyles from '../../styles/AuthForm.module.css'
 import Post from './Post'
 import CommentCreateForm from '../comments/CommentCreateForm'
+import Comment from '../comments/Comment'
 import { useCurrentUser } from '../../contexts/CurrentUserContext'
 
 function PostPage() {
@@ -20,11 +24,12 @@ function PostPage() {
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const [{ data: post },] = await Promise.all([
+        const [{ data: post }, { data: comments }] = await Promise.all([
           axiosReq.get(`/posts/${id}`),
+          axiosReq.get(`/comments/?post=${id}`)
         ])
         setPost({ results: [post]})
-        console.log(post)
+        setComments(comments)
       } catch(err){
         console.log(err)
       }
@@ -36,19 +41,32 @@ function PostPage() {
       <Container>
         <Row className={`text-center ${stylesPost.Post}`}> 
             <Post {...post.results[0]} setPosts={setPost} postPage/>
-            <hr className='d-lg-none m'/>
-            {currentUser ? (
-              <CommentCreateForm 
-              profile_id={currentUser.profile_id}
-              profilePicture={profile_image}
-              post={id}
-              setPost={setPost}
-              setComments={setComments}
-            />
-            ) : comments.results.length ? (
-              'Comments'
-            ) : null
-            }
+            <div className={`${commentFormStyles.Relative} col-lg-6 text-left`}>
+              <hr className='d-lg-none m'/>
+              <h1 className={`${authStyles.Heading} mb-3`}>Comments</h1>
+              <div className={styles.Overflow}>
+                {comments.results.length ? (
+                  comments.results.map((comment) => (
+                    <Comment key={comment.id} {...comment} />
+                  ))
+                  ) : currentUser ? (
+                    <span>No comments! Add one to share your opinion</span>
+                  ) : (
+                    <span>No comments! You must be logged into to add a comment!</span>
+                  )
+                }
+              </div>
+              {currentUser ? (
+                <CommentCreateForm 
+                profile_id={currentUser.profile_id}
+                profilePicture={profile_image}
+                post={id}
+                setPost={setPost}
+                setComments={setComments}
+              />
+              ) : null
+              }
+          </div>
         </Row>
       </Container>
     </Container>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
 import InputGroup from 'react-bootstrap/InputGroup'
@@ -41,36 +40,33 @@ function CommentCreateForm(props) {
   };
 
   return (
-    <Col className={`${styles.Relative}`}>
-    <Container>
-      <p>Comments</p>
-      <Form className={`${styles.Form}`} onSubmit={handleSubmit}>
-        <Form.Group className='ms-auto me-0'>
-          <InputGroup>
-          <Link to={`profiles/${profile_id}`}>
-            <ProfilePicture
-              src={profilePicture}
-            />
-          </Link>
-          <Form.Control 
-            className={`${styles.CommentForm}`}
-            placeholder='Add a comment..'
-            as='textarea'
-            rows={2} 
-            value={body}
-            onChange={handleChange}
+  <Container>
+    <Form className={`${styles.Form} mt-1`} onSubmit={handleSubmit}>
+      <Form.Group className='ms-auto me-0'>
+        <InputGroup>
+        <Link to={`profiles/${profile_id}`}>
+          <ProfilePicture
+            src={profilePicture}
           />
-          </InputGroup>
-        </Form.Group>
-        <Button
-          className={`${styles.Button} mt-2`}
-          type='submit'
-        >
-          Add Comment
-        </Button>
-      </Form>
-    </Container>
-    </Col>
+        </Link>
+        <Form.Control 
+          className={`${styles.CommentForm}`}
+          placeholder='Add a comment..'
+          as='textarea'
+          rows={2} 
+          value={body}
+          onChange={handleChange}
+        />
+        </InputGroup>
+      </Form.Group>
+      <Button
+        className={`${styles.Button} mt-2`}
+        type='submit'
+      >
+        Add Comment
+      </Button>
+    </Form>
+  </Container>
   )
 }
 
