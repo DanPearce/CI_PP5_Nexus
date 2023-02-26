@@ -1,0 +1,23 @@
+.CommentForm {
+  border-color: rgba(63, 44, 71, .5);
+  width: 25vw;
+}
+
+.Button {
+  background-color: rgba(63, 44, 71, 1);;
+  font-size: 1em;
+  border-color: transparent;
+  border-radius: 50px;
+  float: right;
+}
+
+.Relative {
+  position: relative;
+}
+
+.Form {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%
+}
