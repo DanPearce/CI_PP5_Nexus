@@ -1,6 +1,7 @@
 .CommentForm {
   border-color: rgba(63, 44, 71, .5);
   width: 25vw;
+  font-size: 0.8em;
 }
 
 .Button {
@@ -19,5 +20,11 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 100%
+  width: 100%;
+}
+
+@media all and (max-width: 992px) {
+  .Form {
+    position: relative;
+  }
 }

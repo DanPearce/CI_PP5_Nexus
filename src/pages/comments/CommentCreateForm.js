@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Form from 'react-bootstrap/Form'
@@ -7,17 +7,47 @@ import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom'
 import ProfilePicture from '../../components/ProfilePicture'
 import styles from '../../styles/CommentCreateForm.module.css'
+import { axiosRes } from '../../api/axiosDefaults'
 
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profilePicture, profile_id } = props;
+  const [body, setBody] = useState('')
+  const handleChange = (event) => {
+    setBody(event.target.value)
+  }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const { data } = await axiosRes.post("/comments/", {
+        body,
+        post,
+      });
+      setComments((prevComments) => ({
+        ...prevComments,
+        results: [data, ...prevComments.results],
+      }));
+      setPost((prevPost) => ({
+        results: [
+          {
+            ...prevPost.results[0],
+            comments_count: prevPost.results[0].comments_count + 1,
+          },
+        ],
+      }));
+      setBody("");
+    } catch (err) {
+      console.log(err.response);
+    }
+  };
+
   return (
     <Col className={`${styles.Relative}`}>
     <Container>
       <p>Comments</p>
-      <Form className={`${styles.Form}`}>
+      <Form className={`${styles.Form}`} onSubmit={handleSubmit}>
         <Form.Group className='ms-auto me-0'>
           <InputGroup>
-          <Link>
+          <Link to={`profiles/${profile_id}`}>
             <ProfilePicture
               src={profilePicture}
             />
@@ -26,12 +56,14 @@ function CommentCreateForm(props) {
             className={`${styles.CommentForm}`}
             placeholder='Add a comment..'
             as='textarea'
-            rows='2'
+            rows={2} 
+            value={body}
+            onChange={handleChange}
           />
           </InputGroup>
         </Form.Group>
         <Button
-          className={`${styles.Button} mt-1`}
+          className={`${styles.Button} mt-2`}
           type='submit'
         >
           Add Comment
