@@ -18,6 +18,7 @@
 
 .Form {
   position: absolute;
+  z-index: 99;
   bottom: 0;
   right: 0;
   width: 100%;

@@ -1,6 +1,12 @@
 .Overflow {
   max-height: 590px;
   overflow-y: scroll;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+.Overflow::-webkit-scrollbar { 
+  width: 0 !important 
 }
 
 
