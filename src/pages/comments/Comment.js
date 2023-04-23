@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Row from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import { Link } from 'react-router-dom'
@@ -8,6 +8,7 @@ import ProfilePicture from '../../components/ProfilePicture'
 import { useCurrentUser } from '../../contexts/CurrentUserContext'
 import styles from '../../styles/Comment.module.css'
 import dropdownStyles from '../../styles/DropdownMenu.module.css'
+import CommentEditForm from './CommentEditForm';
 
 const Comment = (props) => {
   const { 
@@ -16,6 +17,7 @@ const Comment = (props) => {
 
   const currentUser = useCurrentUser()
   const is_owner = currentUser?.username === owner
+  const [showEditForm, setShowEditForm] = useState(false)
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/comments/${id}`)
@@ -37,22 +39,39 @@ const Comment = (props) => {
   }
 
   return (
-    <Row>
-      <Container className={`${styles.Comment}`}>
-      {is_owner && (
-            <DropdownMenu className={dropdownStyles.Absolute} handleEdit={() => {}} handleDelete={handleDelete} />
+    <>
+      <Row>
+        <Container className={`${styles.Comment}`}>
+          {is_owner && !showEditForm && (
+                <DropdownMenu 
+                  className={dropdownStyles.Absolute}
+                  handleEdit={() => setShowEditForm(true)} 
+                  handleDelete={handleDelete}
+                />
           )}
-        <Link to={`/profiles/${profile_id}`}>
-          <ProfilePicture 
-            src={profile_image}
-          />
-        </Link>
-          <span className={styles.Owner}>{owner}</span>
-          <span className={styles.Updated}> {updated_on}</span>
-          <p className={`mt-1 ${styles.Body}`}>{body}</p>
-      </Container>
-      <hr/>
-    </Row>
+            <Link to={`/profiles/${profile_id}`}>
+              <ProfilePicture 
+                src={profile_image}
+              />
+            </Link>
+            <span className={styles.Owner}>{owner}</span>
+            <span className={styles.Updated}> {updated_on}</span>
+            {showEditForm ? (
+              <CommentEditForm
+                id={id}
+                profile_id={profile_id}
+                body={body}
+                profileImage={profile_image}
+                setComments={setComments}
+                setShowEditForm={setShowEditForm}
+              />
+            ) : (
+              <p className={`mt-1 ${styles.Body}`}>{body}</p>
+            )}
+        </Container>
+        <hr/>
+      </Row>
+    </>
   )
 }
 

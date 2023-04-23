@@ -1,0 +1,24 @@
+.Form {
+  margin-top: 5px;
+  border-color: rgba(63, 44, 71, .5);
+  font-size: 0.8em;
+}
+
+.Button {
+  position: inherit;
+  font-size: small;
+  border: none;
+  border: 1px solid transparent;
+  background-color: rgba(63, 44, 71, 1);
+  color: #fefdfd;
+  border-radius: 100px;
+  padding: 4px 10px;
+  min-width: 75px;
+  margin: 5px;
+}
+
+.Button:hover {
+  border: 1px solid rgba(63, 44, 71, .5);
+  background-color: #fefdfd;
+  color: rgba(63, 44, 71, 1);
+}
