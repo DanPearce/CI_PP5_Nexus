@@ -68,7 +68,7 @@ function PostPage() {
                   />
                   
                   ) : currentUser ? (
-                    <span>No comments! Add one to share your opinion</span>
+                    <span>No comments! Add one to share your opinion.</span>
                   ) : (
                     <span>No comments! You must be logged into to add a comment!</span>
                   )

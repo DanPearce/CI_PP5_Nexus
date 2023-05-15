@@ -7,9 +7,10 @@ import Tooltip from "react-bootstrap/Tooltip";
 import Image from 'react-bootstrap/Image'
 import Popover from "react-bootstrap/Popover";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ProfilePicture from "../../components/ProfilePicture";
 import { axiosRes } from "../../api/axiosDefaults";
+import { DropdownMenu } from "../../components/DropdownMenu";
 
 const Post = (props) => {
   const {
@@ -27,9 +28,22 @@ const Post = (props) => {
     postPage,
     setPosts,
   } = props;
-
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
+  const navigate = useNavigate();
+
+  const handleEdit = () => {
+    navigate(`/posts/${id}/edit`)
+  }
+  
+  const handleDelete = async () => {
+    try {
+      await axiosRes.delete(`/posts/${id}`)
+      navigate(-1)
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   const url = getCurrentURL()
   function getCurrentURL() {
@@ -82,7 +96,12 @@ const Post = (props) => {
       </Link>
       <div className="d-flex align-items-center">
         <span>{updated_on}&nbsp;</span>
-        {is_owner && postPage && " Edit..."}
+        {is_owner && postPage && (
+          <DropdownMenu
+            handleEdit={handleEdit}
+            handleDelete={handleDelete}
+          />
+        )}
       </div>
     </Container>
     <Container>

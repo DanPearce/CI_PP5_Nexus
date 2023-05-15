@@ -1,5 +1,6 @@
 .Overflow {
   max-height: 590px;
+  min-height: 400px;
   overflow-y: scroll;
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;

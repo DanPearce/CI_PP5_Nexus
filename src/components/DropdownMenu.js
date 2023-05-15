@@ -1,11 +1,10 @@
 import React from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import styles from '../styles/DropdownMenu.module.css'
-// import 'bootstrap/dist/js/bootstrap.bundle';
 
 const Meatball = React.forwardRef(({ onClick }, ref) => (
   <i
-  className="fa-solid fa-ellipsis-vertical"
+  className={`${styles.Ellipsis} fa-solid fa-ellipsis-vertical`}
   ref={ref}
   onClick={(event) => {
     event.preventDefault()

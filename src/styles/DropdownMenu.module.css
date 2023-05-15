@@ -3,3 +3,7 @@
   max-width: 50%;
   padding: 0;
 }
+
+.Ellipsis:hover {
+  color: #807685;
+}
