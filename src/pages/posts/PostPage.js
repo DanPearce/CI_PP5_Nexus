@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import InfiniteScroll from 'react-infinite-scroll-component'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import appStyles from '../../styles/App.module.css'
@@ -13,6 +14,8 @@ import Post from './Post'
 import CommentCreateForm from '../comments/CommentCreateForm'
 import Comment from '../comments/Comment'
 import { useCurrentUser } from '../../contexts/CurrentUserContext'
+import Asset from '../../components/Asset'
+import { fetchMoreData } from '../../utils/Utils' 
 
 function PostPage() {
   const { id } = useParams()
@@ -44,16 +47,26 @@ function PostPage() {
             <div className={`${commentFormStyles.Relative} col-lg-6 text-left`}>
               <hr className='d-lg-none m'/>
               <h1 className={`${authStyles.Heading} mb-3`}>Comments</h1>
-              <div className={styles.Overflow}>
+              <div className={styles.Overflow} id='scrollableDiv'>
                 {comments.results.length ? (
-                  comments.results.map((comment) => (
-                    <Comment
-                      key={comment.id} 
-                      {...comment}
-                      setPost={setPost}
-                      setComments={setComments}
-                    />
-                  ))
+                  <InfiniteScroll 
+                    children={
+                      comments.results.map((comment) => (
+                        <Comment
+                          key={comment.id} 
+                          {...comment}
+                          setPost={setPost}
+                          setComments={setComments}
+                        />
+                      ))
+                    }
+                    dataLength={comments.results.length}
+                    loader={<Asset spinner />}
+                    hasMore={!!comments.next}
+                    next={() => fetchMoreData(comments, setComments)}
+                    scrollableTarget='scrollableDiv'
+                  />
+                  
                   ) : currentUser ? (
                     <span>No comments! Add one to share your opinion</span>
                   ) : (
