@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Col from 'react-bootstrap/Col'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -9,12 +9,10 @@ import Alert from 'react-bootstrap/Alert'
 import styles from '../../styles/AuthForm.module.css'
 import appStyles from '../../styles/App.module.css'
 import btnStyles from '../../styles/Button.module.css'
-import Upload from '../../assets/upload.png'
-import Asset from '../../components/Asset'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { axiosReq } from "../../api/axiosDefaults";
 
-function PostCreateForm() {
+function PostEditForm() {
   const [postData, setPostData] = useState({
     title: '',
     body: '',
@@ -24,6 +22,21 @@ function PostCreateForm() {
   const imageInput = useRef(null)
   const navigate = useNavigate()
   const [errors, setErrors] = useState({});
+  const { id } = useParams();
+  useEffect(() => {
+    const handleMount = async () => {
+      try {
+        const { data } = await axiosReq.get(`/posts/${id}`)
+        const { title, body, image, is_owner } = data;
+
+        is_owner ? setPostData({ title, body, image }) : navigate('/');
+      } catch(err) {
+        console.log(err)
+      }
+    }
+    handleMount();
+  }, [navigate, id])
+  
   const handleChange = (event) => {
     setPostData({
       ...postData,
@@ -44,10 +57,13 @@ function PostCreateForm() {
     const formData = new FormData()
     formData.append('title', title)
     formData.append('body', body)
-    formData.append('image', imageInput.current.files[0])
+
+    if (imageInput?.current?.files[0]){
+      formData.append('image', imageInput.current.files[0])
+    }
     try {
-      const {data} = await axiosReq.post('/posts/', formData)
-      navigate(`/posts/${data.id}`)
+      await axiosReq.put(`/posts/${id}`, formData)
+      navigate(`/posts/${id}`)
     } catch(err) {
       console.log(err)
       if (err.response?.status !== 401) {
@@ -62,26 +78,11 @@ function PostCreateForm() {
           <Row>
             <Col lg={6} className={`lg-6`}>
               <Container className={`p-2 mt-4`}>
-              <h1 className={`${styles.Heading} mb-3 text-center d-lg-none`}>Share a Post</h1>
+              <h1 className={`${styles.Heading} mb-3 text-center d-lg-none`}>Edit Post</h1>
                 <Form.Group className={`text-center`}>
-                  {image ? (
-                    <>
-                      <figure>
-                        <Image className={`${appStyles.Image}`} src={image} />
-                      </figure>
-                    </>
-                  ) : (
-                  <Form.Label
-                    className={`d-flex justify-content-center`}
-                    htmlFor='image-upload'
-                  >
-                    <Asset
-                      src={Upload}
-                      message="Tap the image or 'choose file' to upload an image"
-                    />
-                  </Form.Label>
-                  )}
-
+                  <figure>
+                    <Image className={`${appStyles.Image}`} src={image} />
+                  </figure>
                   <Form.Control
                     type='file'
                     id='image-upload'
@@ -103,7 +104,7 @@ function PostCreateForm() {
             </Col>
             <Col lg={5}>
               <Container className={`p-2 mt-4`}>
-                <h1 className={`${styles.Heading} mb-3 text-center d-none d-lg-block`}>Share a Post</h1>
+                <h1 className={`${styles.Heading} mb-3 text-center d-none d-lg-block`}>Edit Post</h1>
                 
                   <Form.Group className="mb-3" controlId="title">
                     <Form.Label className=''>Title</Form.Label>
@@ -158,7 +159,7 @@ function PostCreateForm() {
                       type="submit"
                       className={`mb-3 ${btnStyles.PostButton}`}
                     >
-                      Share
+                      Update
                     </Button>
                   </Container>
               </Container>
@@ -169,4 +170,4 @@ function PostCreateForm() {
   )
 }
 
-export default PostCreateForm
+export default PostEditForm
