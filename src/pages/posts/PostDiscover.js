@@ -1,17 +1,17 @@
 import React from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import styles from "../../styles/PostHome.module.css"
+import styles from "../../styles/PostDiscover.module.css"
 
-function PostHome() {
+function PostDiscover() {
   
   return (
     <Row>
       <Col>
-        <p>Home</p>
+        <p>Discover</p>
       </Col>
     </Row>
   );
 }
 
-export default PostHome;
+export default PostDiscover;
