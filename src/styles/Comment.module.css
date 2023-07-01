@@ -14,5 +14,6 @@
 
 .Body {
   font-size: 0.85em;
+  word-break: break-all;
 }
 

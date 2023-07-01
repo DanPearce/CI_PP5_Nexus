@@ -11,6 +11,7 @@
 .PostLink {
   text-decoration: none;
   color: #3f2c47;
+  word-break: break-all;
 }
 
 .PostLink:hover{
@@ -36,6 +37,7 @@
 
 .PostBody {
   text-align: start;
+  word-break: break-all;
 }
 
 .SharePopover {
