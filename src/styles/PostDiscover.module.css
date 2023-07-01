@@ -12,3 +12,22 @@
 .Link:hover{
   color: #807685;
 }
+
+.SearchBar input {
+  border-radius: 3px;
+  color: #3f2c47;
+  padding-left: 42px;
+  margin-bottom: 16px;
+}
+
+.SearchIcon {
+  position: absolute;
+  font-size: 1.2rem;
+  padding: 9px;
+  padding-left: 15px;
+}
+
+.SearchIcon:hover {
+  cursor: default;
+  color: #cfced3;
+}

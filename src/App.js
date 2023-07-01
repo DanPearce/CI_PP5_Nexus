@@ -34,8 +34,8 @@ function App() {
             exact path='/'
             element={
               <PostDiscover 
-                message="Please follow a user to add content to your Home Feed."
-                filter={`owner__followed__owner__profile=${profile_id}`}
+                message="Try searching for another phrase or follow some more users to add content to your Home page."
+                filter={`owner__followed__owner__profile=${profile_id}&`}
               />
             }
           />
@@ -43,14 +43,21 @@ function App() {
             exact path="/liked"
             element={
               <PostDiscover
-                message="Nothing here yet! You must like a post first."
+                message="Hmm, nothing here! Try searching for another phrase or you must like a post first."
                 filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_on&`}
               />
             }
           />
           <Route exact path='/signin' element={<SignInForm />}/>
           <Route exact path='/signup' element={<SignUpForm />}/>
-          <Route exact path='/discover' element={<PostDiscover />}/>
+          <Route
+            exact path='/discover'
+            element={
+              <PostDiscover
+                message='No posts matching your query! Try searching for another phrase.'
+              />
+            }
+          />
           <Route exact path='/profile' element={<Profile />}/>
           <Route exact path='/posts/create' element={<PostCreateForm />}/>
           <Route exact path='posts/:id' element={<PostPage />} />
