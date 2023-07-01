@@ -66,8 +66,8 @@ const NavBar = () => {
       <NavLink to='/signin' className={styles.NavLink}>
         <i className="fa-solid fa-check"></i> Sign In
       </NavLink>
-      <NavLink to='/' className={styles.NavLink}>
-        <i className="fa-solid fa-square-h"></i> Home
+      <NavLink to='/discover' className={styles.NavLink}>
+        <i className="fa-solid fa-magnifying-glass"></i> Discover
       </NavLink>
     </>
   )
