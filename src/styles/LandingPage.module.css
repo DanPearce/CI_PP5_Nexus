@@ -1,0 +1,24 @@
+.Background {
+  background-color: #fff;
+  border: #3f2c47 solid 1px;
+  border-radius: 3px;
+  color: #3f2c47;
+}
+
+.Logo {
+  font-family: 'El Messiri', sans-serif;
+  font-size: xx-large;
+}
+
+.Slogan {
+  font-size: x-large;
+}
+
+.Info {
+  font-size: medium;
+}
+
+.LandingImage {
+  max-width: 70%;
+  padding-bottom: 1rem;
+}

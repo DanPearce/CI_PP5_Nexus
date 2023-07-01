@@ -6,6 +6,14 @@
   width: 100%;
 }
 
+.ButtonLanding {
+  background-color: rgba(63, 44, 71, 1);;
+  font-size: 1em;
+  border-color: transparent;
+  border-radius: 50px;
+  width: 100%;
+}
+
 .Button:hover {
   border-color: rgba(63, 44, 71, .5);
   background-color: #fefdfd;
@@ -16,6 +24,17 @@
   border-color: rgba(63, 44, 71, .5);
   background-color: rgba(63, 44, 71, 1);;
   color: #fefdfd;
+}
+
+.ButtonLanding:active:focus {
+  border-color: rgba(63, 44, 71, .5);
+  background-color: rgba(63, 44, 71, 1);;
+  color: #fefdfd;
+}
+.ButtonLanding:hover {
+  border-color: rgba(63, 44, 71, .5);
+  background-color: #fefdfd;
+  color: rgba(63, 44, 71, 1);
 }
 
 .PostButton {

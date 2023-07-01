@@ -10,6 +10,7 @@ import PostDiscover from './pages/posts/PostDiscover';
 import PostCreateForm from './pages/posts/PostCreateForm';
 import PostPage from './pages/posts/PostPage';
 import PostEditForm from './pages/posts/PostEditForm'
+import LandingPage from './components/LandingPage';
 import { useCurrentUser } from './contexts/CurrentUserContext'
 import './api/axiosDefaults'
 
@@ -23,7 +24,7 @@ function App() {
       <Container className={styles.Body}>
         {!currentUser ? (
           <Routes>
-            <Route exact path='/' element={<SignInForm />}/>
+            <Route exact path='/' element={<LandingPage />}/>
             <Route exact path='/signin' element={<SignInForm />}/>
             <Route exact path='/signup' element={<SignUpForm />}/>
           </Routes>
