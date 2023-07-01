@@ -39,8 +39,8 @@ function PostDiscover({ message, filter = "" }) {
             <>
               {posts.results.length ? (
                 posts.results.map((post) => (
-                  <Row className={`mb-4 ${styles.Border}`}>
-                    <Post key={post.id} {...post} setPosts={setPosts} />
+                  <Row className={`mb-4 ${styles.Border}`} key={post.id}>
+                    <Post {...post} setPosts={setPosts} />
                   </Row>
                 ))
               ) : (
