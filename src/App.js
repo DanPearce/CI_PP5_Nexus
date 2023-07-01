@@ -14,8 +14,6 @@ import LandingPage from './components/LandingPage';
 import { useCurrentUser } from './contexts/CurrentUserContext'
 import './api/axiosDefaults'
 
-
-
 function App() {
   const currentUser = useCurrentUser()
   return (
@@ -27,6 +25,7 @@ function App() {
             <Route exact path='/' element={<LandingPage />}/>
             <Route exact path='/signin' element={<SignInForm />}/>
             <Route exact path='/signup' element={<SignUpForm />}/>
+            <Route exact path='/discover' element={<PostDiscover />}/>
           </Routes>
         ) : (
           <Routes>
