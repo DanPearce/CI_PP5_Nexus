@@ -8,8 +8,8 @@ import appStyles from "../../styles/App.module.css"
 import styles from "../../styles/PostDiscover.module.css";
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
-
 import NoResults from "../../assets/search-no-results.png";
+import { Link } from "react-router-dom"
 
 function PostDiscover({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -45,7 +45,9 @@ function PostDiscover({ message, filter = "" }) {
                 ))
               ) : (
                 <Container className={appStyles.Body}>
-                  <Asset src={NoResults} message={message} />
+                  <Link to='discover' className={styles.Link}>
+                    <Asset src={NoResults} message={message} className={styles.Link}/>
+                  </Link>
                 </Container>
               )}
             </>

@@ -2,7 +2,6 @@ import styles from './styles/App.module.css'
 import NavBar from './components/NavBar';
 import Container from 'react-bootstrap/Container';
 import { Routes, Route } from 'react-router-dom';
-import PostHome from './pages/posts/PostHome';
 import SignInForm from './pages/auth/SignInForm';
 import SignUpForm from './pages/auth/SignUpForm';
 import Profile from './pages/profiles/Profile';
@@ -16,6 +15,8 @@ import './api/axiosDefaults'
 
 function App() {
   const currentUser = useCurrentUser()
+  const profile_id = currentUser?.profile_id || ""
+
   return (
     <div className={styles.App}>
       <NavBar />
@@ -29,7 +30,14 @@ function App() {
           </Routes>
         ) : (
           <Routes>
-          <Route exact path='/' element={<PostHome />}/>
+          <Route
+            exact path='/'
+            element={
+              <PostDiscover 
+                message="Nothing here yet! Please follow a user to add content to your Home Feed."
+                filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
+              />
+            }/>
           <Route exact path='/signin' element={<SignInForm />}/>
           <Route exact path='/signup' element={<SignUpForm />}/>
           <Route exact path='/discover' element={<PostDiscover />}/>

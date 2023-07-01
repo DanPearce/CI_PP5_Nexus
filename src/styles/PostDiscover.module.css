@@ -2,3 +2,13 @@
   border: 1px solid #3f2c47;
   border-radius: 3px;
 }
+
+.Link {
+  text-decoration: none;
+  color: #3f2c47;
+  text-align: center;
+}
+
+.Link:hover{
+  color: #807685;
+}
