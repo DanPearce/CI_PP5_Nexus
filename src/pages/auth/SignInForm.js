@@ -11,6 +11,7 @@ import appStyles from '../../styles/App.module.css'
 import btnStyles from '../../styles/Button.module.css'
 import axios from 'axios'
 import { useSetCurrentUser } from '../../contexts/CurrentUserContext'
+import landingImage from '../../assets/landing-image.jpg'
 
 function SignInForm() {
   const setCurrentUser = useSetCurrentUser();
@@ -41,13 +42,19 @@ function SignInForm() {
   return (
     <Container className={`col-md-8 ${appStyles.Border} ${styles.Background}`}>
       <Row className='p-4 justify-content-md-center'>
-        <Col className={`text-center mt-auto mb-auto ${styles.Logo}`}>
-          <h1>Nexus</h1>
+        <Col xxl={6} className={`text-center mt-auto mb-auto`}>
+          <h1 className={`${styles.Logo}`}>Nexus</h1>
+          <p className={`${styles.Slogan}`}>Discover, today.</p>
+          <img
+            src={landingImage}
+            className={`${styles.LandingImage}`}
+            alt='Person taking a photograph of live music / event.'
+          />
         </Col>
-        <Col className='text-center'>
+        <Col xxl={6} className='text-center'>
           <Container>
-            <h1 className={`${styles.Heading} mb-3`}>Sign In</h1>
-            <Form onSubmit={handleSubmit}>
+            <h1 className={`${styles.Heading} mb-3 mt-5`}>Sign In</h1>
+            <Form onSubmit={handleSubmit} className='mt-3'>
               <Form.Group className="mb-3" controlId="username">
                 <Form.Label className='d-none'>Username</Form.Label>
                 <Form.Control

@@ -52,3 +52,7 @@
   border-color: rgba(63, 44, 71, .5);
   color: rgba(63, 44, 71, .5);
 }
+
+.LandingImage {
+  width: 100%;
+}

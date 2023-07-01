@@ -25,7 +25,7 @@ const LandingPage = () => {
           />
           <p className={`${styles.Info}`}>You won't be bothered with ads or monetiezation here, so why not? Make an account and start sharing today!</p>
           <Row>
-            <Col>
+            <Col lg={6}>
               <Link to='signup'>
                 <Button
                   className={`mb-3 ${btnStyles.ButtonLanding}`}
@@ -34,7 +34,7 @@ const LandingPage = () => {
                 </Button>
               </Link>
             </Col>
-            <Col>
+            <Col lg={6}>
             <Link to='signin'>
               <Button
                 className={`mb-3 ${btnStyles.ButtonLanding}`}
