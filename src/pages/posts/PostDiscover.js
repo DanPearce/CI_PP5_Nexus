@@ -45,7 +45,7 @@ function PostDiscover({ message, filter = "" }) {
                 ))
               ) : (
                 <Container className={appStyles.Body}>
-                  <Link to='discover' className={styles.Link}>
+                  <Link to={'/discover'} className={styles.Link}>
                     <Asset src={NoResults} message={message} className={styles.Link}/>
                   </Link>
                 </Container>
