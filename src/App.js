@@ -34,8 +34,8 @@ function App() {
             exact path='/'
             element={
               <PostDiscover 
-                message="Nothing here yet! Please follow a user to add content to your Home Feed."
-                filter={`likes__owner__profile=${profile_id}&ordering=-likes__created_at&`}
+                message="Nothing here yet! Please follow a user to add content to your Home Feed"
+                filter={`owner__followed__owner__profile=${profile_id}`}
               />
             }/>
           <Route exact path='/signin' element={<SignInForm />}/>
