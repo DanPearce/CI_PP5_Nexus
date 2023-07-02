@@ -11,6 +11,8 @@ import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import NoResults from "../../assets/search-no-results.png";
 import { Link } from "react-router-dom"
+import InfiniteScroll from "react-infinite-scroll-component";
+import { fetchMoreData } from "../../utils/Utils";
 
 function PostDiscover({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -58,11 +60,19 @@ function PostDiscover({ message, filter = "" }) {
           {hasLoaded ? (
             <>
               {posts.results.length ? (
-                posts.results.map((post) => (
-                  <Row className={`mb-4 ${styles.Border}`} key={post.id}>
-                    <Post {...post} setPosts={setPosts} />
-                  </Row>
-                ))
+                <InfiniteScroll
+                  children={
+                    posts.results.map((post) => (
+                      <Row className={`mb-4 ${styles.Border}`} key={post.id}>
+                        <Post {...post} setPosts={setPosts}/>
+                      </Row>
+                  ))}
+                  dataLength={posts.results.length}
+                  loader={<Asset spinner />}
+                  hasMore={!!posts.next}
+                  next={() => fetchMoreData(posts, setPosts)}
+                  className={styles.InfiniteScroll}
+                />
               ) : (
                 <Container className={appStyles.Body}>
                   <Link to={'/discover'} className={styles.Link}>

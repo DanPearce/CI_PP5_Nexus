@@ -31,3 +31,7 @@
   cursor: default;
   color: #cfced3;
 }
+
+.InfiniteScroll {
+  overflow: visible !important;
+}
