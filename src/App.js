@@ -58,7 +58,7 @@ function App() {
               />
             }
           />
-          <Route exact path='/profile' element={<Profile />}/>
+          <Route exact path='/profiles/:id' element={<Profile />}/>
           <Route exact path='/posts/create' element={<PostCreateForm />}/>
           <Route exact path='posts/:id' element={<PostPage />} />
           <Route exact path='posts/:id/edit' element={<PostEditForm />} />

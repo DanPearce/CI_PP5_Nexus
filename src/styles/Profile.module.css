@@ -1,0 +1,9 @@
+.ProfilePicture {
+  width: 150px;
+}
+
+@media (max-width: 767px) {
+  .ProfilePicture {
+    width: 77px;
+  }
+}

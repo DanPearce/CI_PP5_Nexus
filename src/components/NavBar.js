@@ -49,7 +49,7 @@ const NavBar = () => {
       <NavLink to='/discover' className={styles.NavLink}>
         <i className="fa-solid fa-magnifying-glass"></i> Discover
       </NavLink>
-      <NavLink to='/profile' className={styles.NavLink}>
+      <NavLink to={`/profiles/${currentUser?.profile_id}`} className={styles.NavLink}>
         <ProfilePicture src={currentUser?.profile_image} user={currentUser?.username} height={25} /> 
       </NavLink>
       <NavLink to='/' className={styles.NavLink} onClick={handleSignOut}>
