@@ -6,16 +6,20 @@ import Asset from '../../components/Asset';
 import styles from '../../styles/Profile.module.css';
 import appStyles from '../../styles/App.module.css';
 import btnStyles from '../../styles/Button.module.css'
+import postStyles from '../../styles/Post.module.css'
 import { useCurrentUser } from '../../contexts/CurrentUserContext'
 import { useParams } from 'react-router';
 import { axiosReq } from '../../api/axiosDefaults';
 import { useProfileData, useSetProfileData} from '../../contexts/ProfileDataContext'
 import { Button, Image } from 'react-bootstrap';
-
+import ProfilePost from './ProfilePost';
+import NoResults from '../../assets/search-no-results.png';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import { fetchMoreData } from '../../utils/Utils';
 
 function Profile() {
   const [hasLoaded, setHasLoaded] = useState(false)
-
+  const [profilePosts, setProfilePosts] = useState({ results: [] })
 
   const currentUser = useCurrentUser()
   const { id } = useParams()
@@ -29,7 +33,7 @@ function Profile() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [{ data: pageProfile }] =
+        const [{ data: pageProfile }, { data: profilePosts}] =
           await Promise.all([
             axiosReq.get(`/profiles/${id}`),
             axiosReq.get(`/posts/?owner__profile=${id}`),
@@ -38,6 +42,7 @@ function Profile() {
           ...prevState,
           pageProfile: { results: [pageProfile] },
         }))
+        setProfilePosts(profilePosts)
         setHasLoaded(true)
       } catch (err) {
         console.log(err)
@@ -46,12 +51,12 @@ function Profile() {
     fetchData()
   }, [id, setProfileData])
 
-  const Profile = (
+  const ProfileHeader = (
     <>
     <Row>
         <Col xs={4} className='text-align-left'>
           <Image
-            className={styles.ProfilePicture}
+            className={`${styles.ProfilePicture} ${appStyles.Border}`}
             roundedCircle
             src={profile?.image}
         />
@@ -139,13 +144,41 @@ function Profile() {
     </>
   )
 
+  const ProfilePosts = (
+    <>
+    {profilePosts.results.length ? (
+      <InfiniteScroll
+        children={profilePosts.results.map((post) => (
+          <ProfilePost key={post.id} {...post} setPosts={setProfilePosts}/>
+        ))}
+        dataLength={profilePosts.results.length}
+        loader={<Asset spinner />}
+        hasMore={!!profilePosts.next}
+        next={() => fetchMoreData(profilePosts, setProfilePosts)}
+        className={`mt-3 ${styles.Post} d-flex flex-wrap`}
+    />
+    
+    ) : (
+      <Asset
+        src={NoResults}
+        message={`${profile?.owner} has not got any posts.`}
+      />
+    )}
+    </>
+  );
+
   return (
-    <Row className={`d-flex justify-content-center ${appStyles.Border}`}>
+    <Row className={`d-flex justify-content-center`}>
       <Col lg={12}>
         <Container className='mt-3 mb-3'>
           {hasLoaded ? (
             <>
-              {Profile}
+              <Container>
+                {ProfileHeader}
+              </Container>
+              <Container className={`${postStyles.Gallery} d-flex`}>
+                {ProfilePosts}
+              </Container>
             </>
           ) : (
             <Asset spinner />

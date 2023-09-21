@@ -45,3 +45,32 @@
   color: #fefdfd;
   padding: 5px;
 }
+
+.PostBar{
+  font-size: small;
+}
+
+.Gallery {
+  padding-bottom: 3rem;
+}
+
+.GalleryItem {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex: 1 0 30%;
+  margin: 1%;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 480px)  {
+
+  .GalleryItem {
+    margin: 5px 5px 5px 5px;
+  }
+
+  .PostBar{
+    font-size: xx-small;
+  }
+}
