@@ -27,6 +27,8 @@ function App() {
             <Route exact path='/signin' element={<SignInForm />}/>
             <Route exact path='/signup' element={<SignUpForm />}/>
             <Route exact path='/discover' element={<PostDiscover />}/>
+            <Route exact path='posts/:id' element={<PostPage />} />
+            <Route exact path='/profiles/:id' element={<Profile />}/>
           </Routes>
         ) : (
           <Routes>
