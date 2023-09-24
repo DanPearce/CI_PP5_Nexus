@@ -88,7 +88,7 @@ const Post = (props) => {
   }
 
   return (
-    <Col>
+    <Col className="p-0">
     <Container className={`d-flex mt-1 justify-content-between ${styles.PostBio}`}>
       <Link to={`/profiles/${profile_id}`} className={styles.PostLink}>
         <ProfilePicture src={profile_image} height={60} />
@@ -104,9 +104,9 @@ const Post = (props) => {
         )}
       </div>
     </Container>
-    <Container>
+    <Container className="p-0">
       <Link to={`/posts/${id}`} className={styles.PostLink}>
-        {title && <h4>{title}</h4>}
+        {title && <h4 className="text-center">{title}</h4>}
         <Image src={image} alt={title} className={styles.PostImage} />
       </Link>
     </Container>

@@ -69,7 +69,7 @@ const ProfilePost = (props) => {
 
   return (
     <Col className={`${appStyles.Border} ${styles.GalleryItem} pt-2`} xs={4}>
-      <Container>
+      <Container className="p-0">
         <Link to={`/posts/${id}`} className={styles.PostLink}>
           {title && <h4 className='text-center d-none d-lg-block'>{title}</h4>}
           <Image src={image} alt={title} className={styles.PostImage} />

@@ -28,6 +28,7 @@
   bottom: 0;
   right: 0;
   width: 100%;
+  padding-left: 1%;
 }
 
 @media all and (max-width: 992px) {

@@ -63,7 +63,7 @@ function PostDiscover({ message, filter = "" }) {
                 <InfiniteScroll
                   children={
                     posts.results.map((post) => (
-                      <Row className={`mb-4 ${styles.Border}`} key={post.id}>
+                      <Row className={`mb-4 ${appStyles.Border}`} key={post.id}>
                         <Post {...post} setPosts={setPosts}/>
                       </Row>
                   ))}
