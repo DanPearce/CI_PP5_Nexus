@@ -1,0 +1,29 @@
+.PopularProfiles {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  text-align: left;
+  width: 15%;
+  left: 10%;
+  border:#B9ABC1 1px;
+}
+
+.MobilePopularProfiles {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.SideLinks a {
+  color: #201624;
+}
+
+.SideLinks a:hover {
+  color: #B9ABC1;
+}
+
+.NavBarText {
+  color: #B9ABC1;
+}
+

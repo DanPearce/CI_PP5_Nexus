@@ -13,6 +13,7 @@ import NoResults from "../../assets/search-no-results.png";
 import { Link } from "react-router-dom"
 import InfiniteScroll from "react-infinite-scroll-component";
 import { fetchMoreData } from "../../utils/Utils";
+import PopularProfiles from "../../components/PopularProfiles"; 
 
 function PostDiscover({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
@@ -42,6 +43,7 @@ function PostDiscover({ message, filter = "" }) {
 
   return (
     <Container>
+      <PopularProfiles />
       <Row className="h-100 d-flex justify-content-center">
         <Col lg={6}>
         <i className={`fa-solid fa-magnifying-glass ${styles.SearchIcon}`}></i>
