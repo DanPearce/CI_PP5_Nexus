@@ -20,7 +20,6 @@
 
 .PostImage {
   width: 100%;
-  max-width: 80vw;
 }
 
 .Heart {
@@ -55,6 +54,7 @@
 }
 
 .GalleryItem {
+  max-width: 30%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
