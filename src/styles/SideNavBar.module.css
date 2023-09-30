@@ -15,6 +15,23 @@
   justify-content: space-around;
 }
 
+.SideNavBar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  text-align: left;
+  width: 15%;
+  right: 10%;
+  border:#B9ABC1 1px;
+}
+
+.MobileSideNavBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
 .SideLinks a {
   color: #201624;
 }
