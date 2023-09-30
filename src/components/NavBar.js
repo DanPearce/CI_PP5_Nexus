@@ -22,18 +22,7 @@ const NavBar = () => {
     }
   }
 
-  const loggedInNavText = (
-    <>
-      <NavLink
-        className={styles.NavLink}
-        to='/posts/create'
-      >
-        <i className="fa-regular fa-square-plus"></i> Share
-      </NavLink>
-    </>
-  )
-
-  const loggedOutNavText = (
+  const navText = (
     <>
       <Navbar.Text className={styles.NavBarText}>
         Discover, today.
@@ -43,9 +32,6 @@ const NavBar = () => {
 
   const loggedInNavBar = (
     <>
-      <NavLink to='/' className={styles.NavLink}>
-        <i className="fa-solid fa-square-h"></i> Home
-      </NavLink>
       <NavLink to='/discover' className={styles.NavLink}>
         <i className="fa-solid fa-magnifying-glass"></i> Discover
       </NavLink>
@@ -82,7 +68,7 @@ const NavBar = () => {
         <NavLink to='/' className={styles.NavLink}>
           <Navbar.Brand className={styles.Logo}>Nexus</Navbar.Brand>
         </NavLink>
-          {currentUser ? loggedInNavText : loggedOutNavText}
+          {navText}
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           className={`navbar-dark`}
