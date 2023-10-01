@@ -1,3 +1,4 @@
+/* Post Styling */
 .Post {
   background-color: #ffffff;
   margin: 16px 0;
@@ -64,8 +65,8 @@
   justify-content: center;
 }
 
+/* Screen Sizes smaller than 480px */
 @media (max-width: 480px)  {
-
   .GalleryItem {
     margin: 5px 5px 5px 5px;
   }

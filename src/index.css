@@ -1,4 +1,7 @@
-/*Everything on page, before and after*/
+/*
+  Everything on page, before and after
+  Styles for every page
+*/
 *, *::before, *, *::after {
   box-sizing: border-box;
 }

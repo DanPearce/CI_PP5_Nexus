@@ -1,7 +1,9 @@
+/* Profile Styling */
 .ProfilePicture {
   width: 150px;
 }
 
+/* Screen Sizes smaller than 767px */
 @media (max-width: 767px) {
   .ProfilePicture {
     width: 77px;

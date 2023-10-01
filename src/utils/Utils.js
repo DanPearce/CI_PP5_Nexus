@@ -1,5 +1,11 @@
-import { axiosReq  } from "../api/axiosDefaults";
+/* Imports */
+import { axiosReq  } from '../api/axiosDefaults';
 
+/*
+  Renders and sends data to the InfiniteScroll component
+  Sends a request for data to the next page
+  Filters out duplicated data
+*/
 export const fetchMoreData = async (resource, setRescource) => {
   try {
     const { data } = await axiosReq.get(resource.next);
@@ -17,6 +23,10 @@ export const fetchMoreData = async (resource, setRescource) => {
   }
 }
 
+/*
+  Allows user to follow a profile, incrementing following_count by 1
+  Profiles followed, icrementing followers_count by 1
+*/
 export const followHelper = (profile, clickedProfile, following_id) => {
   return profile.id === clickedProfile.id
     ?
@@ -32,6 +42,10 @@ export const followHelper = (profile, clickedProfile, following_id) => {
       profile;
 };
 
+/*
+  Allows user to follow a profile, decreasing following_count by 1
+  Profiles followed, decreasing followers_count by 1
+*/
 export const unfollowHelper = (profile, clickedProfile) => {
   return profile.id === clickedProfile.id
     ?

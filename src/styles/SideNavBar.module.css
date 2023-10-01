@@ -1,3 +1,4 @@
+/* SideNavBar Styling */
 .PopularProfiles {
   display: flex;
   flex-direction: column;
@@ -43,4 +44,3 @@
 .NavBarText {
   color: #B9ABC1;
 }
-

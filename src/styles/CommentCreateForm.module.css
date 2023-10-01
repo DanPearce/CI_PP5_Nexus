@@ -1,3 +1,4 @@
+/* CommentCreatForm Styling */
 .CommentForm {
   border-color: rgba(63, 44, 71, .5);
   width: 25vw;
@@ -31,6 +32,7 @@
   padding-left: 1%;
 }
 
+/* Screen Sizes smaller than 992px */
 @media all and (max-width: 992px) {
   .Form {
     position: relative;

@@ -1,3 +1,4 @@
+/* PostPage Styling */
 .Overflow {
   max-height: 590px;
   min-height: 400px;
@@ -10,19 +11,21 @@
   width: 0 !important 
 }
 
-
+/* Screen Sizes smaller than 1400px */
 @media all and (max-width: 1400px) {
   .Overflow {
     max-height: 500px;
   }
 }
 
+/* Screen Sizes smaller than 1200px */
 @media all and (max-width: 1200px) {
   .Overflow {
     max-height: 400px;
   }
 }
 
+/* Screen Sizes smaller than 1000px */
 @media all and (max-width: 1000px) {
   .Overflow {
     max-height: 370px;

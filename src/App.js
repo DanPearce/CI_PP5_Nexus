@@ -1,4 +1,5 @@
-import styles from './styles/App.module.css'
+/* Imports */
+import styles from './styles/App.module.css';
 import NavBar from './components/NavBar';
 import Container from 'react-bootstrap/Container';
 import { Routes, Route } from 'react-router-dom';
@@ -8,17 +9,18 @@ import Profile from './pages/profiles/Profile';
 import PostDiscover from './pages/posts/PostDiscover';
 import PostCreateForm from './pages/posts/PostCreateForm';
 import PostPage from './pages/posts/PostPage';
-import PostEditForm from './pages/posts/PostEditForm'
+import PostEditForm from './pages/posts/PostEditForm';
 import ProfileEditForm from './pages/profiles/ProfileEditForm';
 import UserPasswordForm from './pages/profiles/UserPasswordForm';
 import PageNotFound from './components/PageNotFound';
 import LandingPage from './components/LandingPage';
-import { useCurrentUser } from './contexts/CurrentUserContext'
-import './api/axiosDefaults'
+import { useCurrentUser } from './contexts/CurrentUserContext';
+import './api/axiosDefaults';
 
+/* App is used to render all elements of the website. */
 function App() {
-  const currentUser = useCurrentUser()
-  const profile_id = currentUser?.profile_id || ""
+  const currentUser = useCurrentUser();
+  const profile_id = currentUser?.profile_id || "";
 
   return (
     <div className={styles.App}>
