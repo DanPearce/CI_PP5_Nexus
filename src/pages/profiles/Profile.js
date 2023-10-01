@@ -16,6 +16,8 @@ import ProfilePost from './ProfilePost';
 import NoResults from '../../assets/search-no-results.png';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { fetchMoreData } from '../../utils/Utils';
+import { ProfileEditDropdown } from '../../components/DropdownMenu';
+import dropdownStyles from '../../styles/DropdownMenu.module.css'
 
 function Profile() {
   const [hasLoaded, setHasLoaded] = useState(false)
@@ -69,7 +71,8 @@ function Profile() {
             <Col xs={7} className='d-md-none g-0'>
               <h4>{profile?.owner}</h4>
             </Col>
-            <Col className='d-none d-md-flex'>
+            <Col className='d-none d-md-flex justify-content-end'>
+              {profile?.is_owner && <ProfileEditDropdown id={profile?.id} className={dropdownStyles.DropdownItem} />}
               {currentUser &&
                 !is_owner &&
                 (profile?.following_id ? (
@@ -88,7 +91,8 @@ function Profile() {
                   </Button>
                 ))}
             </Col>
-            <Row className='d-md-none w-auto'>
+            <Row className='d-md-none w-auto justify-content-end'>
+              {profile?.is_owner && <ProfileEditDropdown id={profile?.id} className={dropdownStyles.DropdownItem} />}
               {currentUser &&
                 !is_owner &&
                 (profile?.following_id ? (
