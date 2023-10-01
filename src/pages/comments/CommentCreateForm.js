@@ -1,19 +1,25 @@
-import React, { useState } from 'react'
-import Container from 'react-bootstrap/Container'
-import Form from 'react-bootstrap/Form'
-import InputGroup from 'react-bootstrap/InputGroup'
-import Button from 'react-bootstrap/Button'
-import { Link } from 'react-router-dom'
-import ProfilePicture from '../../components/ProfilePicture'
-import styles from '../../styles/CommentCreateForm.module.css'
-import { axiosRes } from '../../api/axiosDefaults'
+/* Imports */
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { axiosRes } from '../../api/axiosDefaults';
+import ProfilePicture from '../../components/ProfilePicture';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
+import Button from 'react-bootstrap/Button';
+import styles from '../../styles/CommentCreateForm.module.css';
 
 function CommentCreateForm(props) {
   const { post, setPost, setComments, profilePicture, profile_id } = props;
-  const [body, setBody] = useState('')
+  const [body, setBody] = useState('');
   const handleChange = (event) => {
-    setBody(event.target.value)
-  }
+    setBody(event.target.value);
+  };
+
+  /*
+    Handles the form submisson
+    Updates comment, including date
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -35,8 +41,8 @@ function CommentCreateForm(props) {
       }));
       setBody("");
     } catch (err) {
-      console.log(err.response);
-    }
+    //  console.log(err.response);
+    };
   };
 
   return (

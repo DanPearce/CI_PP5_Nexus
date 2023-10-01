@@ -1,40 +1,41 @@
+/* Imports */
 import React, { useEffect, useState } from 'react';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row'
-import Container from 'react-bootstrap/Container'
-import Asset from '../../components/Asset';
-import styles from '../../styles/Profile.module.css';
-import appStyles from '../../styles/App.module.css';
-import btnStyles from '../../styles/Button.module.css'
-import postStyles from '../../styles/Post.module.css'
-import { useCurrentUser } from '../../contexts/CurrentUserContext'
+import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import { useParams } from 'react-router';
 import { axiosReq } from '../../api/axiosDefaults';
-import { useProfileData, useSetProfileData} from '../../contexts/ProfileDataContext'
-import { Button, Image } from 'react-bootstrap';
-import ProfilePost from './ProfilePost';
-import NoResults from '../../assets/search-no-results.png';
-import InfiniteScroll from 'react-infinite-scroll-component';
 import { fetchMoreData } from '../../utils/Utils';
 import { ProfileEditDropdown } from '../../components/DropdownMenu';
-import dropdownStyles from '../../styles/DropdownMenu.module.css'
+import { useProfileData, useSetProfileData} from '../../contexts/ProfileDataContext';
 import { Link } from 'react-router-dom';
-import sideNavBarStyles from '../../styles/SideNavBar.module.css'
-
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import Image from 'react-bootstrap/Image';
+import styles from '../../styles/Profile.module.css';
+import appStyles from '../../styles/App.module.css';
+import btnStyles from '../../styles/Button.module.css';
+import postStyles from '../../styles/Post.module.css';
+import dropdownStyles from '../../styles/DropdownMenu.module.css';
+import sideNavBarStyles from '../../styles/SideNavBar.module.css';
+import NoResults from '../../assets/search-no-results.png';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import ProfilePost from './ProfilePost';
+import Asset from '../../components/Asset';
 
 function Profile() {
-  const [hasLoaded, setHasLoaded] = useState(false)
-  const [profilePosts, setProfilePosts] = useState({ results: [] })
+  const [hasLoaded, setHasLoaded] = useState(false);
+  const [profilePosts, setProfilePosts] = useState({ results: [] });
+  const currentUser = useCurrentUser();
+  const { id } = useParams();
+  const { setProfileData, handleFollow, handleUnfollow } = useSetProfileData();
+  const { pageProfile } = useProfileData();
+  const [profile] = pageProfile.results;
+  const is_owner = currentUser?.username === profile?.owner;
 
-  const currentUser = useCurrentUser()
-  const { id } = useParams()
-
-  const { setProfileData, handleFollow, handleUnfollow } = useSetProfileData()
-  const { pageProfile } = useProfileData()
-
-  const [profile] = pageProfile.results
-  const is_owner = currentUser?.username === profile?.owner
-
+  /*
+    Makes an API request to pull the data from the users profile and their posts
+  */
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -42,20 +43,23 @@ function Profile() {
           await Promise.all([
             axiosReq.get(`/profiles/${id}`),
             axiosReq.get(`/posts/?owner__profile=${id}`),
-          ])
+          ]);
         setProfileData((prevState) => ({
           ...prevState,
           pageProfile: { results: [pageProfile] },
-        }))
-        setProfilePosts(profilePosts)
-        setHasLoaded(true)
+        }));
+        setProfilePosts(profilePosts);
+        setHasLoaded(true);
       } catch (err) {
-        console.log(err)
-      }
-    }
+      //  console.log(err);
+      };
+    };
     fetchData()
-  }, [id, setProfileData])
+  }, [id, setProfileData]);
 
+  /*
+    Renders the Users Profile Header
+  */
   const ProfileHeader = (
     <>
     <Row>
@@ -77,7 +81,8 @@ function Profile() {
               <h6>({profile?.owner})</h6>
             </Col>
             <Col className='d-none d-md-flex justify-content-end'>
-              {profile?.is_owner && <ProfileEditDropdown id={profile?.id} className={dropdownStyles.DropdownItem} />}
+              {/* Renders Follow/Unfollow Button to users who can follow other users, prevents following their own profile */}
+              {profile?.is_owner && <ProfileEditDropdown id={profile?.id} className={dropdownStyles.DropdownItem} />};
               {currentUser &&
                 !is_owner &&
                 (profile?.following_id ? (
@@ -94,10 +99,10 @@ function Profile() {
                   >
                     Follow
                   </Button>
-                ))}
+                ))};
             </Col>
             <Row className='d-md-none w-auto justify-content-end'>
-              {profile?.is_owner && <ProfileEditDropdown id={profile?.id} className={dropdownStyles.DropdownItem} />}
+              {profile?.is_owner && <ProfileEditDropdown id={profile?.id} className={dropdownStyles.DropdownItem} />};
               {currentUser &&
                 !is_owner &&
                 (profile?.following_id ? (
@@ -114,7 +119,7 @@ function Profile() {
                   >
                     Follow
                   </Button>
-                ))}
+                ))};
             </Row>
             <p className='d-md-none ps-0'>{profile?.about}</p>
             <p className='d-none d-md-flex'>{profile?.about}</p>
@@ -151,8 +156,11 @@ function Profile() {
           </Row>
       </Row>
     </>
-  )
+  );
 
+  /*
+    Renders the Users Profile Posts
+  */
   const ProfilePosts = (
     <>
     {profilePosts.results.length ? (
@@ -172,7 +180,7 @@ function Profile() {
         src={NoResults}
         message={`${profile?.owner} has not got any posts.`}
       />
-    )}
+    )};
     </>
   );
 
@@ -202,7 +210,7 @@ function Profile() {
         </Container>
       </Col>
     </Row>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

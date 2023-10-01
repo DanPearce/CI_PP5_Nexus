@@ -1,14 +1,18 @@
-import React from 'react'
-import Error from '../assets/error-image.png'
-import Container from 'react-bootstrap/Container'
-import Image from 'react-bootstrap/Image'
-import styles from '../styles/AuthForm.module.css'
-import appStyles from '../styles/App.module.css'
-import sideNavBarStyles from '../styles/SideNavBar.module.css'
-import { Link } from 'react-router-dom'
+/* Imports */
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Error from '../assets/error-image.png';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import styles from '../styles/AuthForm.module.css';
+import appStyles from '../styles/App.module.css';
+import sideNavBarStyles from '../styles/SideNavBar.module.css';
 
-
+/*
+  Error / 404 Page
+*/
 const PageNotFound = () => {
+
   return (
     <Container className={`col-md-8 text-center ${sideNavBarStyles.SideLinks} ${appStyles.Border} ${styles.Background}`}>
       <Image src={Error} width={150}/>
@@ -18,7 +22,7 @@ const PageNotFound = () => {
       </Link>
       <p></p>
     </Container>
-  )
-}
+  );
+};
 
-export default PageNotFound
+export default PageNotFound;

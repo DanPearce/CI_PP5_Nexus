@@ -1,17 +1,24 @@
-import React, { useState } from "react";
-import Form from "react-bootstrap/Form";
-import { axiosRes } from "../../api/axiosDefaults";
-import styles from "../../styles/CommentEditForm.module.css";
+/* Imports */
+import React, { useState } from 'react';
+import { axiosRes } from '../../api/axiosDefaults';
+import Form from 'react-bootstrap/Form';
+import styles from '../../styles/CommentEditForm.module.css';
 
 function CommentEditForm(props) {
   const { id, body, setShowEditForm, setComments } = props;
-
   const [formBody, setFormBody] = useState(body);
 
+  /*
+    Handles changes made to inputs
+  */
   const handleChange = (event) => {
     setFormBody(event.target.value);
   };
 
+  /*
+    Handles the form submisson
+    Updates comment, including date
+  */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -32,8 +39,8 @@ function CommentEditForm(props) {
       }));
       setShowEditForm(false);
     } catch (err) {
-      console.log(err);
-    }
+    //  console.log(err);
+    };
   };
 
   return (
@@ -66,6 +73,6 @@ function CommentEditForm(props) {
       </div>
     </Form>
   );
-}
+};
 
 export default CommentEditForm;

@@ -1,15 +1,16 @@
-import React from "react";
-import styles from "../../styles/Post.module.css";
-import Container from "react-bootstrap/Container";
-import Col from 'react-bootstrap/Col'
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Tooltip from "react-bootstrap/Tooltip";
-import Image from 'react-bootstrap/Image'
-import Popover from "react-bootstrap/Popover";
-import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Link } from "react-router-dom";
+/* Imports */
+import React from 'react';
+import { useCurrentUser } from '../../contexts/CurrentUserContext';
+import { Link } from 'react-router-dom';
 import { axiosRes } from "../../api/axiosDefaults";
-import appStyles from '../../styles/App.module.css'
+import Container from 'react-bootstrap/Container';
+import Col from 'react-bootstrap/Col';
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from 'react-bootstrap/Tooltip';
+import Image from 'react-bootstrap/Image';
+import Popover from "react-bootstrap/Popover";
+import styles from '../../styles/Post.module.css';
+import appStyles from '../../styles/App.module.css';
 
 const ProfilePost = (props) => {
   const {
@@ -25,14 +26,18 @@ const ProfilePost = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
 
-  const url = getCurrentURL()
+  const url = getCurrentURL();
   function getCurrentURL() {
-    return window.location.href
-  }
+    return window.location.href;
+  };
 
+  /*
+    Handles posts 'liked' by users
+    Increments likes_count by 1
+  */
   const handleLike = async () => {
     try {
-      const { data } = await axiosRes.post('/likes/', { post: id })
+      const { data } = await axiosRes.post('/likes/', { post: id });
       setPosts((prevPosts) => ({
         ...prevPosts,
         results: prevPosts.results.map((post) => {
@@ -42,30 +47,34 @@ const ProfilePost = (props) => {
               likes_count: post.likes_count + 1, 
               like_id: data.id
         }
-          : post
+          : post;
         })
-      }))
+      }));
     } catch(err) {
-      console.log(err)
-    }
-  }
+    //  console.log(err);
+    };
+  };
 
+  /*
+    Handles posts 'unliked' by users
+    Decreases likes_count by 1
+  */
   const handleUnlike = async () => {
     try {
-      await axiosRes.delete(`/likes/${like_id}`)
+      await axiosRes.delete(`/likes/${like_id}`);
       setPosts((prevPosts) => ({
         ...prevPosts,
         results: prevPosts.results.map((post) => {
           return post.id === id
           ? { ...post, likes_count:
           post.likes_count - 1, like_id: null }
-          : post
+          : post;
         })
-      }))
+      }));
     } catch(err) {
-      console.log(err)
-    }
-  }
+    //  console.log(err);
+    };
+  };
 
   return (
     <Col className={`${appStyles.Border} ${styles.GalleryItem} pt-2`} xs={4}>

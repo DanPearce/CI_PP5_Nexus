@@ -1,14 +1,18 @@
-import React from "react";
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Container from 'react-bootstrap/Container'
-import Button from 'react-bootstrap/Button'
-import { Link } from "react-router-dom"
-import styles from '../styles/LandingPage.module.css'
-import appStyles from '../styles/App.module.css'
-import btnStyles from '../styles/Button.module.css'
-import landingImage from '../assets/landing-image.jpg'
+/* Imports */
+import React from 'react';
+import { Link } from 'react-router-dom';
+import landingImage from '../assets/landing-image.jpg';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import styles from '../styles/LandingPage.module.css';
+import appStyles from '../styles/App.module.css';
+import btnStyles from '../styles/Button.module.css';
 
+/*
+  Landing Page for logged out users
+*/
 const LandingPage = () => {
   return (
     <>

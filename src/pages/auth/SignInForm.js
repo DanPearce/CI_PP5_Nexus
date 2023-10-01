@@ -1,43 +1,53 @@
-import React, { useState } from 'react'
-import Col from 'react-bootstrap/Col'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
-import Alert from 'react-bootstrap/Alert'
-import { Link, useNavigate } from 'react-router-dom'
-import styles from '../../styles/AuthForm.module.css'
-import appStyles from '../../styles/App.module.css'
-import btnStyles from '../../styles/Button.module.css'
-import axios from 'axios'
-import { useSetCurrentUser } from '../../contexts/CurrentUserContext'
-import landingImage from '../../assets/landing-image.jpg'
+/* Imports */
+import React, { useState } from 'react';
+import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSetCurrentUser } from '../../contexts/CurrentUserContext';
+import landingImage from '../../assets/landing-image.jpg';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import Alert from 'react-bootstrap/Alert';
+import styles from '../../styles/AuthForm.module.css';
+import appStyles from '../../styles/App.module.css';
+import btnStyles from '../../styles/Button.module.css';
 
 function SignInForm() {
   const setCurrentUser = useSetCurrentUser();
   const [signInData, setSignInData] = useState({
     username: '',
     password: '',
-  })
-  const {username, password} = signInData
-  const [errors, setErrors] = useState({})
+  });
+  const {username, password} = signInData;
+  const [errors, setErrors] = useState({});
   const navigate = useNavigate();
+
+  /*
+    Handles the form submission
+    Redirects after successfully signing in
+  */
   const handleSubmit = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
     try {
-      const { data } = await axios.post('/dj-rest-auth/login/', signInData)
-      setCurrentUser(data.user)
-      navigate('/')
+      const { data } = await axios.post('/dj-rest-auth/login/', signInData);
+      setCurrentUser(data.user);
+      navigate('/');
     } catch(err){
-      setErrors(err.response?.data)
-    }
-  }
+      setErrors(err.response?.data);
+    };
+  };
+
+  /*
+    Handles changes made to the input fields
+  */
   const handleChange = (event) => {
     setSignInData({
       ...signInData,
       [event.target.name]: event.target.value,
-    })
-  }
+    });
+  };
   
   return (
     <Container className={`col-md-8 ${appStyles.Border} ${styles.Background}`}>
@@ -72,9 +82,9 @@ function SignInForm() {
                   variant="warning"
                   className={`${appStyles.Alert} mb-3`}
                 >
-                  {message}
+                  {message};
                 </Alert>
-              ))}
+              ))};
               <Form.Group className="mb-3" controlId="password">
                 <Form.Label className='d-none'>Password</Form.Label>
                 <Form.Control 
@@ -92,9 +102,9 @@ function SignInForm() {
                   variant="warning"
                   className={`${appStyles.Alert} mb-3`}
                 >
-                  {message}
+                  {message};
                 </Alert>
-              ))}
+              ))};
               <Button 
                 variant="primary"
                 type="submit"
@@ -108,9 +118,9 @@ function SignInForm() {
                 variant="warning"
                 className={`${appStyles.Alert} mb-3`}
                 >
-                {message}
+                {message};
               </Alert>
-            ))}
+            ))};
             </Form>
           </Container>
           <Container className={styles.LinkContainer}>
@@ -122,7 +132,7 @@ function SignInForm() {
         </Col>
       </Row>
     </Container>
-  )
-}
+  );
+};
 
-export default SignInForm
+export default SignInForm;

@@ -1,27 +1,32 @@
-import React, { useEffect, useState } from "react";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
-import Form from 'react-bootstrap/Form'
-import Post from "./Post";
-import Asset from "../../components/Asset";
-import appStyles from "../../styles/App.module.css"
-import styles from "../../styles/PostDiscover.module.css";
-import { useLocation } from "react-router";
-import { axiosReq } from "../../api/axiosDefaults";
-import NoResults from "../../assets/search-no-results.png";
-import { Link } from "react-router-dom"
-import InfiniteScroll from "react-infinite-scroll-component";
-import { fetchMoreData } from "../../utils/Utils";
-import PopularProfiles from "../../components/PopularProfiles";
-import SideNavBar from "../../components/SideNavBar";
+/* Imports */
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router';
+import { axiosReq } from '../../api/axiosDefaults';
+import { Link } from 'react-router-dom';
+import { fetchMoreData } from '../../utils/Utils';
+import Post from './Post';
+import SideNavBar from '../../components/SideNavBar';
+import PopularProfiles from '../../components/PopularProfiles';
+import Form from 'react-bootstrap/Form';
+import Asset from '../../components/Asset';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import Container from 'react-bootstrap/Container';
+import appStyles from '../../styles/App.module.css';
+import styles from '../../styles/PostDiscover.module.css';
+import NoResults from '../../assets/search-no-results.png';
 
 function PostDiscover({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState('');
 
+  /*
+    Makes an API request to pull the data for all posts, filtered based on search query
+    All posts are loaded, allows us to use 'pathname' to get liked/followed posts
+  */
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -29,24 +34,22 @@ function PostDiscover({ message, filter = "" }) {
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+      //  console.log(err);
       }
     };
-
     setHasLoaded(false);
     const timer = setTimeout(() => {
       fetchPosts();
-    },1500)
+    }, 1500);
     return () => {
-      clearTimeout(timer)
-    }
+      clearTimeout(timer);
+    };
   }, [filter, query, pathname]);
 
   return (
     <Container>
       <PopularProfiles />
       <SideNavBar />
-      
       <Row className="h-100 d-flex justify-content-center">
         <Col lg={6}>
         <i className={`fa-solid fa-magnifying-glass ${styles.SearchIcon}`}></i>
@@ -90,11 +93,11 @@ function PostDiscover({ message, filter = "" }) {
             <Container className={appStyles.Content}>
               <Asset spinner />
             </Container>
-          )}
+          )};
         </Col>
       </Row>
     </Container>
   );
-}
+};
 
 export default PostDiscover;

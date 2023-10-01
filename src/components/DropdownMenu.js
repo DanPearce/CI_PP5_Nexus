@@ -1,21 +1,26 @@
+/* Imports */
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
-import styles from '../styles/DropdownMenu.module.css'
-import { useNavigate } from 'react-router-dom';
+import styles from '../styles/DropdownMenu.module.css';
+
 
 const Meatball = React.forwardRef(({ onClick }, ref) => (
   <i
   className={`${styles.Ellipsis} fa-solid fa-ellipsis-vertical`}
   ref={ref}
   onClick={(event) => {
-    event.preventDefault()
-    onClick(event)
+    event.preventDefault();
+    onClick(event);
   }}
   />
-))
+));
 
+/*
+  Dropdown Menu to allow for edit/deletion of posts
+*/
 export const DropdownMenu = ({ handleEdit, handleDelete }) => {
   return (
     <Dropdown className='float-end' drop='start'>
@@ -53,8 +58,11 @@ export const DropdownMenu = ({ handleEdit, handleDelete }) => {
   )
 }
 
+/*
+  Dropdown Menu to allow for edit of profiles
+*/
 export function ProfileEditDropdown({ id }) {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <Dropdown className='float-end' drop='start'>

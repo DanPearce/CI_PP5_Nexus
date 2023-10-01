@@ -1,13 +1,19 @@
-import React from "react";
+/* Imports */
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Container  from "react-bootstrap/Container"
-import styles from "../styles/SideNavBar.module.css"
-import appStyles from '../styles/App.module.css'
-import navBarStyles from '../styles/NavBar.module.css'
 import { useCurrentUser } from '../contexts/CurrentUserContext';
+import Container  from 'react-bootstrap/Container';
+import styles from '../styles/SideNavBar.module.css';
+import appStyles from '../styles/App.module.css';
+import navBarStyles from '../styles/NavBar.module.css';
 
+/*
+  SideNavBar displays a NavBar for logged in users
+  Allows users to Share Posts
+  Allows users to view liked posts
+  Allows users to view following posts
+*/
 const SideNavBar = () => {
-
   const currentUser = useCurrentUser();
 
   return (
@@ -57,8 +63,9 @@ const SideNavBar = () => {
             </>
             ) : (
               <Container></Container>
-            )}
+            )};
     </Container>
-  )};
+  )
+};
 
 export default SideNavBar;

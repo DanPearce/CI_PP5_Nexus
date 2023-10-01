@@ -1,13 +1,17 @@
-import React from "react";
+/* Imports */
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Container  from "react-bootstrap/Container"
-import Image from "react-bootstrap/Image";
-import styles from "../styles/SideNavBar.module.css"
-import appStyles from '../styles/App.module.css'
-import navBarStyles from '../styles/NavBar.module.css'
-import { useProfileData } from '../contexts/ProfileDataContext'
-import Asset from '../components/Asset'
+import { useProfileData } from '../contexts/ProfileDataContext';
+import Asset from '../components/Asset';
+import Container  from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import styles from '../styles/SideNavBar.module.css';
+import appStyles from '../styles/App.module.css';
+import navBarStyles from '../styles/NavBar.module.css';
 
+/*
+  PopularProfiles component displays the most followed profiles
+*/
 const PopularProfiles = () => {
   const { popularProfiles } = useProfileData();
 
@@ -30,10 +34,10 @@ const PopularProfiles = () => {
                       src={profile?.image}
                       width={30}
                       />
-                      {profile.owner}
+                      {profile.owner};
                     </p>
                   </NavLink>
-                ))}
+                ))};
               </div>
               <div className={`${styles.PopularProfiles} ${appStyles.Border} ${styles.SideLinks} d-none d-lg-block text-center`}>
                 <b>Popular Profiles</b>
@@ -50,17 +54,18 @@ const PopularProfiles = () => {
                       src={profile?.image}
                       width={30}
                       />
-                      {profile.owner}
+                      {profile.owner};
                     </p>
                   </NavLink>
-                ))}
+                ))};
               </div>
           </Container>
       ) : (
         <Asset spinner />
-      )}
+      )};
     </Container>
-  )}
+  );
+};
 
 
 export default PopularProfiles;
