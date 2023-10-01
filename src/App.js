@@ -9,6 +9,7 @@ import PostDiscover from './pages/posts/PostDiscover';
 import PostCreateForm from './pages/posts/PostCreateForm';
 import PostPage from './pages/posts/PostPage';
 import PostEditForm from './pages/posts/PostEditForm'
+import ProfileEditForm from './pages/profiles/ProfileEditForm';
 import LandingPage from './components/LandingPage';
 import { useCurrentUser } from './contexts/CurrentUserContext'
 import './api/axiosDefaults'
@@ -64,6 +65,8 @@ function App() {
           <Route exact path='/posts/create' element={<PostCreateForm />}/>
           <Route exact path='posts/:id' element={<PostPage />} />
           <Route exact path='posts/:id/edit' element={<PostEditForm />} />
+          <Route exact path='/profiles/:id/edit' element={<ProfileEditForm />}/>
+
         </Routes>
         )}
       </Container>

@@ -66,10 +66,12 @@ function Profile() {
         <Col xs={8} className='mt-3'>
           <Row className='mb-1'>
             <Col xs={7} className='d-none d-md-flex'>
-              <h4 >{profile?.owner}</h4>
+              <h4>{profile?.name}</h4>
+              <h6>({profile?.owner})</h6>
             </Col>
             <Col xs={7} className='d-md-none g-0'>
-              <h4>{profile?.owner}</h4>
+              <h4>{profile?.name}</h4>
+              <h6>({profile?.owner})</h6>
             </Col>
             <Col className='d-none d-md-flex justify-content-end'>
               {profile?.is_owner && <ProfileEditDropdown id={profile?.id} className={dropdownStyles.DropdownItem} />}
@@ -111,6 +113,8 @@ function Profile() {
                   </Button>
                 ))}
             </Row>
+            <p className='d-md-none ps-0'>{profile?.about}</p>
+            <p className='d-none d-md-flex'>{profile?.about}</p>
             <hr className='d-none d-md-flex mt-3'/>
           </Row>
           <Row className='d-none d-md-flex'>
@@ -125,8 +129,6 @@ function Profile() {
             </Col>
           </Row>
         </Col>
-        
-        {profile?.content && <Col className='p-3'>{profile.content}</Col>}
       </Row>
       <Row className='d-md-none text-center justify-content-center'>
         <hr className='mt-3' />
