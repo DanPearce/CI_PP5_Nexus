@@ -11,6 +11,7 @@ import PostPage from './pages/posts/PostPage';
 import PostEditForm from './pages/posts/PostEditForm'
 import ProfileEditForm from './pages/profiles/ProfileEditForm';
 import UserPasswordForm from './pages/profiles/UserPasswordForm';
+import PageNotFound from './components/PageNotFound';
 import LandingPage from './components/LandingPage';
 import { useCurrentUser } from './contexts/CurrentUserContext'
 import './api/axiosDefaults'
@@ -68,6 +69,8 @@ function App() {
           <Route exact path='posts/:id/edit' element={<PostEditForm />} />
           <Route exact path='/profiles/:id/edit' element={<ProfileEditForm />}/>
           <Route exact path="/profiles/:id/edit/password" element={<UserPasswordForm />} />
+          <Route path="*" element={<PageNotFound />} />
+          <Route path="/posts/*" element={<PageNotFound />} />
         </Routes>
         )}
       </Container>
