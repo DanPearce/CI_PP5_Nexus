@@ -59,7 +59,7 @@ function UserPasswordForm() {
     event.preventDefault()
     try {
       await axiosRes.post(`/dj-rest-auth/password/change/`, userData);
-      navigate(`/profiles/${id}`);z
+      navigate(`/profiles/${id}`);
     } catch(err) {
     //  console.log(err);
       if (err.response?.status !== 401) {

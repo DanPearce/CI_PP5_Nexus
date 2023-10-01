@@ -46,7 +46,7 @@ function PostPage() {
       };
     };
     handleMount();
-  }, [id]);
+  }, [id, navigate]);
 
   return (
     <Container className={`${appStyles.Border} ${formStyles.Background}`}>
