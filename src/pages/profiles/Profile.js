@@ -18,6 +18,9 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import { fetchMoreData } from '../../utils/Utils';
 import { ProfileEditDropdown } from '../../components/DropdownMenu';
 import dropdownStyles from '../../styles/DropdownMenu.module.css'
+import { Link } from 'react-router-dom';
+import sideNavBarStyles from '../../styles/SideNavBar.module.css'
+
 
 function Profile() {
   const [hasLoaded, setHasLoaded] = useState(false)
@@ -187,7 +190,14 @@ function Profile() {
               </Container>
             </>
           ) : (
-            <Asset spinner />
+            <>
+              <Asset spinner />
+              <Container className={`${sideNavBarStyles.SideLinks} text-center`}>
+              <Link to='/'>
+                <i class="fa-solid fa-house-chimney" />  Go to main page
+              </Link>
+              </Container>
+            </>
           )}
         </Container>
       </Col>

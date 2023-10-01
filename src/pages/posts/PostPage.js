@@ -15,7 +15,8 @@ import CommentCreateForm from '../comments/CommentCreateForm'
 import Comment from '../comments/Comment'
 import { useCurrentUser } from '../../contexts/CurrentUserContext'
 import Asset from '../../components/Asset'
-import { fetchMoreData } from '../../utils/Utils' 
+import { fetchMoreData } from '../../utils/Utils'
+import { useNavigate } from 'react-router-dom'
 
 function PostPage() {
   const { id } = useParams()
@@ -23,6 +24,8 @@ function PostPage() {
   const currentUser = useCurrentUser();
   const profile_image = currentUser?.profile_image;
   const [comments, setComments] = useState({ results: []})
+  const navigate = useNavigate()
+
 
   useEffect(() => {
     const handleMount = async () => {
@@ -34,7 +37,7 @@ function PostPage() {
         setPost({ results: [post]})
         setComments(comments)
       } catch(err){
-        console.log(err)
+        navigate('404')
       }
     }
     handleMount()

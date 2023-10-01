@@ -70,7 +70,7 @@ function App() {
           <Route exact path='/profiles/:id/edit' element={<ProfileEditForm />}/>
           <Route exact path="/profiles/:id/edit/password" element={<UserPasswordForm />} />
           <Route path="*" element={<PageNotFound />} />
-          <Route path="/posts/*" element={<PageNotFound />} />
+          <Route path="404" element={<PageNotFound />} />
         </Routes>
         )}
       </Container>
