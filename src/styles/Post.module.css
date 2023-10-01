@@ -54,11 +54,11 @@
 }
 
 .GalleryItem {
-  max-width: 30%;
+  max-width: 33%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  flex: 1 0 30%;
+  flex: 1 0 31%;
   margin: 1%;
   align-items: center;
   justify-content: center;
