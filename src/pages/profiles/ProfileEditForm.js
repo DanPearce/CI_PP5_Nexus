@@ -140,7 +140,7 @@ function ProfileEditForm() {
                     onChange={handleChange}
                   />
                 </Form.Group>
-                {errors?.title?.map((message, index) => (
+                {errors?.name?.map((message, index) => (
                   <Alert
                     key={index}
                     variant="warning"
@@ -161,7 +161,7 @@ function ProfileEditForm() {
                     onChange={handleChange}
                   />
                 </Form.Group>
-                {errors?.body?.map((message, index) => (
+                {errors?.about?.map((message, index) => (
                   <Alert
                     key={index}
                     variant="warning"
