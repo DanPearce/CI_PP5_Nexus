@@ -69,6 +69,7 @@
 @media (max-width: 480px)  {
   .GalleryItem {
     margin: 5px 5px 5px 5px;
+    max-width: 30%;
   }
 
   .PostBar{

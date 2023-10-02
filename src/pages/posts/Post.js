@@ -107,7 +107,7 @@ const Post = (props) => {
     <Container className={`d-flex mt-1 justify-content-between ${styles.PostBio}`}>
       <Link to={`/profiles/${profile_id}`} className={styles.PostLink}>
         <ProfilePicture src={profile_image} height={60} />
-        {owner};
+        {owner}
       </Link>
       <div className="d-flex align-items-center">
         <span>{updated_on}&nbsp;</span>
@@ -116,12 +116,12 @@ const Post = (props) => {
             handleEdit={handleEdit}
             handleDelete={handleDelete}
           />
-        )};
+        )}
       </div>
     </Container>
     <Container className="p-0">
       <Link to={`/posts/${id}`} className={styles.PostLink}>
-        {title && <h4 className="text-center">{title}</h4>};
+        {title && <h4 className="text-center">{title}</h4>}
         <Image src={image} alt={title} className={styles.PostImage} />
       </Link>
     </Container>
@@ -149,7 +149,7 @@ const Post = (props) => {
           >
             <i className="far fa-heart" />
           </OverlayTrigger>
-        )};
+        )}
         &nbsp;{likes_count}&nbsp;&nbsp;
         <Link to={`/posts/${id}`} className={styles.PostLink}>
           <i className="far fa-comments" />
@@ -166,14 +166,14 @@ const Post = (props) => {
         }
         rootClose
       >
-        <div onClick={() => {navigator.clipboard.writeText(url);}}>
+        <div onClick={() => {navigator.clipboard.writeText(url)}}>
           <i className="fa-regular fa-share-from-square"></i>
         </div>
       </OverlayTrigger>
     </Container>
     <Container>
       <div className={`${styles.PostBody}`}>
-        {body && <p>{body}</p>};
+        {body && <p>{body}</p>}
       </div>
     </Container>
     </Col>

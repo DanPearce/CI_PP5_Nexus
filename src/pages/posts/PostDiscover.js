@@ -93,7 +93,7 @@ function PostDiscover({ message, filter = "" }) {
             <Container className={appStyles.Content}>
               <Asset spinner />
             </Container>
-          )};
+          )}
         </Col>
       </Row>
     </Container>

@@ -117,7 +117,7 @@ function PostEditForm() {
                   >
                     {message}
                   </Alert>
-                ))};
+                ))}
             </Container>
           </Col>
           <Col lg={5}>
@@ -142,7 +142,7 @@ function PostEditForm() {
                   >
                     {message}
                   </Alert>
-                ))};
+                ))}
                 <Form.Group className="mb-3" controlId="body">
                   <Form.Label className=''>Caption</Form.Label>
                   <Form.Control 
@@ -163,7 +163,7 @@ function PostEditForm() {
                   >
                     {message}
                   </Alert>
-                ))};
+                ))}
                 <Container className='text-center'>
                   <Button 
                     className={`mb-3 me-5 ${btnStyles.PostButton}`}

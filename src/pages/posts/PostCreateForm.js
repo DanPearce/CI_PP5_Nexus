@@ -94,7 +94,7 @@ function PostCreateForm() {
                     message="Tap the image or 'choose file' to upload an image"
                   />
                 </Form.Label>
-                )};
+                )}
                 <Form.Control
                   type='file'
                   id='image-upload'
@@ -111,7 +111,7 @@ function PostCreateForm() {
                   >
                     {message}
                   </Alert>
-                ))};
+                ))}
             </Container>
           </Col>
           <Col lg={5}>
@@ -136,7 +136,7 @@ function PostCreateForm() {
                 >
                   {message}
                 </Alert>
-              ))};
+              ))}
               <Form.Group className="mb-3" controlId="body">
                 <Form.Label className=''>Caption</Form.Label>
                 <Form.Control 
@@ -157,7 +157,7 @@ function PostCreateForm() {
                 >
                   {message}
                 </Alert>
-              ))};
+              ))}
               <Container className='text-center'>
                 <Button 
                   className={`mb-3 me-5 ${btnStyles.PostButton}`}

@@ -53,7 +53,7 @@ const Comment = (props) => {
                   handleEdit={() => setShowEditForm(true)} 
                   handleDelete={handleDelete}
                 />
-          )};
+          )}
             <Link to={`/profiles/${profile_id}`}>
               <ProfilePicture 
                 src={profile_image}
@@ -72,7 +72,7 @@ const Comment = (props) => {
               />
             ) : (
               <p className={`mt-1 ${styles.Body}`}>{body}</p>
-            )};
+            )}
         </Container>
         <hr/>
       </Row>

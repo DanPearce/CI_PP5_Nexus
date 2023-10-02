@@ -80,9 +80,9 @@ function SignUpForm() {
                 variant="warning"
                 className={`${appStyles.Alert} mb-3`}
               >
-                {message};
+                {message}
               </Alert>
-              )};
+              )}
               <Form.Group className="mb-3" controlId="password">
                 <Form.Label className='d-none'>Password</Form.Label>
                 <Form.Control 
@@ -100,9 +100,9 @@ function SignUpForm() {
                 variant="warning"
                 className={`${appStyles.Alert} mb-3`}
               >
-                {message};
+                {message}
               </Alert>
-              )};
+              )}
               <Form.Group className="mb-4" controlId="password2">
                 <Form.Label className='d-none'>Confrim password</Form.Label>
                 <Form.Control 
@@ -120,9 +120,9 @@ function SignUpForm() {
                 variant="warning"
                 className={`${appStyles.Alert} mb-3`}
               >
-                {message};
+                {message}
               </Alert>
-              )};
+              )}
               <Button 
                 variant="primary"
                 type="submit"
@@ -136,9 +136,9 @@ function SignUpForm() {
                 variant="warning"
                 className={`${appStyles.Alert} mb-3`}
               >
-                {message};
+                {message}
               </Alert>
-              )};
+              )}
             </Form>
           </Container>
           <Container className={styles.LinkContainer}>

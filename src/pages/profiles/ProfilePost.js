@@ -47,7 +47,7 @@ const ProfilePost = (props) => {
               likes_count: post.likes_count + 1, 
               like_id: data.id
         }
-          : post;
+          : post
         })
       }));
     } catch(err) {
@@ -109,7 +109,7 @@ const ProfilePost = (props) => {
               <i className="far fa-heart" />
             </OverlayTrigger>
           )}
-          &nbsp;{likes_count}&nbsp;&nbsp;
+          &nbsp;{likes_count}&nbsp; &nbsp;
           <Link to={`/posts/${id}`} className={styles.PostLink}>
             <i className="far fa-comments" />
           </Link>

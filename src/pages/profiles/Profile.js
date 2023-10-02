@@ -82,7 +82,7 @@ function Profile() {
             </Col>
             <Col className='d-none d-md-flex justify-content-end'>
               {/* Renders Follow/Unfollow Button to users who can follow other users, prevents following their own profile */}
-              {profile?.is_owner && <ProfileEditDropdown id={profile?.id} className={dropdownStyles.DropdownItem} />};
+              {profile?.is_owner && <ProfileEditDropdown id={profile?.id} className={dropdownStyles.DropdownItem} />}
               {currentUser &&
                 !is_owner &&
                 (profile?.following_id ? (
@@ -99,10 +99,10 @@ function Profile() {
                   >
                     Follow
                   </Button>
-                ))};
+                ))}
             </Col>
             <Row className='d-md-none w-auto justify-content-end'>
-              {profile?.is_owner && <ProfileEditDropdown id={profile?.id} className={dropdownStyles.DropdownItem} />};
+              {profile?.is_owner && <ProfileEditDropdown id={profile?.id} className={dropdownStyles.DropdownItem} />}
               {currentUser &&
                 !is_owner &&
                 (profile?.following_id ? (
@@ -119,7 +119,7 @@ function Profile() {
                   >
                     Follow
                   </Button>
-                ))};
+                ))}
             </Row>
             <p className='d-md-none ps-0'>{profile?.about}</p>
             <p className='d-none d-md-flex'>{profile?.about}</p>
@@ -180,7 +180,7 @@ function Profile() {
         src={NoResults}
         message={`${profile?.owner} has not got any posts.`}
       />
-    )};
+    )}
     </>
   );
 
@@ -202,7 +202,7 @@ function Profile() {
               <Asset spinner />
               <Container className={`${sideNavBarStyles.SideLinks} text-center`}>
               <Link to='/'>
-                <i class="fa-solid fa-house-chimney" />  Go to main page
+                <i className="fa-solid fa-house-chimney" />  Go to main page
               </Link>
               </Container>
             </>

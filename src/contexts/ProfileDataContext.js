@@ -91,7 +91,7 @@ export const ProfileDataProvider = ({ children }) => {
       <SetProfileDataContext.Provider
         value={{ setProfileData, handleFollow, handleUnfollow }}
       >
-        {children};
+        {children}
       </SetProfileDataContext.Provider>
     </ProfileDataContext.Provider>
   );

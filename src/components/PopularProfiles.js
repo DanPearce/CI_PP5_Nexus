@@ -34,10 +34,10 @@ const PopularProfiles = () => {
                       src={profile?.image}
                       width={30}
                       />
-                      {profile.owner};
+                      {profile.owner}
                     </p>
                   </NavLink>
-                ))};
+                ))}
               </div>
               <div className={`${styles.PopularProfiles} ${appStyles.Border} ${styles.SideLinks} d-none d-lg-block text-center`}>
                 <b>Popular Profiles</b>
@@ -54,15 +54,15 @@ const PopularProfiles = () => {
                       src={profile?.image}
                       width={30}
                       />
-                      {profile.owner};
+                      {profile.owner}
                     </p>
                   </NavLink>
-                ))};
+                ))}
               </div>
           </Container>
       ) : (
         <Asset spinner />
-      )};
+      )}
     </Container>
   );
 };
