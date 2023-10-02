@@ -4,6 +4,7 @@ import { useLocation } from 'react-router';
 import { axiosReq } from '../../api/axiosDefaults';
 import { Link } from 'react-router-dom';
 import { fetchMoreData } from '../../utils/Utils';
+import { useCurrentUser } from '../../contexts/CurrentUserContext';
 import Post from './Post';
 import SideNavBar from '../../components/SideNavBar';
 import PopularProfiles from '../../components/PopularProfiles';
@@ -22,10 +23,12 @@ function PostDiscover({ message, filter = "" }) {
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
   const [query, setQuery] = useState('');
+  const currentUser = useCurrentUser();
 
   /*
     Makes an API request to pull the data for all posts, filtered based on search query
     All posts are loaded, allows us to use 'pathname' to get liked/followed posts
+    Calls currentUser to refresh post upon login/logout
   */
   useEffect(() => {
     const fetchPosts = async () => {
@@ -44,7 +47,7 @@ function PostDiscover({ message, filter = "" }) {
     return () => {
       clearTimeout(timer);
     };
-  }, [filter, query, pathname]);
+  }, [filter, query, pathname, currentUser]);
 
   return (
     <Container>
