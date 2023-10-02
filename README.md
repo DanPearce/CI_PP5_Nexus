@@ -23,7 +23,7 @@ You can read more about the DRF Application following the links below:
     - [User Expectations](#user-expectations)
 2. [User Stories](#user-stories)
 3. [Design](#design)
-    - [Structure](#structure)
+    - [FrontEnd Structure](#FrontEnd-structure)
     - [Database and Models](#database-and-models)
     - [Wireframes](#wireframes)
     - [Colour](#colour)
@@ -35,15 +35,15 @@ You can read more about the DRF Application following the links below:
 6. [Validation and Testing](#validation-and-testing)
     - [HTML Validation](#html-validation)
     - [CSS Validation](#css-validation)
-    - [ESLint/JSX](#eslint/jsx)
+    - [ESLint JSX Validation](#eslint-jsx-validation)
     - [Accessibility Validation](#accessibility-validation)
     - [Performance Validation](#performance-validation)
     - [Device and Browser Compatibility](#device-and-browser-compatibility)
     - [User Story Testing](#user-story-testing)
-7. [Bugs and Errors](#bugs-and-errors)
-8. [Deployment](#deployment)
-9. [Credits](#credits)
-10. [Acknowledgements](#acknowledgements)
+    - [Bugs and Errors](#bugs-and-errors)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
+9. [Acknowledgements](#acknowledgements)
 
 ## Application Goals and User Experience
 ### User Goals
@@ -129,3 +129,46 @@ You can read more about the DRF Application following the links below:
     - As a User, I am presented with a site that is fully responsive, so that I can consume the content on the site regardless of device or browser.
 30. **USER STORY 30**: User Authentication – Change Password
     - As a User, I can change my password, so that I can keep my account secure.
+
+## Design
+### FrontEnd Structure
+
+### Database and Models
+
+### Wireframes
+
+### Colour
+
+## Main Features
+
+## Technologies
+### Languages
+
+### APIs
+
+### Libraries, Frameworks and Other Technologies
+
+## Validation and Testing
+### HTML Validation
+
+### CSS Validation
+
+### ESLint JSX Validation
+
+### Accessibility Validation
+
+### Performance Validation
+
+### Device and Browser Compatibility
+
+### Manual Testing
+
+### Bugs and Errors
+
+## Deployment
+
+## Credits
+
+## Acknowledgements
+
+#### [Back to Top](#contents)
