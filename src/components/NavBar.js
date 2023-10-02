@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { useCurrentUser, useSetCurrentUser } from '../contexts/CurrentUserContext';
 import ProfilePicture from './ProfilePicture';
 import useClickOutsideToggle from '../hooks/useClickOutsideToggle';
+import { removeTokenTimestamp } from '../utils/Utils';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -23,6 +24,7 @@ const NavBar = () => {
     try {
       await axios.post('dj-rest-auth/logout/');
       setCurrentUser(null);
+      removeTokenTimestamp();
     } catch(err) {
     //  console.log(err);
     };
@@ -81,7 +83,7 @@ const NavBar = () => {
         <NavLink to='/' className={styles.NavLink}>
           <Navbar.Brand className={styles.Logo}>Nexus</Navbar.Brand>
         </NavLink>
-          {navText};
+          {navText}
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           className={`navbar-dark`}
@@ -90,7 +92,7 @@ const NavBar = () => {
         />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto text-start">
-            {currentUser ? loggedInNavBar : loggedOutNavBar};
+            {currentUser ? loggedInNavBar : loggedOutNavBar}
           </Nav>
         </Navbar.Collapse>
       </Container>

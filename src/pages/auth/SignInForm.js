@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSetCurrentUser } from '../../contexts/CurrentUserContext';
+import { setTokenTimestamp } from '../../utils/Utils';
 import landingImage from '../../assets/landing-image.jpg';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -27,12 +28,14 @@ function SignInForm() {
   /*
     Handles the form submission
     Redirects after successfully signing in
+    Calls setTokenTimestamp
   */
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       const { data } = await axios.post('/dj-rest-auth/login/', signInData);
       setCurrentUser(data.user);
+      setTokenTimestamp(data);
       navigate('/');
     } catch(err){
       setErrors(err.response?.data);
@@ -82,9 +85,9 @@ function SignInForm() {
                   variant="warning"
                   className={`${appStyles.Alert} mb-3`}
                 >
-                  {message};
+                  {message}
                 </Alert>
-              ))};
+              ))}
               <Form.Group className="mb-3" controlId="password">
                 <Form.Label className='d-none'>Password</Form.Label>
                 <Form.Control 
@@ -102,9 +105,9 @@ function SignInForm() {
                   variant="warning"
                   className={`${appStyles.Alert} mb-3`}
                 >
-                  {message};
+                  {message}
                 </Alert>
-              ))};
+              ))}
               <Button 
                 variant="primary"
                 type="submit"
@@ -118,9 +121,9 @@ function SignInForm() {
                 variant="warning"
                 className={`${appStyles.Alert} mb-3`}
                 >
-                {message};
+                {message}
               </Alert>
-            ))};
+            ))}
             </Form>
           </Container>
           <Container className={styles.LinkContainer}>

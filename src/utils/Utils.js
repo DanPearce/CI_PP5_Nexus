@@ -1,5 +1,6 @@
 /* Imports */
 import { axiosReq  } from '../api/axiosDefaults';
+import jwtDecode from 'jwt-decode';
 
 /*
   Renders and sends data to the InfiniteScroll component
@@ -59,4 +60,26 @@ export const unfollowHelper = (profile, clickedProfile) => {
       { ...profile, following_count: profile.following_count - 1 }
     : 
       profile;
+};
+
+/*
+  Stores the users token timestamp in the browsers local storage
+*/
+export const setTokenTimestamp = (data) => {
+  const refreshTokenTimestamp = jwtDecode(data?.refresh_token).exp;
+  localStorage.setItem("refreshTokenTimestamp", refreshTokenTimestamp);
+};
+
+/*
+  Gets the users token timestamo from the browsers local storage
+*/
+export const shouldRefreshToken = () => {
+  return !!localStorage.getItem("refreshTokenTimestamp");
+};
+
+/*
+  Removes the users token timestamp from the browsers local storage
+*/
+export const removeTokenTimestamp = () => {
+  localStorage.removeItem("refreshTokenTimestamp");
 };

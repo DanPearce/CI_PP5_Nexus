@@ -3,6 +3,7 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { axiosReq, axiosRes } from '../api/axiosDefaults';
 import { useNavigate } from 'react-router-dom';
+import { removeTokenTimestamp, shouldRefreshToken } from '../utils/Utils';
 import axios from 'axios';
 
 export const CurrentUserContext = createContext();
@@ -37,16 +38,19 @@ export const CurrentUserProvider = ({ children }) => {
   useMemo(() => {
     axiosReq.interceptors.request.use(
       async (config) => {
-        try {
-          await axios.post('/dj-rest-auth/token/refresh/');
-        } catch(err) {
-          setCurrentUser((prevCurrentUser) => {
-            if (prevCurrentUser) {
-              navigate('/signin');
-            };
-            return null;
-          });
-          return config;
+        if (shouldRefreshToken()) {
+          try {
+            await axios.post('/dj-rest-auth/token/refresh/');
+          } catch(err) {
+            setCurrentUser((prevCurrentUser) => {
+              if (prevCurrentUser) {
+                navigate('/signin');
+              };
+              return null;
+            });
+            removeTokenTimestamp();
+            return config;
+          };
         };
         return config;
       },
@@ -79,7 +83,7 @@ export const CurrentUserProvider = ({ children }) => {
   return (
     <CurrentUserContext.Provider value={currentUser}>
       <SetCurrentUserContext.Provider value={setCurrentUser}>
-        {children};
+        {children}
       </SetCurrentUserContext.Provider>
     </CurrentUserContext.Provider>
   );
