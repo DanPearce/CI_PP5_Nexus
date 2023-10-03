@@ -23,8 +23,8 @@ You can read more about the DRF Application following the links below:
     - [User Expectations](#user-expectations)
 2. [User Stories](#user-stories)
 3. [Design](#design)
-    - [FrontEnd Structure](#FrontEnd-structure)
-    - [Database and Models](#database-and-models)
+    - [FrontEnd Structure](#frontend-structure)
+    - [BackEnd Structure](#backend-structure)
     - [Wireframes](#wireframes)
     - [Colour](#colour)
 4. [Main Features](#main-features)
@@ -129,11 +129,60 @@ You can read more about the DRF Application following the links below:
     - As a User, I am presented with a site that is fully responsive, so that I can consume the content on the site regardless of device or browser.
 30. **USER STORY 30**: User Authentication – Change Password
     - As a User, I can change my password, so that I can keep my account secure.
+31. **USER STORY 29**: Site Functionality – Navigation
+    - As a User, I am presented with a site that I am able to navigate with ease, so that I can easily make my way around the site.
 
 ## Design
 ### FrontEnd Structure
+#### React
+The Front End structure of Nexus has been built using React.
 
-### Database and Models
+React is a Javascript library that is populary used among Social Media Apps and Websites. React allows developers to create easily manipulate the interface and create individual components, which can be re-used and refreshed independantly of the page, allowing for faster loading times and more engaging content.
+
+React has been used in Nexus as it provides a vast amount of manipulation and flexibility; React code is easier to maintain and offers a way to easily manage and store code.
+
+The ability to reuse components greatly increases the devlopment time and allows code to be easily written. 
+
+As React is the most popular library used by Social Media applications such as Twitter and Facebook, the future sustainablity of the code is also gaurenteed. This also is met with a vast support structure and documentation and how to use the library.
+
+The loading time of an React application is also considerably quicker as the code invidiually loads compoents as they are needed. This results in fast loading speeds overal which provides users with a faster experience. 
+
+Using React with React Bootstrap also allows us to easily manipulate the CSS code written on the site and greatly improves development time. 
+
+#### Components
+Nexus uses a various ammount of individual components, all designed with making development and user experience better overall.
+
+**\<Asset />** is a component that is used to display various elements that is easily re-usbale. Dependant on the prop passed into this, we are easily able to render different elements to the page.
+
+    - spinner (A page loading spinner)
+    - src (An Image to be displayed)
+    - message (a message to the user)
+- User Stories: 27
+
+**\<DropdownMenu />** is a component that is used throughout the site to display a dropdown to logged in users to allow the ability to edit and delete comments and posts, this is also used on the profile page to allow users to change their password or edit their profile.
+- User Stories: 6, 7, 11, 12, 17, 18, 30
+
+**\<LandingPage />** is a component that is only used for logged out users, this replaces the usual 'home' page and encourages new users to sign up.
+- User Stories: 31
+
+**\<NavBar />** is a is component that is used on every page that has the abiliy to change based on the users loggedIn status. Logged In users are able to access their profile directly from the navigation menu and are able to sign out.
+- User Stories: 31
+
+**\<PageNotFound />** is a component that is displayed when a user naviagtes to a page that does not yet exisit. The page displays a graphic that naviagtes users back to the home page.
+- User Stories: 28
+
+**\<PopularProfiles />** is a side component that is displayed next to all posts, this component provides a list of all the most popular profiles on the site.
+- User Stories: 19, 20
+
+**\<ProfilePicture />** is a component that is used to render the profile pictures of a user on the site. The Props passed into the component allow us to change the size. 
+- User Stories: 6
+
+**\<SideNavBar />** is a side component that is also displayed next to all the posts. This component is only visblie to users who are currently logged in, and displays additional links so the users are able to access content specific to their profile. This also allows them to share and add posts to the site.
+- User Stories: 10, 31
+
+### BackEnd Structure
+The Back End Structure of the site has been built using the Django REST Framework. The Nexus DRF is an API that has been created to provide data to the Nexus application. Justification and in formation regarding the API is [covered in the API Documentation](https://github.com/DanPearce/CI_PP5_Nexus_DRF)
+- User Stories: 3, 24
 
 ### Wireframes
 
