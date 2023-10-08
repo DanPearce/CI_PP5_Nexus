@@ -374,6 +374,8 @@ Nexus uses the specifically built Django Rest Framework API application. The Nex
 - [JWT](https://jwt.io/) - Used to remove access tokens when a user logs out from the site. Also used to prevent unathenticated requests.
 - [React Infinite Scroll Component](https://www.npmjs.com/package/react-infinite-scroll-component) - Used to prevent all posts/comments from loading at one time, allows them to load once scrolled into view.
 - [React Router](https://reactrouter.com/en/main) - Used to enhasing the routing experience used in the application and allows more control over pages/components.
+- [Coolors](https://coolors.co/) - Used to create the palette for this documentation.
+- [Photopea](https://www.photopea.com/) - Used to make graphical chnanges to some of the images used on the site.
 - Validation:
     - [WC3 Markup Validation Serivce](https://validator.w3.org/) - Used to validate the HTML.
     - [W3C Jigsaw Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS.
