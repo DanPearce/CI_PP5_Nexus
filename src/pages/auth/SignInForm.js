@@ -39,7 +39,7 @@ function SignInForm() {
       navigate('/');
     } catch(err){
       setErrors(err.response?.data);
-    };
+    }
   };
 
   /*
@@ -127,7 +127,7 @@ function SignInForm() {
             </Form>
           </Container>
           <Container className={styles.LinkContainer}>
-            Don't have an account? &nbsp;
+            Dont have an account? &nbsp;
             <Link className={styles.Link} to='/signup'>
               Sign up!
             </Link>
@@ -136,6 +136,6 @@ function SignInForm() {
       </Row>
     </Container>
   );
-};
+}
 
 export default SignInForm;

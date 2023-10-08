@@ -44,7 +44,7 @@ function SignUpForm() {
       navigate('/signin');
     } catch(err) {
       setErrors(err.response?.data);
-    };
+    }
   };
 
   return (
@@ -151,6 +151,6 @@ function SignUpForm() {
       </Row>
     </Container>
   );
-};
+}
 
 export default SignUpForm;
