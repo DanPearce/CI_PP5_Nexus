@@ -355,6 +355,7 @@ By defualt all posts/comments are not shown to provide the user a faster loading
 - [React Bootstrap](https://react-bootstrap.netlify.app/)
 
 ### APIs
+Nexus uses the specifically built Django Rest Framework API application. The Nexus DRF is an API that has been created to provide data to the Nexus application. Justification and in formation regarding the API is [covered in the API Documentation](https://github.com/DanPearce/CI_PP5_Nexus_DRF)
 
 ### Libraries, Frameworks and Other Technologies
 
