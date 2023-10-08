@@ -550,6 +550,21 @@ With more time to focus on the site this would be a section for further developm
 </details>
 
 ### Device and Browser Compatibility
+The project has been tested on numerous devices all of which result with full functionality and no visual issues the devices I tested on were as followed:
+- MacBook Pro 16-inch 
+- Desktop PC with 3 x Monitors
+- iPhone 14 Pro Max
+- iPad Pro 11inch
+- Microsoft Surface Pro 3
+- This site was also tested on all default Google Chrome Developer Tool screen sizes.
+
+#### Browser Compatibility
+The project was tested and viewed on the following browsers with no errors:
+- [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome)
+- [Mozilla Firefox](https://en.wikipedia.org/wiki/Firefox)
+- [Microsoft Edge](https://en.wikipedia.org/wiki/Microsoft_Edge)
+- [Apple Safari](https://en.wikipedia.org/wiki/Safari_(web_browser))
+- [Vivaldi](https://vivaldi.com/)
 
 ### Manual Testing
 
