@@ -43,7 +43,7 @@ function PostPage() {
         setComments(comments);
       } catch(err){
         navigate('404');
-      };
+      }
     };
     handleMount();
   }, [id, navigate]);
@@ -98,6 +98,6 @@ function PostPage() {
       </Container>
     </Container>
   );
-};
+}
 
 export default PostPage;

@@ -88,7 +88,7 @@ function ProfileEditForm() {
     //  console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
-      };
+      }
     }
   };
 
@@ -192,6 +192,6 @@ function ProfileEditForm() {
       </Form>
     </Container>
   );
-};
+}
 
 export default ProfileEditForm;

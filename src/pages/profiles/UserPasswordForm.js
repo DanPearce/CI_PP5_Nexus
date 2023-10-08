@@ -153,6 +153,6 @@ function UserPasswordForm() {
       </Form>
     </Container>
   );
-};
+}
 
 export default UserPasswordForm;

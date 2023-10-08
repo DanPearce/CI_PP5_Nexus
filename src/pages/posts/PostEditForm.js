@@ -38,7 +38,7 @@ function PostEditForm() {
         is_owner ? setPostData({ title, body, image }) : navigate('/');
       } catch(err) {
       //  console.log(err);
-      };
+      }
     };
     handleMount();
   }, [navigate, id]);
@@ -63,7 +63,7 @@ function PostEditForm() {
         ...postData,
         image: URL.createObjectURL(event.target.files[0]),
       });
-    };
+    }
   };
 
   /*
@@ -78,7 +78,7 @@ function PostEditForm() {
 
     if (imageInput?.current?.files[0]){
       formData.append('image', imageInput.current.files[0]);
-    };
+    }
     try {
       await axiosReq.put(`/posts/${id}`, formData);
       navigate(`/posts/${id}`);
@@ -86,8 +86,8 @@ function PostEditForm() {
     //  console.log(err)
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
-      };
-    };
+      }
+    }
   };
 
   return (
@@ -185,6 +185,6 @@ function PostEditForm() {
       </Form>
     </Container>
   );
-};
+}
 
 export default PostEditForm;

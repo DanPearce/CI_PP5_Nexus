@@ -46,7 +46,7 @@ function PostCreateForm() {
         ...postData,
         image: URL.createObjectURL(event.target.files[0]),
       });
-    };
+    }
   };
 
   /*
@@ -66,8 +66,8 @@ function PostCreateForm() {
     //  console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
-      };
-    };
+      }
+    }
   };
 
   return (
@@ -179,6 +179,6 @@ function PostCreateForm() {
       </Form>
     </Container>
   );
-};
+}
 
 export default PostCreateForm;

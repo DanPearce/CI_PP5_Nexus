@@ -29,7 +29,7 @@ const ProfilePost = (props) => {
   const url = getCurrentURL();
   function getCurrentURL() {
     return window.location.href;
-  };
+  }
 
   /*
     Handles posts 'liked' by users
@@ -52,7 +52,7 @@ const ProfilePost = (props) => {
       }));
     } catch(err) {
     //  console.log(err);
-    };
+    }
   };
 
   /*
@@ -73,7 +73,7 @@ const ProfilePost = (props) => {
       }));
     } catch(err) {
     //  console.log(err);
-    };
+    }
   };
 
   return (
@@ -89,7 +89,7 @@ const ProfilePost = (props) => {
           {is_owner ? (
             <OverlayTrigger
               placement="top"
-              overlay={<Tooltip>You can't like your own post!</Tooltip>}
+              overlay={<Tooltip>You cannot like your own post!</Tooltip>}
             >
               <i className="far fa-heart" />
             </OverlayTrigger>

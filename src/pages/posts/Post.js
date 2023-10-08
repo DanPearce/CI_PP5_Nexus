@@ -35,7 +35,7 @@ const Post = (props) => {
   const url = getCurrentURL();
   function getCurrentURL() {
     return window.location.href;
-  };
+  }
 
   /*
     Navigates users to the Edit Post page
@@ -54,7 +54,7 @@ const Post = (props) => {
       navigate(-1);
     } catch (err) {
     //  console.log(err);
-    };
+    }
   };
 
   /*
@@ -78,7 +78,7 @@ const Post = (props) => {
       }));
     } catch(err) {
     //  console.log(err);
-    };
+    }
   };
 
   /*
@@ -99,7 +99,7 @@ const Post = (props) => {
       }));
     } catch(err) {
     //  console.log(err);
-    };
+    }
   };
 
   return (
@@ -129,7 +129,7 @@ const Post = (props) => {
         {is_owner ? (
           <OverlayTrigger
             placement="top"
-            overlay={<Tooltip>You can't like your own post!</Tooltip>}
+            overlay={<Tooltip>You cannot like your own post!</Tooltip>}
           >
             <i className="far fa-heart" />
           </OverlayTrigger>

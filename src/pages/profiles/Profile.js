@@ -52,7 +52,7 @@ function Profile() {
         setHasLoaded(true);
       } catch (err) {
       //  console.log(err);
-      };
+      }
     };
     fetchData()
   }, [id, setProfileData]);
@@ -212,6 +212,6 @@ function Profile() {
       </Col>
     </Row>
   );
-};
+}
 
 export default Profile;

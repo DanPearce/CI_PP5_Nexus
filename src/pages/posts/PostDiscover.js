@@ -101,6 +101,6 @@ function PostDiscover({ message, filter = "" }) {
       </Row>
     </Container>
   );
-};
+}
 
 export default PostDiscover;
