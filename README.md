@@ -212,6 +212,9 @@ The Back End Structure of the site has been built using the Django REST Framewor
 </details>
 
 ### Fonts and Icons
+The main font used throughout the website is [Noto Sans Japanese](https://fonts.google.com/noto/specimen/Noto+Sans+JP), this font offers a classic sans serif design and is easy on the eyes to read. This font is used for all text that isn't the logo.
+
+The font used for the logo is [El Messiri](https://fonts.google.com/specimen/El+Messiri) and this has been chosen as this adds a unique flare to the Logo and allows us to draw attention to the logo on the main site.
 
 ### Colour
 
