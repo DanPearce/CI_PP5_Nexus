@@ -5,7 +5,9 @@
 }
 
 .Owner {
-  font-weight: bold;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  color: #201624;
 }
 
 .Updated {

@@ -68,6 +68,7 @@ function Profile() {
             className={`${styles.ProfilePicture} ${appStyles.Border}`}
             roundedCircle
             src={profile?.image}
+            alt={`${profile?.owner}'s Profile Icon`}
         />
         </Col>
         <Col xs={8} className='mt-3'>

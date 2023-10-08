@@ -15,7 +15,6 @@
 
 .Alert {
   background-color: rgba(249, 252, 91, .5);
-  border-color: rgba(249, 252, 91, .5);
   color: rgba(65, 53, 17, .8);
   font-weight: bold;
 }

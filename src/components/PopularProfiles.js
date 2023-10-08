@@ -33,6 +33,7 @@ const PopularProfiles = () => {
                       roundedCircle
                       src={profile?.image}
                       width={30}
+                      alt={`${profile.owner}'s Profile Icon`}
                       />
                       {profile.owner}
                     </p>
@@ -53,6 +54,7 @@ const PopularProfiles = () => {
                       roundedCircle
                       src={profile?.image}
                       width={30}
+                      alt={`${profile.owner}'s Profile Icon`}
                       />
                       {profile.owner}
                     </p>

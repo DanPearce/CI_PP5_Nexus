@@ -54,12 +54,13 @@ const Comment = (props) => {
                   handleDelete={handleDelete}
                 />
           )}
-            <Link to={`/profiles/${profile_id}`}>
+            <Link to={`/profiles/${profile_id}`} className={styles.Owner}>
               <ProfilePicture 
                 src={profile_image}
+                user={owner}
+                
               />
             </Link>
-            <span className={styles.Owner}>{owner}</span>
             <span className={styles.Updated}> {updated_on}</span>
             {showEditForm ? (
               <CommentEditForm

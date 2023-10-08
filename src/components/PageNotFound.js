@@ -15,7 +15,7 @@ const PageNotFound = () => {
 
   return (
     <Container className={`col-md-8 text-center ${sideNavBarStyles.SideLinks} ${appStyles.Border} ${styles.Background}`}>
-      <Image src={Error} width={150}/>
+      <Image src={Error} width={150} alt='Image showing the word Error'/>
       <h4 className='pt-0'>This page doesn't exist!</h4>   
       <Link to='/'>
         <i className="fa-solid fa-house-chimney" />  Go to main page

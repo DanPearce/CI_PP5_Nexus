@@ -106,8 +106,7 @@ const Post = (props) => {
     <Col className="p-0">
     <Container className={`d-flex mt-1 justify-content-between ${styles.PostBio}`}>
       <Link to={`/profiles/${profile_id}`} className={styles.PostLink}>
-        <ProfilePicture src={profile_image} height={60} />
-        {owner}
+        <ProfilePicture src={profile_image} height={60} user={owner} />
       </Link>
       <div className="d-flex align-items-center">
         <span>{updated_on}&nbsp;</span>
