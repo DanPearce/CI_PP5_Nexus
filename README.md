@@ -26,6 +26,7 @@ You can read more about the DRF Application following the links below:
     - [FrontEnd Structure](#frontend-structure)
     - [BackEnd Structure](#backend-structure)
     - [Wireframes](#wireframes)
+    - [Fonts and Icons](#fonts-and-icons)
     - [Colour](#colour)
 4. [Main Features](#main-features)
 5. [Technologies](#technologies)
@@ -129,7 +130,7 @@ You can read more about the DRF Application following the links below:
     - As a User, I am presented with a site that is fully responsive, so that I can consume the content on the site regardless of device or browser.
 30. **USER STORY 30**: User Authentication – Change Password
     - As a User, I can change my password, so that I can keep my account secure.
-31. **USER STORY 29**: Site Functionality – Navigation
+31. **USER STORY 31**: Site Functionality – Navigation
     - As a User, I am presented with a site that I am able to navigate with ease, so that I can easily make my way around the site.
 
 ## Design
@@ -185,6 +186,32 @@ The Back End Structure of the site has been built using the Django REST Framewor
 - User Stories: 3, 24
 
 ### Wireframes
+<details><summary>Landing Page</summary>
+<img src="docs/wireframes/wf-landing-page.png.png">
+</details>
+<details><summary>Sign Up / Log In Page</summary>
+<img src="docs/wireframes/wf-sign-up-in-page.png">
+</details>
+<details><summary>Post Page</summary>
+<img src="docs/wireframes/wf-post-page.png">
+</details>
+<details><summary>Add / Edit Post Page</summary>
+<img src="docs/wireframes/wf-add-edit-post-page.png">
+</details>
+<details><summary>Discover / Following / Liked Page</summary>
+<img src="docs/wireframes/wf-discover-following-liked-page.png">
+</details>
+<details><summary>Profile Page</summary>
+<img src="docs/wireframes/wf-profile-page.png">
+</details>
+<details><summary>Edit Profile Page</summary>
+<img src="docs/wireframes/wf-edit-profile-page.png">
+</details>
+<details><summary>Change Password Page</summary>
+<img src="docs/wireframes/wf-change-password-page.png">
+</details>
+
+### Fonts and Icons
 
 ### Colour
 
