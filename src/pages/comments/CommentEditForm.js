@@ -40,7 +40,7 @@ function CommentEditForm(props) {
       setShowEditForm(false);
     } catch (err) {
     //  console.log(err);
-    };
+    }
   };
 
   return (
@@ -73,6 +73,6 @@ function CommentEditForm(props) {
       </div>
     </Form>
   );
-};
+}
 
 export default CommentEditForm;

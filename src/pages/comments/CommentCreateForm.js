@@ -42,7 +42,7 @@ function CommentCreateForm(props) {
       setBody("");
     } catch (err) {
     //  console.log(err.response);
-    };
+    }
   };
 
   return (
