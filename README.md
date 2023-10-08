@@ -385,6 +385,38 @@ Nexus uses the specifically built Django Rest Framework API application. The Nex
 
 ## Validation and Testing
 ### HTML Validation
+The HTML has been tested using the [W3C Markup Validation Service](https://validator.w3.org/) in order validate the correct function of this site. All pages have passed with no errors or warnings.
+
+<details><summary>Main Page</summary>
+<img src="docs/validation-and-testing/validation/html-validation/html-main.png">
+</details>
+<details><summary>Sign Up Page</summary>
+<img src="docs/validation-and-testing/validation/html-validation/html-signup.png">
+</details>
+<details><summary>Sign In Page</summary>
+<img src="docs/validation-and-testing/validation/html-validation/html-signin.png">
+</details>
+<details><summary>Post Page</summary>
+<img src="docs/validation-and-testing/validation/html-validation/html-post.png">
+</details>
+<details><summary>Post Create Page</summary>
+<img src="docs/validation-and-testing/validation/html-validation/html-post-create.png">
+</details>
+<details><summary>Post Edit Page</summary>
+<img src="docs/validation-and-testing/validation/html-validation/html-post-edit.png">
+</details>
+<details><summary>Profile Page</summary>
+<img src="docs/validation-and-testing/validation/html-validation/html-profile.png">
+</details>
+<details><summary>Profile Edit Page</summary>
+<img src="docs/validation-and-testing/validation/html-validation/html-profile-edit.png">
+</details>
+<details><summary>Change Password</summary>
+<img src="docs/validation-and-testing/validation/html-validation/html-change-password.png">
+</details>
+<details><summary>404 Page</summary>
+<img src="docs/validation-and-testing/validation/html-validation/html-404.png">
+</details>
 
 ### CSS Validation
 
