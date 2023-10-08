@@ -21,13 +21,13 @@ const LandingPage = () => {
         <Col className={`text-center mt-auto mb-auto`}>
           <h1 className={`${styles.Logo}`}>Welcome to Nexus</h1>
           <p className={`${styles.Slogan}`}>Discover, today.</p>
-          <p className={`${styles.Info}`}>Nexus is a photo sharing platform, designed to bring focus back to what's important in life.</p>
+          <p className={`${styles.Info}`}>Nexus is a photo sharing platform, designed to bring focus back to whats important in life.</p>
           <img
             src={landingImage}
             className={`${styles.LandingImage}`}
             alt='Person taking a photograph of live music / event.'
           />
-          <p className={`${styles.Info}`}>You won't be bothered with ads or monetiezation here, so why not? Make an account and start sharing today!</p>
+          <p className={`${styles.Info}`}>You wont be bothered with ads or monetiezation here, so why not? Make an account and start sharing today!</p>
           <Row>
             <Col lg={6}>
               <Link to='signup'>
