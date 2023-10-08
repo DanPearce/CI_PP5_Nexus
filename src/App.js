@@ -1,4 +1,5 @@
 /* Imports */
+import React from 'react';
 import styles from './styles/App.module.css';
 import NavBar from './components/NavBar';
 import Container from 'react-bootstrap/Container';
