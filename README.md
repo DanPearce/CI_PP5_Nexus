@@ -472,10 +472,70 @@ The [W3C Jigsaw Validation Service](https://jigsaw.w3.org/css-validator/) has be
 <img src="docs/validation-and-testing/validation/css-validation/css-side-nav-bar.png">
 </details>
 
-
 ### ESLint JSX Validation
+The [ESLint](https://eslint.org/) tool has been downloaded and installed onto the editor during development of Nexus. The tool reads the JSX and looks for any errors. All code has passed and thrown no errors.
+
+<details><summary>Components</summary>
+<img src="docs/validation-and-testing/validation/eslint-validation/eslint-components.png">
+</details>
+<details><summary>Contexts</summary>
+<img src="docs/validation-and-testing/validation/eslint-validation/eslint-contexts.png">
+</details>
+<details><summary>Hooks</summary>
+<img src="docs/validation-and-testing/validation/eslint-validation/eslint-hooks.png">
+</details>
+<details><summary>App / Index</summary>
+<img src="docs/validation-and-testing/validation/eslint-validation/eslint-pages-app-index.png">
+</details>
+<details><summary>Pages - Auth</summary>
+<img src="docs/validation-and-testing/validation/eslint-validation/eslint-pages-auth.png">
+</details>
+<details><summary>Pages - Comments</summary>
+<img src="docs/validation-and-testing/validation/eslint-validation/eslint-pages-comments.png">
+</details>
+<details><summary>Pages - Posts</summary>
+<img src="docs/validation-and-testing/validation/eslint-validation/eslint-pages-posts.png">
+</details>
+<details><summary>Pages - Profiles</summary>
+<img src="docs/validation-and-testing/validation/eslint-validation/eslint-pages-profiles.png">
+</details>
+<details><summary>Utils</summary>
+<img src="docs/validation-and-testing/validation/eslint-validation/eslint-utils.png">
+</details>
 
 ### Accessibility Validation
+The [WAVE - Web Accessibility Evaluation Tool](https://wave.webaim.org/) was used to test the accessibility function of the website, all pages have passed with no errors. 
+
+<details><summary>Main Page</summary>
+<img src="docs/validation-and-testing/validation/wave-validation/wave-main.png">
+</details>
+<details><summary>Sign Up Page</summary>
+<img src="docs/validation-and-testing/validation/wave-validation/wave-signup.png">
+</details>
+<details><summary>Sign In Page</summary>
+<img src="docs/validation-and-testing/validation/wave-validation/wave-signin.png">
+</details>
+<details><summary>Post Page</summary>
+<img src="docs/validation-and-testing/validation/wave-validation/wave-post.png">
+</details>
+<details><summary>Post Create Page</summary>
+<img src="docs/validation-and-testing/validation/wave-validation/wave-post-create.png">
+</details>
+<details><summary>Post Edit Page</summary>
+<img src="docs/validation-and-testing/validation/wave-validation/wave-post-edit.png">
+</details>
+<details><summary>Profile Page</summary>
+<img src="docs/validation-and-testing/validation/wave-validation/wave-profile.png">
+</details>
+<details><summary>Profile Edit Page</summary>
+<img src="docs/validation-and-testing/validation/wave-validation/wave-profile-edit.png">
+</details>
+<details><summary>Change Password</summary>
+<img src="docs/validation-and-testing/validation/wave-validation/wave-profile-edit-password.png">
+</details>
+<details><summary>404 Page</summary>
+<img src="docs/validation-and-testing/validation/wave-validation/wave-404.png">
+</details>
 
 ### Performance Validation
 
