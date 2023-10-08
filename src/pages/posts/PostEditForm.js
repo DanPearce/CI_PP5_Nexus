@@ -99,7 +99,7 @@ function PostEditForm() {
             <h1 className={`${styles.Heading} mb-3 text-center d-lg-none`}>Edit Post</h1>
               <Form.Group className={`text-center`}>
                 <figure>
-                  <Image className={`${appStyles.Image}`} src={image} />
+                  <Image className={`${appStyles.Image}`} src={image} alt='Post Image'/>
                 </figure>
                 <Form.Control
                   type='file'

@@ -81,7 +81,7 @@ function PostCreateForm() {
                 {image ? (
                   <>
                     <figure>
-                      <Image className={`${appStyles.Image}`} src={image} />
+                      <Image className={`${appStyles.Image}`} src={image} alt='Post image'/>
                     </figure>
                   </>
                 ) : (
