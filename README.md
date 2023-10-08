@@ -538,6 +538,16 @@ The [WAVE - Web Accessibility Evaluation Tool](https://wave.webaim.org/) was use
 </details>
 
 ### Performance Validation
+[Lighthouse](https://developers.google.com/web/tools/lighthouse) in the Google Chrome Developer Tools was used to test the performance of the website.
+
+With more time to focus on the site this would be a section for further development as the performance isn't where I would like this for production.
+
+<details><summary>Main Page</summary>
+<img src="docs/validation-and-testing/validation/lighthouse-validation/lighthouse-main.png">
+</details>
+<details><summary>Post Page</summary>
+<img src="docs/validation-and-testing/validation/lighthouse-validation/lighthouse-post.png">
+</details>
 
 ### Device and Browser Compatibility
 
