@@ -347,6 +347,12 @@ By defualt all posts/comments are not shown to provide the user a faster loading
 
 ## Technologies
 ### Languages
+- [HTML](https://en.wikipedia.org/wiki/HTML5)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [Bootstrap](https://getbootstrap.com/)
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [React](https://react.dev/)
+- [React Bootstrap](https://react-bootstrap.netlify.app/)
 
 ### APIs
 
