@@ -1,4 +1,5 @@
 /* Imports */
+import React from 'react';
 import { createContext, useContext, useState, useEffect } from 'react';
 import { axiosRes, axiosReq } from '../api/axiosDefaults';
 import { followHelper, unfollowHelper } from '../utils/Utils';
@@ -60,7 +61,7 @@ export const ProfileDataProvider = ({ children }) => {
       }));
     } catch (err) {
     //  console.log(err);
-    };
+    }
   };
 
   /*
@@ -83,7 +84,7 @@ export const ProfileDataProvider = ({ children }) => {
       }));
     } catch (err) {
     //  console.log(err);
-    };
+    }
   };
 
   return (
