@@ -187,7 +187,7 @@ The Back End Structure of the site has been built using the Django REST Framewor
 
 ### Wireframes
 <details><summary>Landing Page</summary>
-<img src="docs/wireframes/wf-landing-page.png.png">
+<img src="docs/wireframes/wf-landing-page.png">
 </details>
 <details><summary>Sign Up / Log In Page</summary>
 <img src="docs/wireframes/wf-sign-up-in-page.png">
@@ -223,6 +223,14 @@ I used [favicon.io](https://favicon.io/) to create the favicon icons for the sit
 Icons from [Font Awesome](https://fontawesome.com/) we're also used throughout the site.
 
 ### Colour
+
+The colours I have chosen on the site all are originated from the deep purple that can be found on the NavBar. I wanted to chose a colour that is different to the usual found on social media sites, and purple felt like the correct fit for Nexus!
+
+I've also ensured to use varients of the colour at half opacity to allow for theming to be produced.
+
+The slightly off white colour that is used is also appealing to the eyes as the text and background of the application. 
+
+![Colour Palette](docs/nexus/nexus-palette.png)
 
 ## Main Features
 
