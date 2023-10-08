@@ -349,15 +349,37 @@ By defualt all posts/comments are not shown to provide the user a faster loading
 ### Languages
 - [HTML](https://en.wikipedia.org/wiki/HTML5)
 - [CSS](https://en.wikipedia.org/wiki/CSS)
-- [Bootstrap](https://getbootstrap.com/)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 - [React](https://react.dev/)
-- [React Bootstrap](https://react-bootstrap.netlify.app/)
 
 ### APIs
 Nexus uses the specifically built Django Rest Framework API application. The Nexus DRF is an API that has been created to provide data to the Nexus application. Justification and in formation regarding the API is [covered in the API Documentation](https://github.com/DanPearce/CI_PP5_Nexus_DRF)
 
 ### Libraries, Frameworks and Other Technologies
+- [Axios](https://axios-http.com/) - Used to make API requests to the DRF API. This was also used to prevent any CORS errors.
+- [Boostrap](https://getbootstrap.com/) - Used to enhance my CSS code.
+- [React Bootstrap](https://react-bootstrap.netlify.app/) Used to enhance the css code written with React.
+- [Git](https://git-scm.com/) - Used to implement version control within the project.
+- [GitHub](https://github.com/) Used to host my code.
+- [GitPod](https://www.gitpod.io/) Used to build my code online.
+- [VS Code](https://code.visualstudio.com) - Used occasionally to build the code offline.
+- [Heroku](https://dashboard.heroku.com/) - Used to host the live version of the site.
+- [Font Awesome](https://fontawesome.com/) - Used for the icons shown on the site.
+- [Balsamiq](https://balsamiq.com/) - Used to create the Wireframes for the site.
+- [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) - Used for day-to-day testing and configuration of the site.
+- [Google Fonts](https://fonts.google.com/) - Used for the two fonts featured on the site [Fonts](#fonts).
+- [Favicon.io](https://favicon.io/) - Used to create the favicon featured on the site.
+- [Am I Responsive? - ui.dev](https://ui.dev/amiresponsive) - Used to create the responsive images for the site.
+- [Cloudinary](https://cloudinary.com/) - Used to host the images used on the live site.
+- [JWT](https://jwt.io/) - Used to remove access tokens when a user logs out from the site. Also used to prevent unathenticated requests.
+- [React Infinite Scroll Component](https://www.npmjs.com/package/react-infinite-scroll-component) - Used to prevent all posts/comments from loading at one time, allows them to load once scrolled into view.
+- [React Router](https://reactrouter.com/en/main) - Used to enhasing the routing experience used in the application and allows more control over pages/components.
+- Validation:
+    - [WC3 Markup Validation Serivce](https://validator.w3.org/) - Used to validate the HTML.
+    - [W3C Jigsaw Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS.
+    - [ESLint](https://eslint.org/) - Used to validate the JSX.
+    - [WAVE - Web Accessibility Evaluation Tool](https://wave.webaim.org/) - Use to ensure the site is accessibile to all.
+    - [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Used to check performance of the site.
 
 ## Validation and Testing
 ### HTML Validation
