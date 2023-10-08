@@ -233,6 +233,117 @@ The slightly off white colour that is used is also appealing to the eyes as the 
 ![Colour Palette](docs/nexus/nexus-palette.png)
 
 ## Main Features
+### Landing Page
+The Landing Page has been implemented to welcome users, old and new, to the website, to clearly state what Nexus is about and define the clear intensions of the use of the application.
+
+This is paired with navigational buttons and pointers to allow users to either sign up or log in to an account.
+![Landing Page](docs/main-features/main-features-1.png)
+**User Stories Covered: 1, 2, 31**
+
+### Sign Up page
+The Sign Up page allows the user to speak directly with the API to create a user account. In doing so, the user unlocks the full potential of Nexus. This will in turn sign the user in and access tokens will be saved to their browser.
+![Sign Up](docs/main-features/main-features-2.png)
+**User Stories Covered: 1, 2, 26**
+
+### Sign In Page
+The Sign In page allows user who already have an account to log back in so they can access the full features of the site. This action will save access tokens to the users browser.
+![Sign In](docs/main-features/main-features-3.png)
+**User Stories Covered: 1, 2, 26**
+
+### Discover / Following / Liked Page
+The Discover / Following / Liked pages act as the 'main' pages to the site.
+
+Discover displays a list of all the posts that have been posted, and this is in decending date order.
+
+Following displays a list of all the posts made to each account that your account is following. This is by defualt the 'home' page to allow content to be catered to you only.
+
+Liked will display a list of all the posts that have been liked by your account.
+![Main Page](docs/main-features/main-features-4.png)
+**User Stories Covered: 8**
+
+### Popular Profiles
+The Popular Profiles section will display a list of the most popular profiles upon your time visiting the site. The site will display the top 10 profiles on a desktop and will show the top three whilst on mobbile. 
+
+All profiles are easily viewable by clicking on the users name or profile icon.
+![Popular Profiles](docs/main-features/main-features-5.png)
+**User Stories Covered: 4**
+
+### Navigation
+Nexus has two forms of navigational sections that are included in the application.
+
+The NavBar is the main feature, and this is always present at the top of every page, no matter how you are viewing the site. Logged in users will have the added ability to log out and to also access their profile from this NavBar. Whereas logged out users will have the opportunity to 'sign up/in'.
+
+The SideNavBar is visible once a user has logged in. Depending on the screen size, this will either be on the side or presented at the top of the page. This section has been made visible to logged in users only as this unlocks features only avaliable to them, such as adding a post, viewing the posts they have liked, or a quick link to view their following profiles.
+![NavBar](docs/main-features/main-features-7.png)
+![SideNavBar](docs/main-features/main-features-6.png)
+**User Stories Covered: 31**
+
+### Add Post Page
+The Add Post page has been implemented as the main point of 'sharing' on the site, and allows users to upload their own content to their profile and account.
+![Add Post](docs/main-features/main-features-8.png)
+**User Stories Covered: 10**
+
+### Post Page
+The Post page offers a detailed look at the post the user has clicked on. The page features the description as well as the title and also gives details on the likes / comments count.
+
+Comments are also visible on this page.
+![Post Page](docs/main-features/main-features-9.png)
+**User Stories Covered: 9, 11, 12, 15**
+
+### Comments
+The comments section of the page allows all users to view all the comments that have been added to the post and who commented this.
+
+While logged in and being the owner of the comment, users are then able to add a comment, make changes to their comment, or have the ability to delete their comment. 
+![Comments](docs/main-features/main-features-10.png)
+**User Stories Covered: 15, 16, 17, 18**
+
+### Profile Page
+The Profile page has been implemented to allow users to view all the content that has been posted by a particualr user. All their posts will be displayed in decending order.
+
+If the user has gone to a profile which isn't their own, they will have the ability to follow / unfollow users from this page.
+
+There are also various statistics displayed on this page, such as the users ammount of posts, ammount of followers and how many users they are following.
+![Profile Page](docs/main-features/main-features-11.png)
+**User Stories Covered: 4, 5, 19, 20, 21, 22**
+
+### Edit Profile
+The Edit Profile page has been added to allow all users to make changes to their own profiles. 
+
+Users are able to change their display name, about section and also their profile icon.
+![Edit Profile](docs/main-features/main-features-12.png)
+**User Stories Covered: 6, 7**
+
+### Change Password
+The Change Password section has been added to allow users to change the password to their account. This is added as a security feature.
+![Change Password](docs/main-features/main-features-13.png)
+**User Stories Covered: 30**
+
+### Search
+The Search function can be found on the Discover / Following / Liked page.
+
+The feature allows users to search for content such as by searching a username or phrase to find the content they wish to view.
+![Search](docs/main-features/main-features-14.png)
+**User Stories Covered: 23**
+
+### 404 Page
+The 404 Error Page has been added as a fallback for users who might navigate to the wrong page or a page that doesn't exist. The page features a link to take users back home.
+![Error 404](docs/main-features/main-features-15.png)
+**User Stories Covered: 28**
+
+### Like Posts
+The Like Posts feature allows users have the ability to like / unlike posts.
+
+Users are presented with a visual aid to let them know this has been actioned.
+![Likes](docs/main-features/main-features-16.png)
+
+**User Stories Covered: 13, 14, 25**
+
+### Infinite Content Scroll
+The Infinite Scroll component has been added to allow content to be added to the site when it is needed.
+
+By defualt all posts/comments are not shown to provide the user a faster loading time, as they scroll to find more content, this will load.
+![Infinite Scroll](docs/main-features/main-features-17.png)
+**User Stories Covered: 27**
 
 ## Technologies
 ### Languages
