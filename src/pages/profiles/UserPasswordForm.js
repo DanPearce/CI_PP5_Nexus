@@ -20,7 +20,7 @@ function UserPasswordForm() {
     new_password1: '',
     new_password2: '',
   });
-  const { new_password1, new_password2, image } = userData;
+  const { new_password1, new_password2, image, owner } = userData;
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
   const { id } = useParams();
@@ -32,8 +32,8 @@ function UserPasswordForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/profiles/${id}`);
-        const { image, is_owner } = data;
-        is_owner ? setUserData({ image }) : navigate('/');
+        const { image, owner, is_owner } = data;
+        is_owner ? setUserData({ image, owner }) : navigate('/');
       } catch(err) {
       //  console.log(err);
       }
@@ -81,6 +81,7 @@ function UserPasswordForm() {
                     className={`${profileStyles.ProfilePicture} ${appStyles.Border}`}
                     roundedCircle 
                     src={image}
+                    alt={`${owner}'s Profile Icon`}
                   />
                 </figure>
               </Form.Group>

@@ -22,7 +22,7 @@ function ProfileEditForm() {
     image: ''
   });
 
-  const { name, about, image } = profileData;
+  const { name, about, image, owner } = profileData;
   const imageInput = useRef(null);
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
@@ -36,8 +36,8 @@ function ProfileEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/profiles/${id}`);
-        const { name, about, image, is_owner } = data;
-        is_owner ? setProfileData({ name, about, image }) : navigate('/');
+        const { name, about, image, owner, is_owner } = data;
+        is_owner ? setProfileData({ name, about, image, owner }) : navigate('/');
       } catch(err) {
       //  console.log(err);
       }
@@ -105,6 +105,7 @@ function ProfileEditForm() {
                     className={`${profileStyles.ProfilePicture} ${appStyles.Border}`}
                     roundedCircle 
                     src={image}
+                    alt={`${owner}'s Profile Icon`}
                   />
                 </figure>
                 <Form.Control
