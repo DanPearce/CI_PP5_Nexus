@@ -688,10 +688,10 @@ The project was tested and viewed on the following browsers with no errors:
 | <details><summary>User Story 23-2</summary><img src="docs/validation-and-testing/testing/user-story-23-2.png"></details> | | |
 | **User Story 25** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I am provided feedback when making changes to posts/profiles, so that I am sure the change was successful/unsuccessful. | | | |
-| | | |
-| | | |
-| | | |
+| As a User, I am provided feedback when making changes to posts/profiles, so that I am sure the change was successful/unsuccessful. | User attempts to log in with the incorrect information. Error is shown. User adds a comment, this is immediately shown. User adds a post, they are navigated to the post page. | User can see when changes occur. | Works as intended. |
+| <details><summary>User Story 25-1</summary><img src="docs/validation-and-testing/testing/user-story-25-1.png"></ | | |
+| <details><summary>User Story 25-2</summary><img src="docs/validation-and-testing/testing/user-story-25-2.png"></details> | | |
+| <details><summary>User Story 25-3</summary><img src="docs/validation-and-testing/testing/user-story-25-3.png"></details> | | |
 | **User Story 26** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
 | As a User, I expect Refresh Access Tokens to be in place, so that I can remain logged into the site on my computer. | User refreshes their page, or even closes their browser. | User remains logged in upon refresh/opening. | Works as intended. |
