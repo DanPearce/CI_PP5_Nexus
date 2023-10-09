@@ -721,6 +721,10 @@ The project was tested and viewed on the following browsers with no errors:
 | As a User, I am presented with a site that I am able to navigate with ease, so that I can easily make my way around the site. | User makes use of the NavBar elements. | User can naviagte around the site. | Works as intended. |
 | <details><summary>User Story 31</summary><img src="docs/validation-and-testing/testing/user-story-31.png"></details> | | |
 ### Bugs and Errors
+| **Bug/Error** | **Resolution** |
+|---------------|----------------|
+| During development the 'DropdownMenu' component had some issues that would cause the first instance to display off screen. | After a long time playing about with the code, I changed the 'popperConfig={{ strategy: 'fixed' }} to popperConfig={{ strategy: 'absolute' }}. This resolved the issues I was facing |
+| During development, I ran into an issue displaying the posts on the profile in a grid. | After playing about with the code, I was applying d-flex flex-wrap to the incorrect element, changing this to the parent resolved the issue. |
 
 ## Deployment
 
