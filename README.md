@@ -573,152 +573,152 @@ The project was tested and viewed on the following browsers with no errors:
 ### User Story Testing
 | **User Story 1** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User/Owner, I can create an account, so that I can have a user profile on the site. | | |
-| <details><summary>User Story 1-1</summary><img src="docs/validation-and-testing/testing/user-story-1-1.png"></details> | | |
+| As a User/Owner, I can create an account, so that I can have a user profile on the site. | User navigates to the 'Sign Up' page, and enters credentials when prompted and clicks 'Sign Up'. | The user is able to create an account. | Works as intended. |
+| <details><summary>User Story 1-1</summary><img src="docs/validation-and-testing/testing/user-story-1-1.png"></details> | | | 
 | <details><summary>User Story 1-2</summary><img src="docs/validation-and-testing/testing/user-story-1-2.png"></details> | | |
 | **User Story 2** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can log into or out of my account, so that I can ensure that I can manage my profile/posts/comments. | | |
-| <details><summary>User Story 2-1</summary><img src="docs/validation-and-testing/testing/user-story-2-1.png"></details> | | |
+| As a User, I can log into or out of my account, so that I can ensure that I can manage my profile/posts/comments. | User navigates to the 'Sign In' page and enters their credentials and clicks 'Sign In'. | User is able to sign into their account. | Works as intended. |
+| <details><summary>User Story 2-1</summary><img src="docs/validation-and-testing/testing/user-story-2-1.png"></details> | | | 
 | <details><summary>User Story 2-2</summary><img src="docs/validation-and-testing/testing/user-story-2-2.png"></details> | | |
 | <details><summary>User Story 2-3</summary><img src="docs/validation-and-testing/testing/user-story-2-3.png"></details> | | |
 | **User Story 4** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can view all profiles, so that I can see who has posted and has an account. | | |
+| As a User, I can view all profiles, so that I can see who has posted and has an account. | User uses the search feature to find accounts, User also able to view 'popular profiles'. | User able to find profiles they want. | Works as intended. |
 | <details><summary>User Story 4-1</summary><img src="docs/validation-and-testing/testing/user-story-4-1.png"></details> | | |
 | <details><summary>User Story 4-2</summary><img src="docs/validation-and-testing/testing/user-story-4-2.png"></details> | | |
 | <details><summary>User Story 4-3</summary><img src="docs/validation-and-testing/testing/user-story-4-3.png"></details> | | |
 | **User Story 5** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can view an individual profile, so that I can view it in full detail. | | |
+| As a User, I can view an individual profile, so that I can view it in full detail. | User clicks on a users profile. | User able to see the profile. | Works as intended. |
 | <details><summary>User Story 5</summary><img src="docs/validation-and-testing/testing/user-story-5.png"></details> | | |
 | **User Story 6** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can change my profile picture, so that I can make my profile more recognisable. | | |
+| As a User, I can change my profile picture, so that I can make my profile more recognisable. | User navigates to their Profile, Clicks the Meatball icon, and then edit profile. User is then able to upload a new Profile Icon. User clicks 'Update'. | User is able to change their profile picture. | Works as intended. |
 | <details><summary>User Story 6-1</summary><img src="docs/validation-and-testing/testing/user-story-6-1.png"></details> | | |
 | <details><summary>User Story 6-2</summary><img src="docs/validation-and-testing/testing/user-story-6-2.png"></details> | | |
 | <details><summary>User Story 6-3</summary><img src="docs/validation-and-testing/testing/user-story-6-3.png"></details> | | |
 | <details><summary>User Story 6-4</summary><img src="docs/validation-and-testing/testing/user-story-6-4.png"></details> | | |
 | **User Story 7** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can edit my profile, so that I can modify the about me section. | | |
+| As a User, I can edit my profile, so that I can modify the about me section. | User navigates to their Profile, Clicks the Meatball icon, and then edit profile. User is then able to upload a make changes to their profile about and display name. User clicks 'Update'. | User is able to make changes to their profile. | Works as intended. |
 | <details><summary>User Story 7-1</summary><img src="docs/validation-and-testing/testing/user-story-7-1.png"></details> | | |
 | <details><summary>User Story 7-2</summary><img src="docs/validation-and-testing/testing/user-story-7-2.png"></details> | | |
 | <details><summary>User Story 7-3</summary><img src="docs/validation-and-testing/testing/user-story-7-3.png"></details> | | |
 | <details><summary>User Story 7-4</summary><img src="docs/validation-and-testing/testing/user-story-7-4.png"></details> | | |
 | **User Story 8** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can view all posts, so that I can decide if I would like to interact with it. | | |
+| As a User, I can view all posts, so that I can decide if I would like to interact with it. | User browses the page using the 'Discover' tab, also able to use the 'Search' to find specific content. | User able to find posts they want to interact with. | Works as intended. |
 | <details><summary>User Story 8-1</summary><img src="docs/validation-and-testing/testing/user-story-8-1.png"></details> | | |
 | <details><summary>User Story 8-2</summary><img src="docs/validation-and-testing/testing/user-story-8-2.png"></details> | | |
 | **User Story 9** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can view an individual post, so that I can view it in full detail. | | |
+| As a User, I can view an individual post, so that I can view it in full detail. | User clicks on the post they wish to view. | The full post detail is shown. | Works as intended. |
 | <details><summary>User Story 9</summary><img src="docs/validation-and-testing/testing/user-story-9.png"></details> | | |
 | **User Story 10** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can create a post, so that I can add content to my profile. | | |
+| As a User, I can create a post, so that I can add content to my profile. | User navigates to the 'Share' section. User is abe to make changes to the image, title and description. User hits 'Update'. | User able to add posts to Nexus. | Works as intended. |
 | <details><summary>User Story 10-1</summary><img src="docs/validation-and-testing/testing/user-story-10-1.png"></details> | | |
 | <details><summary>User Story 10-2</summary><img src="docs/validation-and-testing/testing/user-story-10-2.png"></details> | | |
 | <details><summary>User Story 10-3</summary><img src="docs/validation-and-testing/testing/user-story-10-3.png"></details> | | |
 | <details><summary>User Story 10-4</summary><img src="docs/validation-and-testing/testing/user-story-10-4.png"></details> | | |
 | **User Story 11** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can edit my own posts, so that I can make edits at a later stage, if needed. | | |
+| As a User, I can edit my own posts, so that I can make edits at a later stage, if needed. | User navigates to the post they wish to edit, user clicks the 'Meatball' dropdown, user clicks edit post. User is able to make changes as they wish, click 'Update'. | User can make changes to their existing posts. | Works as intended. |
 | <details><summary>User Story 11-1</summary><img src="docs/validation-and-testing/testing/user-story-11-1.png"></details> | | |
 | <details><summary>User Story 11-2</summary><img src="docs/validation-and-testing/testing/user-story-11-2.png"></details> | | |
 | <details><summary>User Story 11-3</summary><img src="docs/validation-and-testing/testing/user-story-11-3.png"></details> | | |
 | <details><summary>User Story 11-4</summary><img src="docs/validation-and-testing/testing/user-story-11-4.png"></details> | | |
 | **User Story 12** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can delete my own posts, so that I can manage the content on my profile. | | |
-| <details><summary>User Story 12</summary><img src="docs/validation-and-testing/testing/user-story-12.png"></details> | | |
+| As a User, I can delete my own posts, so that I can manage the content on my profile. | | | Works as intended. |
+| <details><summary>User Story 12</summary><img src="docs/validation-and-testing/testing/user-story-12.png"></details> | User navigates to the post they wish to edit, user clicks the 'Meatball' dropdown, user clicks 'delete post'. | The post is deleted from Nexus | Works as intended. |
 | **User Story 13** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can like a post, so that I can increase its popularity/show my interest. | | |
+| As a User, I can like a post, so that I can increase its popularity/show my interest. | User clicks the hollow heart under the post they want to like. | User has added a like to the post. | Works as intended. |
 | <details><summary>User Story 13-1</summary><img src="docs/validation-and-testing/testing/user-story-13-1.png"></details> | | |
 | <details><summary>User Story 13-2</summary><img src="docs/validation-and-testing/testing/user-story-13-2.png"></details> | | |
 | **User Story 14** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can unlike a post, so that I can decrease its popularity/remove my interest. | | |
+| As a User, I can unlike a post, so that I can decrease its popularity/remove my interest. | User clicks the whole heart under the post they wish to unlike. | User has unliked the post. | Works as intended. |
 | <details><summary>User Story 14-1</summary><img src="docs/validation-and-testing/testing/user-story-14-1.png"></details> | | |
 | <details><summary>User Story 14-2</summary><img src="docs/validation-and-testing/testing/user-story-14-2.png"></details> | | |
 | **User Story 15** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can view all comments, so that I can engage with the content. | | |
+| As a User, I can view all comments, so that I can engage with the content. | User navigates to the post they wish to view the comments on. | The comments are displayed next to the associated post. | Works as intended. |
 | <details><summary>User Story 15</summary><img src="docs/validation-and-testing/testing/user-story-15.png"></details> | | |
 | **User Story 16** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can create a comment, so that I can share my reaction to the content. | | |
-| <details><summary>User Story 16-1</summary><img src="docs/validation-and-testing/testing/user-story-16-1.png"></details> | | |
+| As a User, I can create a comment, so that I can share my reaction to the content. | | | Works as intended. |
+| <details><summary>User Story 16-1</summary><img src="docs/validation-and-testing/testing/user-story-16-1.png"></details> | User is able to add a comment by entering what they wish into the textbox, and clicking 'Add Comment'. | Comments are added to the post. | Works as intended. |
 | <details><summary>User Story 16-2</summary><img src="docs/validation-and-testing/testing/user-story-16-2.png"></details> | | |
 | **User Story 17** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can edit my own comment, so that I can make any necessary changes. | | |
+| As a User, I can edit my own comment, so that I can make any necessary changes. | User navigates to the comment they wish to edit, user clicks the 'Meatball' dropdown, user clicks 'edit comment'. User makes changes and hits 'Update' | Changes are able to be made to existing comments. | Works as intended. |
 | <details><summary>User Story 17-1</summary><img src="docs/validation-and-testing/testing/user-story-17-1.png"></details> | | |
 | <details><summary>User Story 17-2</summary><img src="docs/validation-and-testing/testing/user-story-17-2.png"></details> | | |
 | <details><summary>User Story 17-3</summary><img src="docs/validation-and-testing/testing/user-story-17-3.png"></details> | | |
 | **User Story 18** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can delete my own comments, so that I have control over my comments. | | |
+| As a User, I can delete my own comments, so that I have control over my comments. | User navigates to the comment they wish to delete, user clicks the 'Meatball' dropdown, user clicks 'Delete Comment'. | The comment is deleted from Nexus. | Works as intended. |
 | <details><summary>User Story 18-1</summary><img src="docs/validation-and-testing/testing/user-story-18-1.png"></details> | | |
 | <details><summary>User Story 18-2</summary><img src="docs/validation-and-testing/testing/user-story-18-2.png"></details> | | |
 | **User Story 19** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can follow another profile, so that I can increase their follower count. | | |
+| As a User, I can follow another profile, so that I can increase their follower count. | User navigates to the profile they wish to follow, user clicks 'Follow'. | User is able to follow another user. | Works as intended. |
 | <details><summary>User Story 19-1</summary><img src="docs/validation-and-testing/testing/user-story-19-1.png"></details> | | |
 | <details><summary>User Story 19-2</summary><img src="docs/validation-and-testing/testing/user-story-19-2.png"></details> | | |
 | **User Story 20** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can unfollow another profile, so that I can decrease their follower count. | | |
+| As a User, I can unfollow another profile, so that I can decrease their follower count. | User navigates to the profile they wish to unfollow, user clicks 'Unfollow'. | User is able to unfollow another user. | Works as intended. |
 | <details><summary>User Story 20-1</summary><img src="docs/validation-and-testing/testing/user-story-20-1.png"></details> | | |
 | <details><summary>User Story 20-2</summary><img src="docs/validation-and-testing/testing/user-story-20-2.png"></details> | | |
 | **User Story 21** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can view the followers count for any profile, so that I can determine how many followers they have. | | |
+| As a User, I can view the followers count for any profile, so that I can determine how many followers they have. | User navigates to the profile they wish to view the followers_count on. | The 'Followers' number is displayed. | Works as intended. |
 | <details><summary>User Story 21</summary><img src="docs/validation-and-testing/testing/user-story-21.png"></details> | | |
 | **User Story 22** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can view the following count for any profile, so that I can determine how many profiles they are following. | | |
+| As a User, I can view the following count for any profile, so that I can determine how many profiles they are following. | User navigates to the profile they wish to view the following_count on. | The 'Following' number is displayed. |  Works as intended. |
 | <details><summary>User Story 22</summary><img src="docs/validation-and-testing/testing/user-story-22.png"></details> | | |
 | **User Story 23** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can search for posts/profiles, so that I can find the content I need. | | |
+| As a User, I can search for posts/profiles, so that I can find the content I need. | User navigates to the discover tab, uses the search function. | User is able to use search to find content they want. | Works as intended. |
 | <details><summary>User Story 23-1</summary><img src="docs/validation-and-testing/testing/user-story-23-1.png"></details> | | |
 | <details><summary>User Story 23-2</summary><img src="docs/validation-and-testing/testing/user-story-23-2.png"></details> | | |
 | **User Story 25** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I am provided feedback when making changes to posts/profiles, so that I am sure the change was successful/unsuccessful. | | |
+| As a User, I am provided feedback when making changes to posts/profiles, so that I am sure the change was successful/unsuccessful. | | | |
 | | | |
 | | | |
 | | | |
 | **User Story 26** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I expect Refresh Access Tokens to be in place, so that I can remain logged into the site on my computer. | | |
+| As a User, I expect Refresh Access Tokens to be in place, so that I can remain logged into the site on my computer. | User refreshes their page, or even closes their browser. | User remains logged in upon refresh/opening. | Works as intended. |
 | <details><summary>User Story 26-1</summary><img src="docs/validation-and-testing/testing/user-story-26-1.png"></details> | | |
 | <details><summary>User Story 26-2</summary><img src="docs/validation-and-testing/testing/user-story-26-2.png"></details> | | |
 | **User Story 27** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I am presented with a continuous flow of posts, so that I do not need to re-load any content or cycle through pages. | | |
+| As a User, I am presented with a continuous flow of posts, so that I do not need to re-load any content or cycle through pages. | User scrolls to the end of the displayed content. | More content is displayed once reaching the end of the displayed content. | Works as intended. |
 | <details><summary>User Story 27</summary><img src="docs/validation-and-testing/testing/user-story-27.png"></details> | | |
 | **User Story 28** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I am presented with a 404-error page when I have navigated to a page that does not exist, so that I can easily find my way back to the main site. | | |
+| As a User, I am presented with a 404-error page when I have navigated to a page that does not exist, so that I can easily find my way back to the main site. | User navigates to a page that does not exist. | User is presented with a 404 page with navigation back. | Works as intended. |
 | <details><summary>User Story 28</summary><img src="docs/validation-and-testing/testing/user-story-28.png"></details> | | |
 | **User Story 29** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I am presented with a site that is fully responsive, so that I can consume the content on the site regardless of device or browser. | | |
+| As a User, I am presented with a site that is fully responsive, so that I can consume the content on the site regardless of device or browser. | User uses Nexus on various platforms. | The application is still fully functional. | Works as intended. |
 | <details><summary>User Story 29-1</summary><img src="docs/validation-and-testing/testing/user-story-29-1.png"></details> | | |
 | <details><summary>User Story 29-2</summary><img src="docs/validation-and-testing/testing/user-story-29-2.png"></details> | | |
 | <details><summary>User Story 29-3</summary><img src="docs/validation-and-testing/testing/user-story-29-3.png"></details> | | |
 | **User Story 30** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can change my password, so that I can keep my account secure. | | |
+| As a User, I can change my password, so that I can keep my account secure. | User naviagtes to their profile, hits the 'Meatball' dropdown, selects 'Change Password'. User enters their new password into the feilds, clicks 'Update'. | User can change their password. | Works as intended. |
 | <details><summary>User Story 30-1</summary><img src="docs/validation-and-testing/testing/user-story-30-1.png"></details> | | |
 | <details><summary>User Story 30-2</summary><img src="docs/validation-and-testing/testing/user-story-30-2.png"></details> | | |
 | **User Story 31** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I am presented with a site that I am able to navigate with ease, so that I can easily make my way around the site. | | |
+| As a User, I am presented with a site that I am able to navigate with ease, so that I can easily make my way around the site. | User makes use of the NavBar elements. | User can naviagte around the site. | Works as intended. |
 | <details><summary>User Story 31</summary><img src="docs/validation-and-testing/testing/user-story-31.png"></details> | | |
 ### Bugs and Errors
 
