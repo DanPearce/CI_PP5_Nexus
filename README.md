@@ -56,7 +56,7 @@ You can read more about the DRF Application following the links below:
 ### Owner Goals
 - Provide the user feedback while using the site.
 - Provide the user and experience that is responsive.
-- Ensure all users are able to easily naviagte throughout the site.
+- Ensure all users are able to easily navigate throughout the site.
 
 ### Target Audience
 - Lovers of social media, users who like to network and socialise using images.
@@ -138,20 +138,20 @@ You can read more about the DRF Application following the links below:
 #### React
 The Front End structure of Nexus has been built using React.
 
-React is a Javascript library that is populary used among Social Media Apps and Websites. React allows developers to create easily manipulate the interface and create individual components, which can be re-used and refreshed independantly of the page, allowing for faster loading times and more engaging content.
+React is a Javascript library that is popularly used among Social Media Apps and Websites. React allows developers to create easily manipulate the interface and create individual components, which can be re-used and refreshed independently of the page, allowing for faster loading times and more engaging content.
 
 React has been used in Nexus as it provides a vast amount of manipulation and flexibility; React code is easier to maintain and offers a way to easily manage and store code.
 
 The ability to reuse components greatly increases the devlopment time and allows code to be easily written. 
 
-As React is the most popular library used by Social Media applications such as Twitter and Facebook, the future sustainablity of the code is also gaurenteed. This also is met with a vast support structure and documentation and how to use the library.
+As React is the most popular library used by Social Media applications such as Twitter and Facebook, the future sustainability of the code is also guaranteed. This also is met with a vast support structure and documentation and how to use the library.
 
-The loading time of an React application is also considerably quicker as the code invidiually loads compoents as they are needed. This results in fast loading speeds overal which provides users with a faster experience. 
+The loading time of an React application is also considerably quicker as the code individually loads components as they are needed. This results in fast loading speeds overal which provides users with a faster experience. 
 
 Using React with React Bootstrap also allows us to easily manipulate the CSS code written on the site and greatly improves development time. 
 
 #### Components
-Nexus uses a various ammount of individual components, all designed with making development and user experience better overall.
+Nexus uses a various amount of individual components, all designed with making development and user experience better overall.
 
 **\<Asset />** is a component that is used to display various elements that is easily re-usbale. Dependant on the prop passed into this, we are easily able to render different elements to the page.
 
@@ -166,10 +166,10 @@ Nexus uses a various ammount of individual components, all designed with making 
 **\<LandingPage />** is a component that is only used for logged out users, this replaces the usual 'home' page and encourages new users to sign up.
 - User Stories: 31
 
-**\<NavBar />** is a is component that is used on every page that has the abiliy to change based on the users loggedIn status. Logged In users are able to access their profile directly from the navigation menu and are able to sign out.
+**\<NavBar />** is a is component that is used on every page that has the ability to change based on the users loggedIn status. Logged In users are able to access their profile directly from the navigation menu and are able to sign out.
 - User Stories: 31
 
-**\<PageNotFound />** is a component that is displayed when a user naviagtes to a page that does not yet exisit. The page displays a graphic that naviagtes users back to the home page.
+**\<PageNotFound />** is a component that is displayed when a user navigates to a page that does not yet exist. The page displays a graphic that navigates users back to the home page.
 - User Stories: 28
 
 **\<PopularProfiles />** is a side component that is displayed next to all posts, this component provides a list of all the most popular profiles on the site.
@@ -224,9 +224,9 @@ Icons from [Font Awesome](https://fontawesome.com/) we're also used throughout t
 
 ### Colour
 
-The colours I have chosen on the site all are originated from the deep purple that can be found on the NavBar. I wanted to chose a colour that is different to the usual found on social media sites, and purple felt like the correct fit for Nexus!
+The colours I have chosen on the site all are originated from the deep purple that can be found on the NavBar. I wanted to choose a colour that is different to the usual found on social media sites, and purple felt like the correct fit for Nexus!
 
-I've also ensured to use varients of the colour at half opacity to allow for theming to be produced.
+I've also ensured to use variants of the colour at half opacity to allow for theming to be produced.
 
 The slightly off white colour that is used is also appealing to the eyes as the text and background of the application. 
 
@@ -253,16 +253,16 @@ The Sign In page allows user who already have an account to log back in so they 
 ### Discover / Following / Liked Page
 The Discover / Following / Liked pages act as the 'main' pages to the site.
 
-Discover displays a list of all the posts that have been posted, and this is in decending date order.
+Discover displays a list of all the posts that have been posted, and this is in descending date order.
 
-Following displays a list of all the posts made to each account that your account is following. This is by defualt the 'home' page to allow content to be catered to you only.
+Following displays a list of all the posts made to each account that your account is following. This is by default the 'home' page to allow content to be catered to you only.
 
 Liked will display a list of all the posts that have been liked by your account.
 ![Main Page](docs/main-features/main-features-4.png)
 **User Stories Covered: 8**
 
 ### Popular Profiles
-The Popular Profiles section will display a list of the most popular profiles upon your time visiting the site. The site will display the top 10 profiles on a desktop and will show the top three whilst on mobbile. 
+The Popular Profiles section will display a list of the most popular profiles upon your time visiting the site. The site will display the top 10 profiles on a desktop and will show the top three whilst on mobile. 
 
 All profiles are easily viewable by clicking on the users name or profile icon.
 ![Popular Profiles](docs/main-features/main-features-5.png)
@@ -273,7 +273,7 @@ Nexus has two forms of navigational sections that are included in the applicatio
 
 The NavBar is the main feature, and this is always present at the top of every page, no matter how you are viewing the site. Logged in users will have the added ability to log out and to also access their profile from this NavBar. Whereas logged out users will have the opportunity to 'sign up/in'.
 
-The SideNavBar is visible once a user has logged in. Depending on the screen size, this will either be on the side or presented at the top of the page. This section has been made visible to logged in users only as this unlocks features only avaliable to them, such as adding a post, viewing the posts they have liked, or a quick link to view their following profiles.
+The SideNavBar is visible once a user has logged in. Depending on the screen size, this will either be on the side or presented at the top of the page. This section has been made visible to logged in users only as this unlocks features only available to them, such as adding a post, viewing the posts they have liked, or a quick link to view their following profiles.
 ![NavBar](docs/main-features/main-features-7.png)
 ![SideNavBar](docs/main-features/main-features-6.png)
 **User Stories Covered: 31**
@@ -298,11 +298,11 @@ While logged in and being the owner of the comment, users are then able to add a
 **User Stories Covered: 15, 16, 17, 18**
 
 ### Profile Page
-The Profile page has been implemented to allow users to view all the content that has been posted by a particualr user. All their posts will be displayed in decending order.
+The Profile page has been implemented to allow users to view all the content that has been posted by a particular user. All their posts will be displayed in descending order.
 
 If the user has gone to a profile which isn't their own, they will have the ability to follow / unfollow users from this page.
 
-There are also various statistics displayed on this page, such as the users ammount of posts, ammount of followers and how many users they are following.
+There are also various statistics displayed on this page, such as the users amount of posts, amount of followers and how many users they are following.
 ![Profile Page](docs/main-features/main-features-11.png)
 **User Stories Covered: 4, 5, 19, 20, 21, 22**
 
@@ -341,7 +341,7 @@ Users are presented with a visual aid to let them know this has been actioned.
 ### Infinite Content Scroll
 The Infinite Scroll component has been added to allow content to be added to the site when it is needed.
 
-By defualt all posts/comments are not shown to provide the user a faster loading time, as they scroll to find more content, this will load.
+By default all posts/comments are not shown to provide the user a faster loading time, as they scroll to find more content, this will load.
 ![Infinite Scroll](docs/main-features/main-features-17.png)
 **User Stories Covered: 27**
 
@@ -371,17 +371,17 @@ Nexus uses the specifically built Django Rest Framework API application. The Nex
 - [Favicon.io](https://favicon.io/) - Used to create the favicon featured on the site.
 - [Am I Responsive? - ui.dev](https://ui.dev/amiresponsive) - Used to create the responsive images for the site.
 - [Cloudinary](https://cloudinary.com/) - Used to host the images used on the live site.
-- [JWT](https://jwt.io/) - Used to remove access tokens when a user logs out from the site. Also used to prevent unathenticated requests.
+- [JWT](https://jwt.io/) - Used to remove access tokens when a user logs out from the site. Also used to prevent unauthenticated requests.
 - [React Infinite Scroll Component](https://www.npmjs.com/package/react-infinite-scroll-component) - Used to prevent all posts/comments from loading at one time, allows them to load once scrolled into view.
-- [React Router](https://reactrouter.com/en/main) - Used to enhasing the routing experience used in the application and allows more control over pages/components.
+- [React Router](https://reactrouter.com/en/main) - Used to enhance the routing experience used in the application and allows more control over pages/components.
 - [Coolors](https://coolors.co/) - Used to create the palette for this documentation.
-- [Photopea](https://www.photopea.com/) - Used to make graphical chnanges to some of the images used on the site.
-- [Enable JavaScript](https://www.enable-javascript.com/) - Link provided to allow users who don't have js enabled to find out how to turn this on.
+- [Photopea](https://www.photopea.com/) - Used to make graphical changes to some of the images used on the site.
+- [Enable JavaScript](https://www.enable-javascript.com/) - Link provided to allow users who don't have JS enabled to find out how to turn this on.
 - Validation:
-    - [WC3 Markup Validation Serivce](https://validator.w3.org/) - Used to validate the HTML.
+    - [WC3 Markup Validation Service](https://validator.w3.org/) - Used to validate the HTML.
     - [W3C Jigsaw Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS.
     - [ESLint](https://eslint.org/) - Used to validate the JSX.
-    - [WAVE - Web Accessibility Evaluation Tool](https://wave.webaim.org/) - Use to ensure the site is accessibile to all.
+    - [WAVE - Web Accessibility Evaluation Tool](https://wave.webaim.org/) - Use to ensure the site is accessible to all.
     - [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Used to check performance of the site.
 
 ## Validation and Testing
@@ -573,7 +573,7 @@ The project was tested and viewed on the following browsers with no errors:
 ### User Story Testing
 | **User Story 1** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User/Owner, I can create an account, so that I can have a user profile on the site. | User navigates to the 'Sign Up' page, and enters credentials when prompted and clicks 'Sign Up'. | The user is able to create an account. | Works as intended. |
+| As a User/Owner, I can create an account, so that I can have a user profile on the site. | User navigates to the 'Sign Up' page and enters credentials when prompted and clicks 'Sign Up'. | The user is able to create an account. | Works as intended. |
 | <details><summary>User Story 1-1</summary><img src="docs/validation-and-testing/testing/user-story-1-1.png"></details> | | | 
 | <details><summary>User Story 1-2</summary><img src="docs/validation-and-testing/testing/user-story-1-2.png"></details> | | |
 | **User Story 2** | **User Action** | **Desired Outcome** | **Actual Outcome** |
@@ -590,7 +590,7 @@ The project was tested and viewed on the following browsers with no errors:
 | <details><summary>User Story 4-3</summary><img src="docs/validation-and-testing/testing/user-story-4-3.png"></details> | | |
 | **User Story 5** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can view an individual profile, so that I can view it in full detail. | User clicks on a users profile. | User able to see the profile. | Works as intended. |
+| As a User, I can view an individual profile, so that I can view it in full detail. | User clicks on a users' profile. | User able to see the profile. | Works as intended. |
 | <details><summary>User Story 5</summary><img src="docs/validation-and-testing/testing/user-story-5.png"></details> | | |
 | **User Story 6** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
@@ -601,7 +601,7 @@ The project was tested and viewed on the following browsers with no errors:
 | <details><summary>User Story 6-4</summary><img src="docs/validation-and-testing/testing/user-story-6-4.png"></details> | | |
 | **User Story 7** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can edit my profile, so that I can modify the about me section. | User navigates to their Profile, Clicks the Meatball icon, and then edit profile. User is then able to upload a make changes to their profile about and display name. User clicks 'Update'. | User is able to make changes to their profile. | Works as intended. |
+| As a User, I can edit my profile, so that I can modify the about me section. | User navigates to their Profile, Clicks the Meatball icon, and then edit profile. User is then able to upload or make changes to their profile about and display name. User clicks 'Update'. | User is able to make changes to their profile. | Works as intended. |
 | <details><summary>User Story 7-1</summary><img src="docs/validation-and-testing/testing/user-story-7-1.png"></details> | | |
 | <details><summary>User Story 7-2</summary><img src="docs/validation-and-testing/testing/user-story-7-2.png"></details> | | |
 | <details><summary>User Story 7-3</summary><img src="docs/validation-and-testing/testing/user-story-7-3.png"></details> | | |
@@ -650,7 +650,7 @@ The project was tested and viewed on the following browsers with no errors:
 | **User Story 16** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
 | As a User, I can create a comment, so that I can share my reaction to the content. | | | Works as intended. |
-| <details><summary>User Story 16-1</summary><img src="docs/validation-and-testing/testing/user-story-16-1.png"></details> | User is able to add a comment by entering what they wish into the textbox, and clicking 'Add Comment'. | Comments are added to the post. | Works as intended. |
+| <details><summary>User Story 16-1</summary><img src="docs/validation-and-testing/testing/user-story-16-1.png"></details> | User is able to add a comment by entering what they wish into the textbox and clicking 'Add Comment'. | Comments are added to the post. | Works as intended. |
 | <details><summary>User Story 16-2</summary><img src="docs/validation-and-testing/testing/user-story-16-2.png"></details> | | |
 | **User Story 17** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
@@ -713,12 +713,12 @@ The project was tested and viewed on the following browsers with no errors:
 | <details><summary>User Story 29-3</summary><img src="docs/validation-and-testing/testing/user-story-29-3.png"></details> | | |
 | **User Story 30** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I can change my password, so that I can keep my account secure. | User naviagtes to their profile, hits the 'Meatball' dropdown, selects 'Change Password'. User enters their new password into the feilds, clicks 'Update'. | User can change their password. | Works as intended. |
+| As a User, I can change my password, so that I can keep my account secure. | User navigates to their profile, hits the 'Meatball' dropdown, selects 'Change Password'. User enters their new password into the fields, clicks 'Update'. | User can change their password. | Works as intended. |
 | <details><summary>User Story 30-1</summary><img src="docs/validation-and-testing/testing/user-story-30-1.png"></details> | | |
 | <details><summary>User Story 30-2</summary><img src="docs/validation-and-testing/testing/user-story-30-2.png"></details> | | |
 | **User Story 31** | **User Action** | **Desired Outcome** | **Actual Outcome** |
 |------------------|-----------------|---------------------|--------------------|
-| As a User, I am presented with a site that I am able to navigate with ease, so that I can easily make my way around the site. | User makes use of the NavBar elements. | User can naviagte around the site. | Works as intended. |
+| As a User, I am presented with a site that I am able to navigate with ease, so that I can easily make my way around the site. | User makes use of the NavBar elements. | User can navigate around the site. | Works as intended. |
 | <details><summary>User Story 31</summary><img src="docs/validation-and-testing/testing/user-story-31.png"></details> | | |
 ### Bugs and Errors
 | **Bug/Error** | **Resolution** |
@@ -727,33 +727,33 @@ The project was tested and viewed on the following browsers with no errors:
 | During development, I ran into an issue displaying the posts on the profile in a grid. | After playing about with the code, I was applying d-flex flex-wrap to the incorrect element, changing this to the parent resolved the issue. |
 
 ## Deployment
-Nexus has been deployed usng [Heroku](https://dashboard.heroku.com/). I deployed the site using the following steps:
+Nexus has been deployed using [Heroku](https://dashboard.heroku.com/). I deployed the site using the following steps:
 1. Create and account with or Log into Heroku.
 2. Click New > Create new app, and select the correct region for this to be hosted > Create App.
 3. Once the app has been created, navigate to the 'Deploy tab'
 4. Ensure your application is fully pushed to GitHub.
 5. Connect your App to GitHub by signing in and linking your account.
 6. Select the repository, and under 'Manual Deploy' click deploy.
-7. Wait for any chnages to completed.
+7. Wait for any changes to completed.
 8. Hit the open app button to view the live application. 
 
 The following steps can be followed to clone the project.
-1. Navigte to GitHub and login to your account.
+1. Navigate to GitHub and login to your account.
 2. Navigate to the repository you wish to clone.
-3. Under the green 'Code' dropdown, select your preffered cloning option.
-4. On your machine, please navigte either to your editor / cmd / terminal.
+3. Under the green 'Code' dropdown, select your preferred cloning option.
+4. On your machine, please navigate to your editor / cmd / terminal.
 5. Ensure your directory is changes to the location you wish to clone the project.
-6. In the terminal type git clone and followed by the URL you selected earlier.
+6. In the terminal type, git clone and followed by the URL you selected earlier.
 7. The project will be cloned to the location chosen.
 
 ## Credits
 ### Code
-- [Moments](https://github.com/Code-Institute-Solutions/moments) by [Code Instiute](https://codeinstitute.net/) - Used as a template of the code to follow for this project.
+- [Moments](https://github.com/Code-Institute-Solutions/moments) by [Code Institute](https://codeinstitute.net/) - Used as a template of the code to follow for this project.
 - [HTML and CSS](https://www.htmlandcssbook.com/) by Jon Duckett - Used to broaden my knowledge in HTML and CSS
 - [React 17 Design Patterns and Best Practices](https://www.packtpub.com/product/react-17-design-patterns-and-best-practices-third-edition/9781800560444) by Carlos Santana Roldán - Used to broaden my knowledge in React.
 - [Link Animation](https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/) - Used to help me create a hover effect on the logo.
 - [Popover Dismiss](https://stackoverflow.com/questions/28935314/reactbootstrap-popover-dismiss-on-click-outside) - Used to help the placement of the share hover.
-- [React Infinite Scroll Component](https://github.com/ankeetmaini/react-infinite-scroll-component/blob/master/README.md) - Used to provide the ininite scroll to posts and comments.
+- [React Infinite Scroll Component](https://github.com/ankeetmaini/react-infinite-scroll-component/blob/master/README.md) - Used to provide the infinite scroll to posts and comments.
 - [Scrollable Div](https://stackoverflow.com/questions/59689791/react-infinitescroll-in-a-scrollable-component-on-the-page) - Used to help me understand how to make the InfiniteScroll work with the comments section.
 
 ### Images
