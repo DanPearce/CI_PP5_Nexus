@@ -727,7 +727,24 @@ The project was tested and viewed on the following browsers with no errors:
 | During development, I ran into an issue displaying the posts on the profile in a grid. | After playing about with the code, I was applying d-flex flex-wrap to the incorrect element, changing this to the parent resolved the issue. |
 
 ## Deployment
+Nexus has been deployed usng [Heroku](https://dashboard.heroku.com/). I deployed the site using the following steps:
+1. Create and account with or Log into Heroku.
+2. Click New > Create new app, and select the correct region for this to be hosted > Create App.
+3. Once the app has been created, navigate to the 'Deploy tab'
+4. Ensure your application is fully pushed to GitHub.
+5. Connect your App to GitHub by signing in and linking your account.
+6. Select the repository, and under 'Manual Deploy' click deploy.
+7. Wait for any chnages to completed.
+8. Hit the open app button to view the live application. 
 
+The following steps can be followed to clone the project.
+1. Navigte to GitHub and login to your account.
+2. Navigate to the repository you wish to clone.
+3. Under the green 'Code' dropdown, select your preffered cloning option.
+4. On your machine, please navigte either to your editor / cmd / terminal.
+5. Ensure your directory is changes to the location you wish to clone the project.
+6. In the terminal type git clone and followed by the URL you selected earlier.
+7. The project will be cloned to the location chosen.
 ## Credits
 
 ## Acknowledgements
