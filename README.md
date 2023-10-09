@@ -745,7 +745,21 @@ The following steps can be followed to clone the project.
 5. Ensure your directory is changes to the location you wish to clone the project.
 6. In the terminal type git clone and followed by the URL you selected earlier.
 7. The project will be cloned to the location chosen.
+
 ## Credits
+### Code
+- [HTML and CSS](https://www.htmlandcssbook.com/) by Jon Duckett - Used to broaden my knowledge in HTML and CSS
+- [React 17 Design Patterns and Best Practices](https://www.packtpub.com/product/react-17-design-patterns-and-best-practices-third-edition/9781800560444) by Carlos Santana Roldán - Used to broaden my knowledge in React.
+- [Link Animation](https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/) - Used to help me create a hover effect on the logo.
+- [Popover Dismiss](https://stackoverflow.com/questions/28935314/reactbootstrap-popover-dismiss-on-click-outside) - Used to help the placement of the share hover.
+- [React Infinite Scroll Component](https://github.com/ankeetmaini/react-infinite-scroll-component/blob/master/README.md) - Used to provide the ininite scroll to posts and comments.
+- [Scrollable Div](https://stackoverflow.com/questions/59689791/react-infinitescroll-in-a-scrollable-component-on-the-page) - Used to help me understand how to make the InfiniteScroll work with the comments section.
+
+### Images
+- [Upload Icon](https://pixabay.com/vectors/upload-files-icon-1118929/) - By [IO-Image](https://pixabay.com/users/io-images-1096650/)
+- [Media Icon](https://pixabay.com/vectors/image-media-icon-symbol-visual-2935360/) - By [raphaelsilva](https://pixabay.com/users/raphaelsilva-4702998/)
+- [Default Profile](https://pixabay.com/vectors/blank-profile-picture-mystery-man-973460/) - By [WandererCreative](https://pixabay.com/users/wanderercreative-855399/)
+- [Error](https://www.rawpixel.com/image/2563506) - By [Gade](https://www.rawpixel.com/gade1)
 
 ## Acknowledgements
 
