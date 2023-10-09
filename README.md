@@ -748,6 +748,7 @@ The following steps can be followed to clone the project.
 
 ## Credits
 ### Code
+- [Moments](https://github.com/Code-Institute-Solutions/moments) by [Code Instiute](https://codeinstitute.net/) - Used as a template of the code to follow for this project.
 - [HTML and CSS](https://www.htmlandcssbook.com/) by Jon Duckett - Used to broaden my knowledge in HTML and CSS
 - [React 17 Design Patterns and Best Practices](https://www.packtpub.com/product/react-17-design-patterns-and-best-practices-third-edition/9781800560444) by Carlos Santana Roldán - Used to broaden my knowledge in React.
 - [Link Animation](https://css-tricks.com/4-ways-to-animate-the-color-of-a-text-link-on-hover/) - Used to help me create a hover effect on the logo.
@@ -762,5 +763,9 @@ The following steps can be followed to clone the project.
 - [Error](https://www.rawpixel.com/image/2563506) - By [Gade](https://www.rawpixel.com/gade1)
 
 ## Acknowledgements
+As always there are some people I would especially like to thank for their continued support throughout my coding journey.
+- Thank you to my mentor, [Mo Shami](https://www.linkedin.com/in/moshami/), for all of the valuable information provided over these projects.
+- Thank you to my partner, Harry for having the upmost patience with me as I have worked through this project and for always being by my side.
+- Thank you to you, for taking the time to look at my work!
 
 #### [Back to Top](#contents)
