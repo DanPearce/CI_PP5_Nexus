@@ -376,6 +376,7 @@ Nexus uses the specifically built Django Rest Framework API application. The Nex
 - [React Router](https://reactrouter.com/en/main) - Used to enhasing the routing experience used in the application and allows more control over pages/components.
 - [Coolors](https://coolors.co/) - Used to create the palette for this documentation.
 - [Photopea](https://www.photopea.com/) - Used to make graphical chnanges to some of the images used on the site.
+- [Enable JavaScript](https://www.enable-javascript.com/) - Link provided to allow users who don't have js enabled to find out how to turn this on.
 - Validation:
     - [WC3 Markup Validation Serivce](https://validator.w3.org/) - Used to validate the HTML.
     - [W3C Jigsaw Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS.
@@ -567,7 +568,158 @@ The project was tested and viewed on the following browsers with no errors:
 - [Vivaldi](https://vivaldi.com/)
 
 ### Manual Testing
+#### User Story Testing
 
+### User Story Testing
+| **User Story 1** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User/Owner, I can create an account, so that I can have a user profile on the site. | | |
+| <details><summary>User Story 1-1</summary><img src="docs/validation-and-testing/testing/user-story-1-1.png"></details> | | |
+| <details><summary>User Story 1-2</summary><img src="docs/validation-and-testing/testing/user-story-1-2.png"></details> | | |
+| **User Story 2** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can log into or out of my account, so that I can ensure that I can manage my profile/posts/comments. | | |
+| <details><summary>User Story 2-1</summary><img src="docs/validation-and-testing/testing/user-story-2-1.png"></details> | | |
+| <details><summary>User Story 2-2</summary><img src="docs/validation-and-testing/testing/user-story-2-2.png"></details> | | |
+| <details><summary>User Story 2-3</summary><img src="docs/validation-and-testing/testing/user-story-2-3.png"></details> | | |
+| **User Story 4** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can view all profiles, so that I can see who has posted and has an account. | | |
+| <details><summary>User Story 4-1</summary><img src="docs/validation-and-testing/testing/user-story-4-1.png"></details> | | |
+| <details><summary>User Story 4-2</summary><img src="docs/validation-and-testing/testing/user-story-4-2.png"></details> | | |
+| <details><summary>User Story 4-3</summary><img src="docs/validation-and-testing/testing/user-story-4-3.png"></details> | | |
+| **User Story 5** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can view an individual profile, so that I can view it in full detail. | | |
+| <details><summary>User Story 5</summary><img src="docs/validation-and-testing/testing/user-story-5.png"></details> | | |
+| **User Story 6** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can change my profile picture, so that I can make my profile more recognisable. | | |
+| <details><summary>User Story 6-1</summary><img src="docs/validation-and-testing/testing/user-story-6-1.png"></details> | | |
+| <details><summary>User Story 6-2</summary><img src="docs/validation-and-testing/testing/user-story-6-2.png"></details> | | |
+| <details><summary>User Story 6-3</summary><img src="docs/validation-and-testing/testing/user-story-6-3.png"></details> | | |
+| <details><summary>User Story 6-4</summary><img src="docs/validation-and-testing/testing/user-story-6-4.png"></details> | | |
+| **User Story 7** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can edit my profile, so that I can modify the about me section. | | |
+| <details><summary>User Story 7-1</summary><img src="docs/validation-and-testing/testing/user-story-7-1.png"></details> | | |
+| <details><summary>User Story 7-2</summary><img src="docs/validation-and-testing/testing/user-story-7-2.png"></details> | | |
+| <details><summary>User Story 7-3</summary><img src="docs/validation-and-testing/testing/user-story-7-3.png"></details> | | |
+| <details><summary>User Story 7-4</summary><img src="docs/validation-and-testing/testing/user-story-7-4.png"></details> | | |
+| **User Story 8** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can view all posts, so that I can decide if I would like to interact with it. | | |
+| <details><summary>User Story 8-1</summary><img src="docs/validation-and-testing/testing/user-story-8-1.png"></details> | | |
+| <details><summary>User Story 8-2</summary><img src="docs/validation-and-testing/testing/user-story-8-2.png"></details> | | |
+| **User Story 9** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can view an individual post, so that I can view it in full detail. | | |
+| <details><summary>User Story 9</summary><img src="docs/validation-and-testing/testing/user-story-9.png"></details> | | |
+| **User Story 10** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can create a post, so that I can add content to my profile. | | |
+| <details><summary>User Story 10-1</summary><img src="docs/validation-and-testing/testing/user-story-10-1.png"></details> | | |
+| <details><summary>User Story 10-2</summary><img src="docs/validation-and-testing/testing/user-story-10-2.png"></details> | | |
+| <details><summary>User Story 10-3</summary><img src="docs/validation-and-testing/testing/user-story-10-3.png"></details> | | |
+| <details><summary>User Story 10-4</summary><img src="docs/validation-and-testing/testing/user-story-10-4.png"></details> | | |
+| **User Story 11** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can edit my own posts, so that I can make edits at a later stage, if needed. | | |
+| <details><summary>User Story 11-1</summary><img src="docs/validation-and-testing/testing/user-story-11-1.png"></details> | | |
+| <details><summary>User Story 11-2</summary><img src="docs/validation-and-testing/testing/user-story-11-2.png"></details> | | |
+| <details><summary>User Story 11-3</summary><img src="docs/validation-and-testing/testing/user-story-11-3.png"></details> | | |
+| <details><summary>User Story 11-4</summary><img src="docs/validation-and-testing/testing/user-story-11-4.png"></details> | | |
+| **User Story 12** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can delete my own posts, so that I can manage the content on my profile. | | |
+| <details><summary>User Story 12</summary><img src="docs/validation-and-testing/testing/user-story-12.png"></details> | | |
+| **User Story 13** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can like a post, so that I can increase its popularity/show my interest. | | |
+| <details><summary>User Story 13-1</summary><img src="docs/validation-and-testing/testing/user-story-13-1.png"></details> | | |
+| <details><summary>User Story 13-2</summary><img src="docs/validation-and-testing/testing/user-story-13-2.png"></details> | | |
+| **User Story 14** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can unlike a post, so that I can decrease its popularity/remove my interest. | | |
+| <details><summary>User Story 14-1</summary><img src="docs/validation-and-testing/testing/user-story-14-1.png"></details> | | |
+| <details><summary>User Story 14-2</summary><img src="docs/validation-and-testing/testing/user-story-14-2.png"></details> | | |
+| **User Story 15** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can view all comments, so that I can engage with the content. | | |
+| <details><summary>User Story 15</summary><img src="docs/validation-and-testing/testing/user-story-15.png"></details> | | |
+| **User Story 16** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can create a comment, so that I can share my reaction to the content. | | |
+| <details><summary>User Story 16-1</summary><img src="docs/validation-and-testing/testing/user-story-16-1.png"></details> | | |
+| <details><summary>User Story 16-2</summary><img src="docs/validation-and-testing/testing/user-story-16-2.png"></details> | | |
+| **User Story 17** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can edit my own comment, so that I can make any necessary changes. | | |
+| <details><summary>User Story 17-1</summary><img src="docs/validation-and-testing/testing/user-story-17-1.png"></details> | | |
+| <details><summary>User Story 17-2</summary><img src="docs/validation-and-testing/testing/user-story-17-2.png"></details> | | |
+| <details><summary>User Story 17-3</summary><img src="docs/validation-and-testing/testing/user-story-17-3.png"></details> | | |
+| **User Story 18** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can delete my own comments, so that I have control over my comments. | | |
+| <details><summary>User Story 18-1</summary><img src="docs/validation-and-testing/testing/user-story-18-1.png"></details> | | |
+| <details><summary>User Story 18-2</summary><img src="docs/validation-and-testing/testing/user-story-18-2.png"></details> | | |
+| **User Story 19** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can follow another profile, so that I can increase their follower count. | | |
+| <details><summary>User Story 19-1</summary><img src="docs/validation-and-testing/testing/user-story-19-1.png"></details> | | |
+| <details><summary>User Story 19-2</summary><img src="docs/validation-and-testing/testing/user-story-19-2.png"></details> | | |
+| **User Story 20** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can unfollow another profile, so that I can decrease their follower count. | | |
+| <details><summary>User Story 20-1</summary><img src="docs/validation-and-testing/testing/user-story-20-1.png"></details> | | |
+| <details><summary>User Story 20-2</summary><img src="docs/validation-and-testing/testing/user-story-20-2.png"></details> | | |
+| **User Story 21** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can view the followers count for any profile, so that I can determine how many followers they have. | | |
+| <details><summary>User Story 21</summary><img src="docs/validation-and-testing/testing/user-story-21.png"></details> | | |
+| **User Story 22** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can view the following count for any profile, so that I can determine how many profiles they are following. | | |
+| <details><summary>User Story 22</summary><img src="docs/validation-and-testing/testing/user-story-22.png"></details> | | |
+| **User Story 23** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can search for posts/profiles, so that I can find the content I need. | | |
+| <details><summary>User Story 23-1</summary><img src="docs/validation-and-testing/testing/user-story-23-1.png"></details> | | |
+| <details><summary>User Story 23-2</summary><img src="docs/validation-and-testing/testing/user-story-23-2.png"></details> | | |
+| **User Story 25** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I am provided feedback when making changes to posts/profiles, so that I am sure the change was successful/unsuccessful. | | |
+| | | |
+| | | |
+| | | |
+| **User Story 26** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I expect Refresh Access Tokens to be in place, so that I can remain logged into the site on my computer. | | |
+| <details><summary>User Story 26-1</summary><img src="docs/validation-and-testing/testing/user-story-26-1.png"></details> | | |
+| <details><summary>User Story 26-2</summary><img src="docs/validation-and-testing/testing/user-story-26-2.png"></details> | | |
+| **User Story 27** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I am presented with a continuous flow of posts, so that I do not need to re-load any content or cycle through pages. | | |
+| <details><summary>User Story 27</summary><img src="docs/validation-and-testing/testing/user-story-27.png"></details> | | |
+| **User Story 28** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I am presented with a 404-error page when I have navigated to a page that does not exist, so that I can easily find my way back to the main site. | | |
+| <details><summary>User Story 28</summary><img src="docs/validation-and-testing/testing/user-story-28.png"></details> | | |
+| **User Story 29** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I am presented with a site that is fully responsive, so that I can consume the content on the site regardless of device or browser. | | |
+| <details><summary>User Story 29-1</summary><img src="docs/validation-and-testing/testing/user-story-29-1.png"></details> | | |
+| <details><summary>User Story 29-2</summary><img src="docs/validation-and-testing/testing/user-story-29-2.png"></details> | | |
+| <details><summary>User Story 29-3</summary><img src="docs/validation-and-testing/testing/user-story-29-3.png"></details> | | |
+| **User Story 30** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I can change my password, so that I can keep my account secure. | | |
+| <details><summary>User Story 30-1</summary><img src="docs/validation-and-testing/testing/user-story-30-1.png"></details> | | |
+| <details><summary>User Story 30-2</summary><img src="docs/validation-and-testing/testing/user-story-30-2.png"></details> | | |
+| **User Story 31** | **User Action** | **Desired Outcome** | **Actual Outcome** |
+|------------------|-----------------|---------------------|--------------------|
+| As a User, I am presented with a site that I am able to navigate with ease, so that I can easily make my way around the site. | | |
+| <details><summary>User Story 31</summary><img src="docs/validation-and-testing/testing/user-story-31.png"></details> | | |
 ### Bugs and Errors
 
 ## Deployment
