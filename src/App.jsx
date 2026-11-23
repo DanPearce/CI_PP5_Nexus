@@ -2,6 +2,7 @@
 import React from 'react';
 import styles from './styles/App.module.css';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 import Container from 'react-bootstrap/Container';
 import { Routes, Route } from 'react-router-dom';
 import SignInForm from './pages/auth/SignInForm';
@@ -77,6 +78,7 @@ function App() {
         </Routes>
         )}
       </Container>
+      <Footer />
     </div>
   );
 }

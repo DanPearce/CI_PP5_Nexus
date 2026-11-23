@@ -1,5 +1,5 @@
 # Nexus
-Developed by, [Dan Pearce](https://danpearce.software/)
+Developed by, [Dan Pearce](https://danielpearce.co.uk/)
 
 [Live Website](https://nexus.danielpearce.co.uk/)
 
@@ -383,6 +383,20 @@ Nexus uses the specifically built Django Rest Framework API application. The Nex
     - [ESLint](https://eslint.org/) - Used to validate the JSX.
     - [WAVE - Web Accessibility Evaluation Tool](https://wave.webaim.org/) - Use to ensure the site is accessible to all.
     - [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Used to check performance of the site.
+
+## Running it and the automated tests (November 2026)
+The project is built with Vite (it moved off Create React App, which is no longer maintained). Node 22 or newer:
+
+```
+npm install
+npm run dev        # development server; set VITE_API_URL to use a local API, e.g. VITE_API_URL=http://localhost:8000/
+npm test           # automated tests (Vitest and Testing Library)
+npm run lint       # ESLint
+npm run build      # production build into the build folder
+```
+
+The automated tests cover the token handling, the footer, the landing page for visitors, a signed-in user's view and
+signing in and out (including a wrong password).
 
 ## Validation and Testing
 ### HTML Validation
