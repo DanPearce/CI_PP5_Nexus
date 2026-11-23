@@ -1,6 +1,6 @@
 /* Imports */
 import { axiosReq  } from '../api/axiosDefaults';
-import jwtDecode from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 
 /*
   Renders and sends data to the InfiniteScroll component
@@ -19,7 +19,7 @@ export const fetchMoreData = async (resource, setRescource) => {
       : [...acc, cur]
     }, prevResource.results)
     }));
-  } catch (err){
+  } catch {
     // console.log();
   }
 }
@@ -63,11 +63,16 @@ export const unfollowHelper = (profile, clickedProfile) => {
 };
 
 /*
-  Stores the users token timestamp in the browsers local storage
+  Remembers that the user signed in, by storing a timestamp in the browsers local storage.
+  The app only checks that it exists (shouldRefreshToken), to know whether to refresh the access token.
+  dj-rest-auth 7 keeps the refresh token in an HttpOnly cookie, so the "refresh" field in the response body is empty
+  and the page cannot read it: use the expiry of the refresh token when it is given (older API versions, "refresh_token"
+  in the body) and the time of sign in otherwise.
 */
 export const setTokenTimestamp = (data) => {
-  const refreshTokenTimestamp = jwtDecode(data?.refresh_token).exp;
-  localStorage.setItem("refreshTokenTimestamp", refreshTokenTimestamp);
+  const refreshToken = data?.refresh || data?.refresh_token;
+  const timestamp = refreshToken ? jwtDecode(refreshToken).exp : Math.floor(Date.now() / 1000);
+  localStorage.setItem("refreshTokenTimestamp", timestamp);
 };
 
 /*

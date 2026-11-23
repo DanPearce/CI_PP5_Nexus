@@ -1,7 +1,7 @@
 # Nexus
-Developed by, [Dan Pearce](https://danpearce.software/)
+Developed by, [Dan Pearce](https://danielpearce.co.uk/)
 
-[Live Website](https://ci-pp5-nexus-drf-danpearce.herokuapp.com/)
+[Live Website](https://nexus.danielpearce.co.uk/)
 
 ![Screen Capture](docs/nexus/nexus-resoponsive.png)
 
@@ -11,7 +11,7 @@ Nexus is paired with its sister application Nexus DRF, which is an API using the
 
 You can read more about the DRF Application following the links below:
 
-[View the live Nexus DRF application here](https://ci-pp5-nexus-danpearce.herokuapp.com/)
+[View the live Nexus DRF application here](https://nexus-api.danielpearce.co.uk/)
 
 [View the Nexus DRF GitHub page here](https://github.com/DanPearce/CI_PP5_Nexus_DRF)
 
@@ -384,6 +384,20 @@ Nexus uses the specifically built Django Rest Framework API application. The Nex
     - [WAVE - Web Accessibility Evaluation Tool](https://wave.webaim.org/) - Use to ensure the site is accessible to all.
     - [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Used to check performance of the site.
 
+## Running it and the automated tests (November 2026)
+The project is built with Vite (it moved off Create React App, which is no longer maintained). Node 22 or newer:
+
+```
+npm install
+npm run dev        # development server; set VITE_API_URL to use a local API, e.g. VITE_API_URL=http://localhost:8000/
+npm test           # automated tests (Vitest and Testing Library)
+npm run lint       # ESLint
+npm run build      # production build into the build folder
+```
+
+The automated tests cover the token handling, the footer, the landing page for visitors, a signed-in user's view and
+signing in and out (including a wrong password).
+
 ## Validation and Testing
 ### HTML Validation
 The HTML has been tested using the [W3C Markup Validation Service](https://validator.w3.org/) in order validate the correct function of this site. All pages have passed with no errors or warnings.
@@ -727,6 +741,8 @@ The project was tested and viewed on the following browsers with no errors:
 | During development, I ran into an issue displaying the posts on the profile in a grid. | After playing about with the code, I was applying d-flex flex-wrap to the incorrect element, changing this to the parent resolved the issue. |
 
 ## Deployment
+
+> **Hosting update (November 2026):** the live site no longer runs on Heroku. It is now self-hosted on my own server (Docker containers behind Caddy, with PostgreSQL where needed). The Heroku steps below describe the original deployment and are kept as a record.
 Nexus has been deployed using [Heroku](https://dashboard.heroku.com/). I deployed the site using the following steps:
 1. Create and account with or Log into Heroku.
 2. Click New > Create new app, and select the correct region for this to be hosted > Create App.

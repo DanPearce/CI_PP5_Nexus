@@ -38,7 +38,7 @@ function CommentEditForm(props) {
         }),
       }));
       setShowEditForm(false);
-    } catch (err) {
+    } catch {
     //  console.log(err);
     }
   };

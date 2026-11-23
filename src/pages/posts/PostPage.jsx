@@ -41,7 +41,7 @@ function PostPage() {
         ]);
         setPost({ results: [post]});
         setComments(comments);
-      } catch(err){
+      } catch {
         navigate('404');
       }
     };
@@ -60,22 +60,21 @@ function PostPage() {
                 {comments.results.length ? (
                   // InfiniteScroll pulls more data as the user scrolls
                   <InfiniteScroll
-                    children={
-                      comments.results.map((comment) => (
-                        <Comment
-                          key={comment.id} 
-                          {...comment}
-                          setPost={setPost}
-                          setComments={setComments}
-                        />
-                      ))
-                    }
                     dataLength={comments.results.length}
                     loader={<Asset spinner />}
                     hasMore={!!comments.next}
                     next={() => fetchMoreData(comments, setComments)}
                     scrollableTarget='scrollableDiv'
-                  />
+                  >
+                    {comments.results.map((comment) => (
+                      <Comment
+                        key={comment.id}
+                        {...comment}
+                        setPost={setPost}
+                        setComments={setComments}
+                      />
+                    ))}
+                  </InfiniteScroll>
                   ) : currentUser ? (
                     <span>No comments! Add one to share your opinion.</span>
                   ) : (

@@ -1,7 +1,7 @@
 /* Imports */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { axiosRes, axiosReq } from "../../api/axiosDefaults";
+import { axiosReq } from '../../api/axiosDefaults';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -12,61 +12,83 @@ import Alert from 'react-bootstrap/Alert';
 import styles from '../../styles/AuthForm.module.css';
 import appStyles from '../../styles/App.module.css';
 import btnStyles from '../../styles/Button.module.css';
-import profileStyles from '../../styles/Profile.module.css';
 
-function UserPasswordForm() {
-  
-  const [userData, setUserData] = useState({
-    new_password1: '',
-    new_password2: '',
+function PostEditForm() {
+  const [postData, setPostData] = useState({
+    title: '',
+    body: '',
+    image: ''
   });
-  const { new_password1, new_password2, image, owner } = userData;
+  const { title, body, image } = postData;
+  const imageInput = useRef(null);
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
   const { id } = useParams();
 
   /*
-    Handles the edit of the password  
+    Makes an API request to pull the data from the post ID
+    Prevents making changes to data that isn't owned by the user
+    Redirects if user does not own data
   */
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const { data } = await axiosReq.get(`/profiles/${id}`);
-        const { image, owner, is_owner } = data;
-        is_owner ? setUserData({ image, owner }) : navigate('/');
-      } catch(err) {
+        const { data } = await axiosReq.get(`/posts/${id}`);
+        const { title, body, image, is_owner } = data;
+        is_owner ? setPostData({ title, body, image }) : navigate('/');
+      } catch {
       //  console.log(err);
       }
-    }
+    };
     handleMount();
   }, [navigate, id]);
-
+  
   /*
-    Handles the change to the input fields
+    Handles changes made to the input fields
   */
   const handleChange = (event) => {
-    setUserData({
-      ...userData,
+    setPostData({
+      ...postData,
       [event.target.name]: event.target.value
     });
-  }
+  };
 
   /*
-    Handles the password update
-    Redirects user to their profile page upon completion
+    Handles changes made to the image input field
+  */
+  const handleChangeImage = (event) => {
+    if (event.target.files.length) {
+      URL.revokeObjectURL(image);
+      setPostData({
+        ...postData,
+        image: URL.createObjectURL(event.target.files[0]),
+      });
+    }
+  };
+
+  /*
+    Handles the form submission
+    Redirects user back to the post upon completion
   */
   const handleSubmit = async (event) => {
-    event.preventDefault()
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append('title', title);
+    formData.append('body', body);
+
+    if (imageInput?.current?.files[0]){
+      formData.append('image', imageInput.current.files[0]);
+    }
     try {
-      await axiosRes.post(`/dj-rest-auth/password/change/`, userData);
-      navigate(`/profiles/${id}`);
+      await axiosReq.put(`/posts/${id}`, formData);
+      navigate(`/posts/${id}`);
     } catch(err) {
-    //  console.log(err);
+    //  console.log(err)
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
     }
-  }
+  };
 
   return (
     <Container className={`${appStyles.Border} ${styles.Background}`}>
@@ -74,35 +96,45 @@ function UserPasswordForm() {
         <Row>
           <Col lg={6} className={`lg-6`}>
             <Container className={`p-2 mt-4`}>
-            <h1 className={`${styles.Heading} mb-3 text-center d-lg-none`}>Change Password</h1>
+            <h1 className={`${styles.Heading} mb-3 text-center d-lg-none`}>Edit Post</h1>
               <Form.Group className={`text-center`}>
                 <figure>
-                  <Image 
-                    className={`${profileStyles.ProfilePicture} ${appStyles.Border}`}
-                    roundedCircle 
-                    src={image}
-                    alt={`${owner}'s Profile Icon`}
-                  />
+                  <Image className={`${appStyles.Image}`} src={image} alt='Post Image'/>
                 </figure>
+                <Form.Control
+                  type='file'
+                  id='image-upload'
+                  accept='image/*'
+                  onChange={handleChangeImage}
+                  ref={imageInput}
+                />
               </Form.Group>
+              {errors?.image?.map((message, index) => (
+                  <Alert
+                    key={index}
+                    variant="warning"
+                    className={`${appStyles.Alert} mb-3`}
+                  >
+                    {message}
+                  </Alert>
+                ))}
             </Container>
           </Col>
           <Col lg={5}>
             <Container className={`p-2 mt-4`}>
-              <h1 className={`${styles.Heading} mb-3 text-center d-none d-lg-block`}>Change Password</h1>
-              
+              <h1 className={`${styles.Heading} mb-3 text-center d-none d-lg-block`}>Edit Post</h1>
                 <Form.Group className="mb-3" controlId="title">
-                  <Form.Label className=''>Password</Form.Label>
+                  <Form.Label className=''>Title</Form.Label>
                   <Form.Control
-                    type="password"
-                    placeholder="Please enter your new password"
-                    name='new_password1'
+                    type="text"
+                    placeholder="Add a title"
+                    name='title'
                     className={styles.PostInput}
-                    value={new_password1 || ''}
+                    value={title}
                     onChange={handleChange}
                   />
                 </Form.Group>
-                {errors?.new_password1?.map((message, index) => (
+                {errors?.title?.map((message, index) => (
                   <Alert
                     key={index}
                     variant="warning"
@@ -112,18 +144,18 @@ function UserPasswordForm() {
                   </Alert>
                 ))}
                 <Form.Group className="mb-3" controlId="body">
-                  <Form.Label className=''>Confirm Password</Form.Label>
+                  <Form.Label className=''>Caption</Form.Label>
                   <Form.Control 
-                    type='password'
+                    as="textarea"
                     rows={5}
-                    placeholder="Confirm your new password"
-                    name='new_password2'
+                    placeholder="Add a caption"
+                    name='body'
                     className={styles.PostInput}
-                    value={new_password2 || ''}
+                    value={body}
                     onChange={handleChange}
                   />
                 </Form.Group>
-                {errors?.new_password2?.map((message, index) => (
+                {errors?.body?.map((message, index) => (
                   <Alert
                     key={index}
                     variant="warning"
@@ -155,4 +187,4 @@ function UserPasswordForm() {
   );
 }
 
-export default UserPasswordForm;
+export default PostEditForm;

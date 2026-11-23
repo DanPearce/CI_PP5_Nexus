@@ -38,7 +38,7 @@ const Comment = (props) => {
         ...prevComments,
         results: prevComments.results.filter((comment) => comment.id !== id)
       }));
-    } catch (err){
+    } catch {
     //  console.log(err);
     }
   };

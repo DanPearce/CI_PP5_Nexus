@@ -38,7 +38,7 @@ function ProfileEditForm() {
         const { data } = await axiosReq.get(`/profiles/${id}`);
         const { name, about, image, owner, is_owner } = data;
         is_owner ? setProfileData({ name, about, image, owner }) : navigate('/');
-      } catch(err) {
+      } catch {
       //  console.log(err);
       }
     }

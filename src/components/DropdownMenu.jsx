@@ -17,6 +17,7 @@ const Meatball = React.forwardRef(({ onClick }, ref) => (
   }}
   />
 ));
+Meatball.displayName = 'Meatball';
 
 /*
   Dropdown Menu to allow for edit/deletion of posts
