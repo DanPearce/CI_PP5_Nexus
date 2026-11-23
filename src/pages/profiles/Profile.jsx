@@ -1,7 +1,7 @@
 /* Imports */
 import React, { useEffect, useState } from 'react';
 import { useCurrentUser } from '../../contexts/CurrentUserContext';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 import { axiosReq } from '../../api/axiosDefaults';
 import { fetchMoreData } from '../../utils/Utils';
 import { ProfileEditDropdown } from '../../components/DropdownMenu';
@@ -50,7 +50,7 @@ function Profile() {
         }));
         setProfilePosts(profilePosts);
         setHasLoaded(true);
-      } catch (err) {
+      } catch {
       //  console.log(err);
       }
     };
@@ -166,15 +166,16 @@ function Profile() {
     <>
     {profilePosts.results.length ? (
       <InfiniteScroll
-        children={profilePosts.results.map((post) => (
-          <ProfilePost key={post.id} {...post} setPosts={setProfilePosts}/>
-        ))}
         dataLength={profilePosts.results.length}
         loader={<Asset spinner />}
         hasMore={!!profilePosts.next}
         next={() => fetchMoreData(profilePosts, setProfilePosts)}
         className={`mt-3 ${styles.Post} d-flex flex-wrap`}
-    />
+      >
+        {profilePosts.results.map((post) => (
+          <ProfilePost key={post.id} {...post} setPosts={setProfilePosts}/>
+        ))}
+      </InfiniteScroll>
     
     ) : (
       <Asset

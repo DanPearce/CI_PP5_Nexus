@@ -1,6 +1,6 @@
 /* Imports */
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router';
+import { useLocation } from 'react-router-dom';
 import { axiosReq } from '../../api/axiosDefaults';
 import { Link } from 'react-router-dom';
 import { fetchMoreData } from '../../utils/Utils';
@@ -36,7 +36,7 @@ function PostDiscover({ message, filter = "" }) {
         const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
         setPosts(data);
         setHasLoaded(true);
-      } catch (err) {
+      } catch {
       //  console.log(err);
       }
     };
@@ -72,18 +72,18 @@ function PostDiscover({ message, filter = "" }) {
             <>
               {posts.results.length ? (
                 <InfiniteScroll
-                  children={
-                    posts.results.map((post) => (
-                      <Row className={`mb-4 ${appStyles.Border}`} key={post.id}>
-                        <Post {...post} setPosts={setPosts}/>
-                      </Row>
-                  ))}
                   dataLength={posts.results.length}
                   loader={<Asset spinner />}
                   hasMore={!!posts.next}
                   next={() => fetchMoreData(posts, setPosts)}
                   className={styles.InfiniteScroll}
-                />
+                >
+                  {posts.results.map((post) => (
+                    <Row className={`mb-4 ${appStyles.Border}`} key={post.id}>
+                      <Post {...post} setPosts={setPosts}/>
+                    </Row>
+                  ))}
+                </InfiniteScroll>
               ) : (
                 <Container className={appStyles.Body}>
                   <Link to={'/discover'} className={styles.Link}>

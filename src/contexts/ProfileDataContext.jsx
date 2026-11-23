@@ -31,7 +31,7 @@ export const ProfileDataProvider = ({ children }) => {
           ...prevState,
           popularProfiles: data,
         }));
-      } catch (err) {
+      } catch {
       //  console.log(err);
       }
     };
@@ -59,7 +59,7 @@ export const ProfileDataProvider = ({ children }) => {
           )
         }
       }));
-    } catch (err) {
+    } catch {
     //  console.log(err);
     }
   };
@@ -82,7 +82,7 @@ export const ProfileDataProvider = ({ children }) => {
           )
         }
       }));
-    } catch (err) {
+    } catch {
     //  console.log(err);
     }
   };

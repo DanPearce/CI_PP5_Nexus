@@ -40,7 +40,7 @@ function CommentCreateForm(props) {
         ],
       }));
       setBody("");
-    } catch (err) {
+    } catch {
     //  console.log(err.response);
     }
   };
