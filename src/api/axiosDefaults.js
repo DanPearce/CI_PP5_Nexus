@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Unique URL for deployed API site
-axios.defaults.baseURL = 'https://ci-pp5-nexus-drf-danpearce.herokuapp.com/'
+axios.defaults.baseURL = 'https://nexus-api.danielpearce.co.uk/'
 // Data Format
 axios.defaults.headers.post['Content-Type'] = 'multipart/form-data'
 // Helps to resolve CORS errors
