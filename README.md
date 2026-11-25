@@ -363,7 +363,7 @@ Nexus uses the specifically built Django Rest Framework API application. The Nex
 - [GitHub](https://github.com/) Used to host my code.
 - [GitPod](https://www.gitpod.io/) Used to build my code online.
 - [VS Code](https://code.visualstudio.com) - Used occasionally to build the code offline.
-- [Heroku](https://dashboard.heroku.com/) - Used to host the live version of the site.
+- [Heroku](https://dashboard.heroku.com/) - Originally used to host the live version of the site (it is now self-hosted, see Deployment).
 - [Font Awesome](https://fontawesome.com/) - Used for the icons shown on the site.
 - [Balsamiq](https://balsamiq.com/) - Used to create the Wireframes for the site.
 - [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) - Used for day-to-day testing and configuration of the site.
@@ -741,6 +741,17 @@ The project was tested and viewed on the following browsers with no errors:
 | During development, I ran into an issue displaying the posts on the profile in a grid. | After playing about with the code, I was applying d-flex flex-wrap to the incorrect element, changing this to the parent resolved the issue. |
 
 ## Deployment
+
+### Current hosting and automatic deployment (since November 2026)
+
+The live site is at <https://nexus.danielpearce.co.uk/>. It runs in a Docker container on a self-hosted server behind HTTPS.
+
+- Every pull request is checked by GitHub Actions (`.github/workflows/ci-deploy.yml`): lint, the automated tests and a production build.
+- Every change merged to `main` that passes the checks is **deployed automatically**. GitHub connects to the server over SSH with a key that can deploy only this project and only the latest commit of `main`; the server builds the new version, waits for the site to answer, and puts the previous version back (and emails an alert) if anything fails.
+- `main` is protected: no force-pushes or deleting the branch, and the `test` check must pass before changes are merged.
+- To deploy a change: merge a pull request into `main`. To redeploy, re-run the workflow in the repository's Actions tab.
+
+The steps below describe how the project was first deployed and are kept as a record of the original deployment.
 
 > **Hosting update (November 2026):** the live site no longer runs on Heroku. It is now self-hosted on my own server (Docker containers behind Caddy, with PostgreSQL where needed). The Heroku steps below describe the original deployment and are kept as a record.
 Nexus has been deployed using [Heroku](https://dashboard.heroku.com/). I deployed the site using the following steps:
