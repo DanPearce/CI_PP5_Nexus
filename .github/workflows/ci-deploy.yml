@@ -43,10 +43,11 @@ jobs:
       - name: Deploy this commit to the server
         env:
           DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
-          DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
-          DEPLOY_HOST_KEY: ${{ vars.DEPLOY_HOST_KEY }}
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_HOST_KEY: ${{ secrets.DEPLOY_HOST_KEY }}
         run: |
           set -euo pipefail
+          # The server address and host key are secrets, so GitHub hides them in this (public) log.
           install -d -m 700 ~/.ssh
           umask 077
           printf '%s\n' "$DEPLOY_SSH_KEY" > ~/.ssh/deploy_key
