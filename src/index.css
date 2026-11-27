@@ -18,7 +18,7 @@ code {
     monospace;
 }
 
-/* The portfolio header is 64px tall: the app's own fixed navbar sits underneath it */
+/* The app's own fixed navbar sits underneath the portfolio header (height set in portfolio-header.css) */
 body.dp-has-bar .fixed-top {
-  top: 64px;
+  top: var(--dp-header-height);
 }
